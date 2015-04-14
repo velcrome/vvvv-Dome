@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Domemaster_dx11_tracking\content\sandboxes\QuickPrep (Dome DX11.Layer).v4p" systemname="QuickPrep (Dome DX11.Layer)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\content\sandboxes\QuickPrep (Dome DX11.Layer).v4p" scrollx="0" scrolly="5040">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\_SANDBOXES\QuickPrep (Dome DX11.Layer).v4p" systemname="QuickPrep (Dome DX11.Layer)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\content\sandboxes\QuickPrep (Dome DX11.Layer).v4p" scrollx="0" scrolly="3675">
    <BOUNDS type="Window" left="0" top="0" width="11520" height="12375">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.0.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="504" top="8088" width="3528" height="780">
@@ -236,18 +236,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE systemname="SoftDome" filename="..\SoftDome.v4p" componentmode="Hidden" id="26" nodename="..\SoftDome.v4p">
-   <BOUNDS type="Node" left="3720" top="6135" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3720" top="6135" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="750" top="570" width="9765" height="14250">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="SubDivisions" slicecount="1" values="3">
-   </PIN>
-   </NODE>
    <NODE systemname="Trees (DX11)" filename="..\Trees (DX11).v4p" componentmode="Hidden" id="32" nodename="..\Trees (DX11).v4p">
    <BOUNDS type="Node" left="5805" top="6105" width="100" height="100">
    </BOUNDS>
@@ -263,7 +251,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2835" top="11730" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" values="|Mikrofon (High Definition Audio-Gerät)|">
+   <PIN pinname="Input Enum" slicecount="1" values="(nil)">
    </PIN>
    </NODE>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="34">
@@ -291,40 +279,6 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   </NODE>
-   <NODE systemname="Pano" filename="..\pano\Pano.v4p" nodename="..\pano\Pano.v4p" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="1575" top="6180" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Window" left="5700" top="3645" width="9000" height="7770">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="StopRotation" slicecount="1" values="1">
-   </PIN>
-   <BOUNDS type="Box" left="1575" top="6180">
-   </BOUNDS>
-   <PIN pinname="Next">
-   </PIN>
-   <PIN pinname="HorizonRaise">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Next">
-   </LINK>
-   <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="2" dstpinname="HorizonRaise">
-   </LINK>
-   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 1">
-   </LINK>
-   <NODE systemname="SpaceGrid (DX11)" filename="..\SpaceGrid\SpaceGrid (DX11).v4p" nodename="SpaceGrid (DX11)" componentmode="Hidden" id="43">
-   <BOUNDS type="Node" left="7410" top="4845" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Window" left="10035" top="6645" width="9000" height="6000">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="7410" top="4845">
-   </BOUNDS>
    </NODE>
    <NODE systemname="TwilightSound (DX11)" filename="..\Twilight\TwilightSound (DX11).v4p" componentmode="Hidden" id="44" nodename="TwilightSound (DX11)">
    <BOUNDS type="Node" left="7410" top="5475" width="100" height="100">
@@ -382,4 +336,50 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE systemname="Pano" filename="..\Panorama\Pano.v4p" nodename="..\Panorama\Pano.v4p" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1575" top="6180" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5700" top="3645" width="9000" height="7770">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="StopRotation" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Box" left="1575" top="6180">
+   </BOUNDS>
+   <PIN pinname="Next">
+   </PIN>
+   <PIN pinname="HorizonRaise">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Next">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="2" dstpinname="HorizonRaise">
+   </LINK>
+   <NODE systemname="SpaceGrid (DX11)" filename="..\SpaceGrid\SpaceGrid (DX11).v4p" nodename="SpaceGrid (DX11)" componentmode="Hidden" id="49">
+   <BOUNDS type="Node" left="7410" top="4845" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10035" top="6645" width="9000" height="6000">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7410" top="4845">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 5">
+   </LINK>
+   <NODE systemname="SoftDome" filename="..\SoftDome.v4p" componentmode="Hidden" id="50" nodename="..\SoftDome.v4p">
+   <BOUNDS type="Node" left="3720" top="6135" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3720" top="6135" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="750" top="570" width="9765" height="14250">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="50" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 3">
+   <LINKPOINT x="3660" y="6825">
+   </LINKPOINT>
+   </LINK>
    </PATCH>
