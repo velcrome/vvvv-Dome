@@ -1,0 +1,967 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta31.2.dtd" >
+   <PATCH nodename="C:\dev\vvvv\360lab\Talk - EDML und die Rolle der Kunst.v4p" systemname="Talk - EDML und die Rolle der Kunst" filename="C:\dev\vvvv\360lab\Talk - EDML und die Rolle der Kunst.v4p">
+   <BOUNDS type="Window" left="14400" top="0" width="14400" height="15480">
+   </BOUNDS>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="0">
+   <BOUNDS type="Node" left="3189" top="11853" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3189" top="11853" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="30150" top="1230" width="15540" height="11700">
+   </BOUNDS>
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Ratio" visible="1">
+   </PIN>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="D24X8">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   </PIN>
+   </NODE>
+   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="4578" top="11841" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Aspect Width" visible="1" slicecount="1" values="1024">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1" slicecount="1" values="768">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Transform Out" dstnodeid="0" dstpinname="Aspect Ratio" linkstyle="PolyLine">
+   </LINK>
+   <NODE systemname="Camera (Transform Softimage)" filename="%VVVV%\lib\nodes\modules\Transform\Camera (Transform Softimage).v4p" nodename="Camera (Transform Softimage)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="5349" top="10893" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Position" visible="1">
+   </PIN>
+   <PIN pinname="Inital Distance" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Initial Pitch" slicecount="1" values="0.0833333333333333">
+   </PIN>
+   <PIN pinname="Initial Yaw" slicecount="1" values="0.935">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="View" dstnodeid="0" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Projection" dstnodeid="0" dstpinname="Projection">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="6294" top="11253" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="CameraPosition">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="CameraPosition">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Position" dstnodeid="18" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="FullscreenQuad (DX9)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p" nodename="FullscreenQuad (DX9)" componentmode="Hidden" id="48">
+   <BOUNDS type="Node" left="3189" top="10008" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="3189" top="10008">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="49">
+   <BOUNDS type="Node" left="3189" top="10533" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Layer" dstnodeid="49" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="50" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="1389" top="8859" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="img\light_minimalistic_vignette_simple_background_1920x1200_51858.jpg">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="49" srcpinname="Layer" dstnodeid="0" dstpinname="Layers">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="60" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="744" top="11157" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="744" top="11157" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1024">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="px">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="61" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1749" top="11142" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1749" top="11142" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="768">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="px">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="62" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5541" top="9891" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5541" top="9891" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Initial Yaw">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="65" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5784" top="10278" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5784" top="10278" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="65" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Initial Pitch">
+   </LINK>
+   <NODE systemname="fourAreas" filename="fourAreas.v4p" nodename="fourAreas.v4p" componentmode="Hidden" id="68">
+   <BOUNDS type="Node" left="3291" top="5136" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="108" top="804" width="13755" height="11970">
+   </BOUNDS>
+   <BOUNDS type="Window" left="19335" top="1800" width="8220" height="11970">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Connections" slicecount="6" visible="1" values="1,1,0,1,0,0">
+   </PIN>
+   <PIN pinname="Areas" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="69">
+   <BOUNDS type="Node" left="2466" top="6939" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Input 5" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 6" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 7" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 8" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 10" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 9" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="threeSpheres" filename="threeSpheres.v4p" componentmode="Hidden" id="117" nodename="threeSpheres.v4p">
+   <BOUNDS type="Node" left="3600" top="5661" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3600" top="5661" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="19800" top="6825" width="9000" height="6000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="sat" filename="sat.v4p" nodename="sat.v4p" componentmode="Hidden" id="136">
+   <BOUNDS type="Node" left="2698" top="5568" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="108" top="2151" width="6360" height="6835">
+   </BOUNDS>
+   <BOUNDS type="Window" left="21810" top="4815" width="6360" height="6840">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="HSCB (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\HSCB\HSCB (EX9.Texture Filter).v4p" nodename="HSCB (EX9.Texture Filter)" componentmode="Hidden" id="137">
+   <BOUNDS type="Node" left="3156" top="9408" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Brightness" slicecount="1" values="0.31">
+   </PIN>
+   <PIN pinname="Saturation" slicecount="1" values="0.63">
+   </PIN>
+   <PIN pinname="Contrast" slicecount="1" values="-0.47">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="50" srcpinname="Texture Out" dstnodeid="137" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="137" srcpinname="Output" dstnodeid="48" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
+   <BOUNDS type="Node" left="2076" top="624" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Maximum background fpsS" visible="1">
+   </PIN>
+   <PIN pinname="Time Mode" slicecount="1" values="Filtered">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="142" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2076" top="156" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2076" top="156" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="60">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="142" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum forground fps">
+   </LINK>
+   <LINK srcnodeid="142" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum background fpsS">
+   </LINK>
+   <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="143">
+   <BOUNDS type="Node" left="2400" top="1224" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="144" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2076" top="1812" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2076" top="1812" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="143" srcpinname="frames per second" dstnodeid="144" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="text" filename="text.v4p" componentmode="Hidden" id="145" nodename="..\..\..\dev\vvvv\360lab\text.v4p">
+   <BOUNDS type="Node" left="4332" top="7380" width="1548" height="264">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4332" top="7380" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="18360" top="2445" width="9000" height="10500">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   <PIN pinname="HTML" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="146">
+   <BOUNDS type="Node" left="2460" top="7860" width="3780" height="276">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="145" srcpinname="Layer" dstnodeid="146" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="146" srcpinname="Layer" dstnodeid="49" dstpinname="Layer 2">
+   <LINKPOINT x="2472" y="9924">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="ZWriteEnable (EX9.RenderState)" nodename="ZWriteEnable (EX9.RenderState)" componentmode="Hidden" id="147">
+   <BOUNDS type="Node" left="4356" top="6912" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Render State Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="147" srcpinname="Render State Out" dstnodeid="145" dstpinname="Render State" linkstyle="PolyLine">
+   </LINK>
+   <NODE systemname="QuickText" filename="QuickText.v4p" nodename="QuickText.v4p" componentmode="Hidden" id="158">
+   <BOUNDS type="Node" left="5940" top="2233" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2412" top="0" width="7056" height="6360">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16215" top="3930" width="7050" height="6360">
+   </BOUNDS>
+   <PIN pinname="Headline" slicecount="1" values="EMDL">
+   </PIN>
+   <PIN pinname="Bulletins" visible="1" slicecount="7" values="|European Mobile Dome Lab for Artistic Research|,|EMDL will foster an international community of artists/researchers dedicated to exploring the full-dome environment as a platform for creative innovation.|,|Wien, Dresden, Athen, Plymouth, Montreal, Quebec|,|Universitäten und kulturelle Einrichtungen|,|akademische und künstlerische Ausrichtung|,|Februar 2014 bis Sommer 2015, in allen Städten|,|besonders wichtiger Partner: SAT Montreal|">
+   </PIN>
+   <PIN pinname="HTML" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="159" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="8076" top="7332" width="2904" height="4584">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8076" top="7332" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="|&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body bgcolor=&quot;#ffffff&quot;&gt;&lt;/body&gt;&lt;/html&gt;|">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="69" srcpinname="Output" dstnodeid="146" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="163">
+   <BOUNDS type="Node" left="5808" top="6912" width="540" height="276">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Input 4" visible="1" slicecount="1" values="|&lt;h1&gt;Umfeld des SAT&lt;/h1&gt;&cr;&lf;&lt;ul&gt;&lt;li&gt;European Mobile Dome Lab for Artistic Research&lt;/li&gt;&cr;&lf;&lt;li&gt;European Mobile Dome Lab for Artistic Research&lt;/li&gt;&cr;&lf;&lt;li&gt;European Mobile Dome Lab for Artistic Research&lt;/li&gt;&cr;&lf;&lt;li&gt;European Mobile Dome Lab for Artistic Research&lt;/li&gt;&cr;&lf;&lt;li&gt;European Mobile Dome Lab for Artistic Research&lt;/li&gt;&cr;&lf;&lt;li&gt;European Mobile Dome Lab for Artistic Research&lt;/li&gt;&cr;&lf;&lt;li&gt;European Mobile Dome Lab for Artistic Research&lt;/li&gt;&lt;/ul&gt;|">
+   </PIN>
+   <PIN pinname="Input 5" visible="1">
+   </PIN>
+   <PIN pinname="Input 6" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 7" visible="1" slicecount="1" values="|&lt;h1&gt;Das Medium Domeprojection&cr;&lf;&lt;/h1&gt;&cr;&lf;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Dome&lt;/b&gt;&lt;/li&gt;&cr;&lf;&lt;li&gt;Architektur, mobil oder permanent&lt;/li&gt;&cr;&lf;&lt;li&gt;(Schutz-)Raum vor der Realität&lt;/li&gt;&cr;&lf;&lt;li&gt;Nicht-Raum&lt;/li&gt;&cr;&lf;&amp;nbsp;&cr;&lf;&lt;li&gt;&lt;b&gt;Projektion&lt;/b&gt;&lt;/li&gt;&cr;&lf;&lt;li&gt;virtueller Raum&lt;/li&gt;&cr;&lf;&lt;li&gt;Illusionstechnik&lt;/li&gt;&cr;&lf;&lt;li&gt;Holodeck&lt;/li&gt;&cr;&lf;&amp;nbsp;&cr;&lf;&lt;li&gt;&lt;b&gt;Content&lt;/b&gt;&lt;/li&gt;&cr;&lf;&lt;li&gt;Erlebniswelt&lt;/li&gt;&cr;&lf;&lt;li&gt;Kommerziell&lt;/li&gt;&cr;&lf;&lt;li&gt;Kunst&lt;/li&gt;&lt;/ul&gt;|">
+   </PIN>
+   <PIN pinname="Input 8" visible="1">
+   </PIN>
+   <PIN pinname="Input 10" visible="1">
+   </PIN>
+   <PIN pinname="Input 9" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="158" srcpinname="HTML" dstnodeid="163" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="163" srcpinname="Output" dstnodeid="145" dstpinname="HTML">
+   </LINK>
+   <LINK srcnodeid="163" srcpinname="Output" dstnodeid="159" dstpinname="Input String" linkstyle="VHV">
+   <LINKPOINT x="5868" y="7254">
+   </LINKPOINT>
+   <LINKPOINT x="8076" y="7254">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="QuickText" filename="QuickText.v4p" nodename="QuickText.v4p" componentmode="Hidden" id="164">
+   <BOUNDS type="Node" left="6072" top="2617" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2544" top="0" width="7056" height="6360">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16215" top="3930" width="7050" height="6360">
+   </BOUNDS>
+   <PIN pinname="Headline" slicecount="1" values="|SAT Montreal|">
+   </PIN>
+   <PIN pinname="Bulletins" visible="1" slicecount="5" values="|SOCIÉTÉ DES ARTS TECHNOLOGIQUES [SAT] Montréal |,|Entwicklung digitaler Kompetenz in allen künstlerischen Disziplinen|,|Freier, kultureller Träger, zu 2/3 eigenfinanziert|,|Vielfältiges Kulturprogramm (Konzerte, Kurse und Schulungen, Erlebnisgastronomie, Konferenzen, Musikfestivals, Artist Residencies)|,|Fulldome seit 2011|">
+   </PIN>
+   <PIN pinname="HTML" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="165" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="408" top="2280" width="936" height="1284">
+   </BOUNDS>
+   <BOUNDS type="Node" left="408" top="2280" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="8">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="47">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="9">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Slider">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="165" srcpinname="Y Output Value" dstnodeid="163" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="QuickText" filename="QuickText.v4p" nodename="QuickText.v4p" componentmode="Hidden" id="166">
+   <BOUNDS type="Node" left="6180" top="2965" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2652" top="0" width="7056" height="6360">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16215" top="3930" width="7050" height="6360">
+   </BOUNDS>
+   <PIN pinname="Headline" slicecount="1" values="|Umfeld des SAT|">
+   </PIN>
+   <PIN pinname="Bulletins" visible="1" slicecount="6" values="|stetiger Publikumsfluß|,|Neuerung als Notwendigkeit|,|häufig wechselnde Künstler|,|wechselnde Tools und Ansprüche|,|problemorientierte Weiterentwicklung|,|Flexible Infrastruktur und Accessibility|">
+   </PIN>
+   <PIN pinname="HTML" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="164" srcpinname="HTML" dstnodeid="163" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="166" srcpinname="HTML" dstnodeid="163" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="QuickText" filename="QuickText.v4p" nodename="QuickText.v4p" componentmode="Hidden" id="167">
+   <BOUNDS type="Node" left="6312" top="3325" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2784" top="145" width="7056" height="6360">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16215" top="3930" width="7050" height="6360">
+   </BOUNDS>
+   <PIN pinname="Headline" slicecount="1" values="|Welche Rolle spielt Kunst in der europ. Dome-Szene?|">
+   </PIN>
+   <PIN pinname="Bulletins" visible="1" slicecount="4" values="|Zentriert um filmische Aktivitäten, zumeist aus dem akademischen Umfeld|,|Einfacher Zugang zu Technologie fehlt häufig. |,|Fulldome UK (Ben Stern organisiert das ehrenamtlich)|,|Jena Fulldome Festival &lt;i&gt;(The purpose of the festival is to showcase recent fulldome productions and to promote art, the business and the future of fulldome.)&lt;/i&gt;|">
+   </PIN>
+   <PIN pinname="HTML" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="167" srcpinname="HTML" dstnodeid="163" dstpinname="Input 4">
+   </LINK>
+   <NODE systemname="QuickText" filename="QuickText.v4p" nodename="QuickText.v4p" componentmode="Hidden" id="168">
+   <BOUNDS type="Node" left="6456" top="3721" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2928" top="541" width="7056" height="6360">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16215" top="3930" width="7050" height="6360">
+   </BOUNDS>
+   <PIN pinname="Headline" slicecount="1" values="|Säulen des 360° Lab&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Bulletins" visible="1" slicecount="17" values="|&lt;b&gt;Wirtschaft&lt;/b&gt; (Techn. Ausrüstung, Verleih, Marketing, Event)|,|kunden- und kampagnenorientiert|,|kommerzielle Verwertbarkeit im Vordergrund|,&lt;b&gt;Forschung&lt;/b&gt;,Innovationsgetrieben,|technologische Exzellenz im Vordergrund|,&lt;b&gt;Ausbildung&lt;/b&gt;,|Heranführen von Studenten an Gestaltungsmerkmale im Dome|,|Beschäftigung mit dem Medium an sich|,Semestergetrieben,|Inzwischen vereinfachter Zugang zur Infrastruktur|,,,,,,">
+   </PIN>
+   <PIN pinname="HTML" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="168" srcpinname="HTML" dstnodeid="163" dstpinname="Input 5">
+   </LINK>
+   <NODE systemname="QuickText" filename="QuickText.v4p" nodename="QuickText.v4p" componentmode="Hidden" id="169">
+   <BOUNDS type="Node" left="6828" top="5149" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3300" top="1969" width="7056" height="6360">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16215" top="3930" width="7050" height="6360">
+   </BOUNDS>
+   <PIN pinname="Headline" slicecount="1" visible="1" values="|Mögliche Rolle der Kunst im 360°Lab|">
+   </PIN>
+   <PIN pinname="Bulletins" visible="1" slicecount="6" values="|Erforschung neuer sensorischer und konzeptioneller Bereiche|,|konkrete Use-Cases für die Grundlagenforschung|,|Ideengeber für kommerzielle Kampagnen|,|facettenreiche Beschäftigung mit dem Medium|,,|Benötigt Access (liberalen Zugang zu Infrastruktur und Schnittstellen)|">
+   </PIN>
+   <PIN pinname="HTML" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="QuickText" filename="QuickText.v4p" nodename="QuickText.v4p" componentmode="Hidden" id="170">
+   <BOUNDS type="Node" left="6936" top="5545" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3408" top="2365" width="7056" height="6360">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16215" top="3930" width="7050" height="6360">
+   </BOUNDS>
+   <PIN pinname="Headline" slicecount="1" visible="1" values="|Das Medium Domeprojection&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Bulletins" visible="1" slicecount="14" values="&lt;b&gt;Dome&lt;/b&gt;,|Architektur, mobil oder permanent|,|(Schutz-)Raum vor der Realität|,Nicht-Raum,,&lt;b&gt;Projektion&lt;/b&gt;,|virtueller Raum|,Illusionstechnik,&quot;Holodeck&quot;,,&lt;b&gt;Content&lt;/b&gt;,Erlebniswelt,Kommerziell,Kunst">
+   </PIN>
+   <PIN pinname="HTML" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="QuickText" filename="QuickText.v4p" nodename="QuickText.v4p" componentmode="Hidden" id="172">
+   <BOUNDS type="Node" left="7080" top="6025" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3552" top="2845" width="7056" height="6360">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16215" top="3930" width="7050" height="6360">
+   </BOUNDS>
+   <PIN pinname="Headline" slicecount="1" visible="1" values="|Ziele des 360°Labs &cr;&lf;|">
+   </PIN>
+   <PIN pinname="Bulletins" visible="1" slicecount="4" values="|Technologische Exzellenz|,|Kommerzielle Verwertbarkeit und Profitabilität der Technologie|,|Ausdrucksstärke und relevanter Content|,|Ausweitung der Einsatzfelder|">
+   </PIN>
+   <PIN pinname="HTML" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="165" srcpinname="Y Output Value" dstnodeid="69" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="136" srcpinname="Layer" dstnodeid="69" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="136" srcpinname="Layer" dstnodeid="69" dstpinname="Input 3">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="173" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3216" top="3528" width="264" height="420">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3216" top="3528" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="4" values="1,1,1,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="175" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4680" top="3612" width="924" height="264">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4680" top="3612" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="6" values="1,1,0,1,0,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="6">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="172" srcpinname="HTML" dstnodeid="163" dstpinname="Input 10">
+   </LINK>
+   <LINK srcnodeid="170" srcpinname="HTML" dstnodeid="163" dstpinname="Input 9">
+   </LINK>
+   <LINK srcnodeid="169" srcpinname="HTML" dstnodeid="163" dstpinname="Input 8">
+   </LINK>
+   <NODE systemname="QuickText" filename="QuickText.v4p" nodename="QuickText.v4p" componentmode="Hidden" id="176">
+   <BOUNDS type="Node" left="6684" top="4705" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3156" top="1525" width="7056" height="6360">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16215" top="3930" width="7050" height="6360">
+   </BOUNDS>
+   <PIN pinname="Headline" slicecount="1" visible="1" values="|Säulen des 360° Lab&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Bulletins" visible="1" slicecount="17" values="|&lt;b&gt;Wirtschaft&lt;/b&gt; (Techn. Ausrüstung, Verleih, Marketing, Event)|,|kunden- und kampagnenorientiert|,|kommerzielle Verwertbarkeit im Vordergrund|,&lt;b&gt;Forschung&lt;/b&gt;,Innovationsgetrieben,|technologische Exzellenz im Vordergrund|,&lt;b&gt;Ausbildung&lt;/b&gt;,|Heranführen von Studenten an Gestaltungsmerkmale im Dome|,|Beschäftigung mit dem Medium an sich|,Semestergetrieben,|Inzwischen vereinfachter Zugang zur Infrastruktur|,,&lt;b&gt;Kunst&lt;/b&gt;,|Konzeptgetrieben, Idee oder Aussage steht im Vordergrund|,|Kompromissfähigkeit mit der Technologie, Leidensfähigkeit|,|Pragmatische Innovation|,Bootstrapping">
+   </PIN>
+   <PIN pinname="HTML" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="176" srcpinname="HTML" dstnodeid="163" dstpinname="Input 7">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="179" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3588" top="3516" width="264" height="420">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3588" top="3516" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="4" values="1,1,1,1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="4" values="0,0,0,1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="178" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4884" top="3972" width="924" height="264">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4884" top="3972" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="6" values="0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="6">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="4" values="0,0,0,0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="182" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4044" top="3528" width="264" height="420">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4044" top="3528" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="4" values="1,1,1,1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="4" values="0,0,1,1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="181" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5124" top="4284" width="924" height="264">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5124" top="4284" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="6" values="0,0,1,0,1,1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="6">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="6" values="0,0,1,0,1,1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="68" srcpinname="Layer" dstnodeid="69" dstpinname="Input 5">
+   </LINK>
+   <LINK srcnodeid="117" srcpinname="Layer" dstnodeid="69" dstpinname="Input 9">
+   </LINK>
+   <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="187">
+   <BOUNDS type="Node" left="408" top="1620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mode" slicecount="1" values="Clamp">
+   </PIN>
+   <PIN pinname="Down" visible="1">
+   </PIN>
+   <PIN pinname="Up" visible="1">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="9">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="189">
+   <BOUNDS type="Node" left="408" top="672" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Key Match" slicecount="1" values="|Left, Right|">
+   </PIN>
+   <PIN pinname="Left" visible="1">
+   </PIN>
+   <PIN pinname="Right" visible="1">
+   </PIN>
+   <PIN pinname="Key Mode" slicecount="1" values="DownOnly">
+   </PIN>
+   <BOUNDS type="Box" left="408" top="672">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="189" srcpinname="Left" dstnodeid="187" dstpinname="Down">
+   </LINK>
+   <LINK srcnodeid="189" srcpinname="Right" dstnodeid="187" dstpinname="Up">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Output" dstnodeid="165" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="pic" filename="pic.v4p" nodename="pic.v4p" componentmode="Hidden" id="196">
+   <BOUNDS type="Node" left="2307" top="4865" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="445" top="2115" width="3724" height="5500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="18804" top="4073" width="3724" height="5500">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="197" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="2256" top="3240" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2256" top="3240" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="img\emdl-logo.png">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="image.jpg">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="|All Pictures (*.bmp, *.dds, *.hdr, *.jpg, *.png, *.tif, *.tga)||*.bmp;*.dds;*.hdr;*.jpg;*.png;*.tif;*.tga||Bitmap (*.bmp)||*.bmp||HDR (*.hdr)||*.hdr||DDS (*.dds)||*.dds||JPG (*.jpg)||*.jpg||PNG (*.png)||*.png||TIFF (*.tif)||*.tif||Targa (*.tga)||*.tga|">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="197" srcpinname="Output String" dstnodeid="196" dstpinname="Filename">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Layer" dstnodeid="69" dstpinname="Input 7">
+   </LINK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="198">
+   <BOUNDS type="Node" left="3276" top="4452" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="173" srcpinname="Y Output Value" dstnodeid="198" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="179" srcpinname="Y Output Value" dstnodeid="198" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="182" srcpinname="Y Output Value" dstnodeid="198" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="198" srcpinname="Output" dstnodeid="68" dstpinname="Areas">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Layer" dstnodeid="69" dstpinname="Input 6">
+   </LINK>
+   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="199">
+   <BOUNDS type="Node" left="2784" top="3912" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="165" srcpinname="Y Output Value" dstnodeid="199" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="199" srcpinname="Output" dstnodeid="198" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="200">
+   <BOUNDS type="Node" left="4092" top="4668" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="175" srcpinname="Y Output Value" dstnodeid="200" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="178" srcpinname="Y Output Value" dstnodeid="200" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="181" srcpinname="Y Output Value" dstnodeid="200" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="200" srcpinname="Output" dstnodeid="68" dstpinname="Connections">
+   </LINK>
+   <LINK srcnodeid="199" srcpinname="Output" dstnodeid="200" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="196" srcpinname="Layer" dstnodeid="69" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="pic" filename="pic.v4p" nodename="pic.v4p" componentmode="Hidden" id="202">
+   <BOUNDS type="Node" left="3891" top="6161" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2029" top="3411" width="3724" height="5500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="18810" top="4080" width="5775" height="7305">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="img\360lab.png">
+   </PIN>
+   <PIN pinname="Scalar" slicecount="1" values="1.53">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="202" srcpinname="Layer" dstnodeid="69" dstpinname="Input 10">
+   </LINK>
+   <NODE systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (System Global)" componentmode="Hidden" id="188">
+   <BOUNDS type="Node" left="408" top="156" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="408" top="156">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="188" srcpinname="Keyboard" dstnodeid="189" dstpinname="Keyboard">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="203" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="204" top="4920" width="1404" height="1944">
+   </BOUNDS>
+   <BOUNDS type="Node" left="204" top="4920" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Fullscreen">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="203" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Fullscreen">
+   <LINKPOINT x="228" y="9384">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Actual Backbuffer Width" dstnodeid="1" dstpinname="Aspect Width">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Actual Backbuffer Height" dstnodeid="1" dstpinname="Aspect Height">
+   </LINK>
+   <LINK srcnodeid="60" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Backbuffer Width">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Backbuffer Height">
+   </LINK>
+   <NODE systemname="QuickText" filename="QuickText.v4p" nodename="QuickText.v4p" componentmode="Hidden" id="204">
+   <BOUNDS type="Node" left="6576" top="4177" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3048" top="997" width="7056" height="6360">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16215" top="3930" width="7050" height="6360">
+   </BOUNDS>
+   <PIN pinname="Headline" slicecount="1" visible="1" values="|Säulen des 360° Lab&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Bulletins" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HTML" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="204" srcpinname="HTML" dstnodeid="163" dstpinname="Input 6">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="205" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4740" top="4944" width="1128" height="504">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4740" top="4944" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" values="0,0,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="3" values="0,0,0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="205" srcpinname="Y Output Value" dstnodeid="117" dstpinname="Spheres">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="208" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="7656" top="3396" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7656" top="3396" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="|Aspekte des 360° Lab&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="208" srcpinname="Output String" dstnodeid="168" dstpinname="Headline">
+   </LINK>
+   <LINK srcnodeid="208" srcpinname="Output String" dstnodeid="204" dstpinname="Headline">
+   </LINK>
+   <LINK srcnodeid="208" srcpinname="Output String" dstnodeid="176" dstpinname="Headline">
+   </LINK>
+   </PATCH>

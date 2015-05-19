@@ -1,27 +1,17 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Domemaster_dx11_tracking\content\QuickSound (DShow).v4p" systemname="QuickSound (DShow)" filename="C:\dev\vvvv\vvvv-Domemaster_dx11_tracking\content\QuickSound (DShow).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\modules\Input\QuickSound (DShow).v4p" systemname="QuickSound (DShow)" filename="C:\dev\vvvv\vvvv-Domemaster_dx11_tracking\content\QuickSound (DShow).v4p" scrollx="15" scrolly="930">
    <BOUNDS type="Window" left="1710" top="4620" width="11565" height="8400">
    </BOUNDS>
-   <PACK Name="addonpack" Version="31.9.0">
+   <PACK Name="addonpack" Version="33.3.0">
    </PACK>
-   <NODE systemname="AudioIn (DShow9)" nodename="AudioIn (DShow9)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="2835" top="2550" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Audio" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="FFT (DShow9)" nodename="FFT (DShow9)" componentmode="Hidden" id="18">
-   <BOUNDS type="Node" left="2835" top="3180" width="100" height="100">
+   <BOUNDS type="Node" left="2955" top="3885" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Audio" visible="1">
+   <PIN pinname="Audio" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="FFT L" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="19" srcpinname="Audio" dstnodeid="18" dstpinname="Audio">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2835" top="1740" width="480" height="480">
    </BOUNDS>
@@ -39,9 +29,9 @@
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="19" dstpinname="Enabled">
-   </LINK>
    <NODE systemname="AudioIn (DShow9)" nodename="AudioIn (DShow9)" componentmode="Hidden" id="16">
    <BOUNDS type="Node" left="4410" top="2520" width="100" height="100">
    </BOUNDS>
@@ -49,7 +39,7 @@
    </PIN>
    <PIN pinname="Enabled" visible="1">
    </PIN>
-   <PIN pinname="Driver" visible="1">
+   <PIN pinname="Driver" visible="1" slicecount="1" values="(nil)">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
@@ -70,10 +60,8 @@
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Enabled">
-   </LINK>
    <NODE systemname="ScopeSpread (DShow9)" nodename="ScopeSpread (DShow9)" componentmode="Hidden" id="14">
-   <BOUNDS type="Node" left="4410" top="2820" width="100" height="100">
+   <BOUNDS type="Node" left="4380" top="2970" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Audio" visible="1">
    </PIN>
@@ -85,29 +73,31 @@
    <LINK srcnodeid="16" srcpinname="Audio" dstnodeid="14" dstpinname="Audio">
    </LINK>
    <NODE systemname="MapRange (Value)" nodename="MapRange (Value)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="4410" top="3180" width="100" height="100">
+   <BOUNDS type="Node" left="4530" top="3885" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Mapping" slicecount="1" values="Mirror">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   </NODE>
-   <LINK srcnodeid="14" srcpinname="Output L" dstnodeid="13" dstpinname="Input">
-   </LINK>
-   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="12">
-   <BOUNDS type="Node" left="2850" top="3690" width="1635" height="270">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Source Center" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Source Width" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Destination Width" slicecount="1" values="0.52">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="2925" top="4590" width="1635" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="256" values="0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543,0.1543">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="18" srcpinname="FFT L" dstnodeid="12" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="12" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="AudioIn (DShow9)" nodename="AudioIn (DShow9)" componentmode="Hidden" id="7">
    <BOUNDS type="Node" left="6135" top="2595" width="100" height="100">
    </BOUNDS>
@@ -115,7 +105,7 @@
    </PIN>
    <PIN pinname="Enabled" visible="1">
    </PIN>
-   <PIN pinname="Driver" visible="1">
+   <PIN pinname="Driver" visible="1" slicecount="1" values="(nil)">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6" systemname="IOBox (Value Advanced)">
@@ -136,8 +126,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Enabled">
-   </LINK>
    <NODE systemname="RMS (DShow9)" nodename="RMS (DShow9)" componentmode="Hidden" id="5">
    <BOUNDS type="Node" left="6180" top="3300" width="100" height="100">
    </BOUNDS>
@@ -172,22 +160,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Audio RMS|">
    </PIN>
    </NODE>
-   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="6690" top="4515" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Source Maximum" slicecount="1" values="0.1">
-   </PIN>
-   <PIN pinname="Destination Maximum" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="2" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="3" dstpinname="Y Input Value">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="7020" top="4005" width="795" height="240">
    </BOUNDS>
@@ -205,19 +177,13 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8355" top="1080" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" values="|Mikrofon (High Definition Audio-Gerät)|">
+   <PIN pinname="Input Enum" slicecount="1" values="|Mikrofon (2- H4)|">
    </PIN>
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Audio Input|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="21" srcpinname="Output Enum" dstnodeid="19" dstpinname="Driver">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Output Enum" dstnodeid="7" dstpinname="Driver">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Output Enum" dstnodeid="16" dstpinname="Driver">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="1575" top="4875" width="795" height="240">
    </BOUNDS>
@@ -231,5 +197,69 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="12" srcpinname="Output" dstnodeid="22" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="AudioIn (DShow9)" nodename="AudioIn (DShow9)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="2835" top="2550" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="Audio" dstnodeid="18" dstpinname="Audio">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output Enum" dstnodeid="23" dstpinname="Driver">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output Enum" dstnodeid="7" dstpinname="Driver">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output Enum" dstnodeid="16" dstpinname="Driver">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="24">
+   <BOUNDS type="Node" left="2280" top="5535" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2280" top="5535" width="3975" height="2535">
+   </BOUNDS>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Slider">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="256">
+   </PIN>
+   <PIN pinname="Show Connections" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Output" dstnodeid="24" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="3" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="Resample (Spreads)" nodename="Resample (Spreads)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="4425" top="3420" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" slicecount="1" values="256">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Cosine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Output L" dstnodeid="25" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Output" dstnodeid="13" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="12" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="FFT L" dstnodeid="12" dstpinname="Input 1">
    </LINK>
    </PATCH>

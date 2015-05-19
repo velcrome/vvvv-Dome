@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Domemaster_dx11_tracking\modules\Architecture\Dome (Transform).v4p" systemname="Dome (Transform)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\modules\Dome (Transform).v4p" scrollx="435" scrolly="1650">
-   <BOUNDS type="Window" left="645" top="5475" width="13890" height="8880">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\modules\Engine\Dome (Transform).v4p" systemname="Dome (Transform)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\modules\Dome (Transform).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="3240" top="5760" width="13890" height="8880">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.0.0">
+   <PACK Name="addonpack" Version="33.3.0">
    </PACK>
    <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1839" top="3348" width="100" height="100">
@@ -19,7 +19,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2766" top="597" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="8.9">
+   <PIN pinname="Y Input Value" slicecount="1" values="5.5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="m">
    </PIN>
@@ -38,6 +38,10 @@
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    <PIN pinname="Y" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="X" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE id="3" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
@@ -72,22 +76,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Dome Type|">
    </PIN>
    </NODE>
-   <NODE systemname="Expr (Value Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\AdvExpr.dll" nodename="Expr (Value Advanced)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="840" top="2385" width="1416" height="276">
-   </BOUNDS>
-   <PIN pinname="Term" slicecount="1" values="|return -Math.Cos(Math.Pi*2-A)/2)*R;|">
-   </PIN>
-   <PIN pinname="A" slicecount="1" visible="1" values="0.08">
-   </PIN>
-   <PIN pinname="Variables Name" slicecount="1" values="A">
-   </PIN>
-   <PIN pinname=" R" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="840" top="2385">
-   </BOUNDS>
-   </NODE>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="8">
    <BOUNDS type="Node" left="2754" top="1548" width="100" height="100">
    </BOUNDS>
@@ -110,8 +98,6 @@
    <BOUNDS type="Box" left="840" top="1590">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="11" srcpinname="Radians" dstnodeid="7" dstpinname="A">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="12" systemname="IOBox (String)">
    <BOUNDS type="Box" left="1005" top="2070" width="1845" height="270">
    </BOUNDS>
@@ -126,8 +112,6 @@
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="12" srcpinname="Output String" dstnodeid="7" dstpinname="Term">
-   </LINK>
    <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="14">
    <BOUNDS type="Node" left="870" top="780" width="100" height="100">
    </BOUNDS>
@@ -156,15 +140,11 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="15" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="0" srcpinname="Transform Out" dstnodeid="2" dstpinname="Transform In" linkstyle="Bezier">
    <LINKPOINT x="1845" y="3938">
    </LINKPOINT>
    <LINKPOINT x="450" y="3938">
    </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="3" dstpinname="Input Node">
    </LINK>
    <NODE systemname="DomeHelper (DX11.Layer)" filename="modules\DomeHelper (DX11.Layer).v4p" nodename="DomeHelper (DX11.Layer)" componentmode="Hidden" id="17">
    <BOUNDS type="Node" left="3285" top="5700" width="100" height="100">
@@ -179,7 +159,7 @@
    </BOUNDS>
    <BOUNDS type="Window" left="9675" top="8040" width="8820" height="7350">
    </BOUNDS>
-   <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,0.16301|" visible="1">
+   <PIN pinname="Color" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,0.16301|">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16" systemname="IOBox (Value Advanced)">
@@ -204,12 +184,6 @@
    </NODE>
    <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="17" dstpinname="Show Helper">
    </LINK>
-   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="17" dstpinname="DomeTransform" linkstyle="Bezier">
-   <LINKPOINT x="450" y="5115">
-   </LINKPOINT>
-   <LINKPOINT x="3285" y="5115">
-   </LINKPOINT>
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="18" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="3285" top="6330" width="792" height="240">
    </BOUNDS>
@@ -219,32 +193,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="17" srcpinname="HelperLayer" dstnodeid="18" dstpinname="Input Node">
-   </LINK>
-   <NODE systemname="Expr (Value Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\AdvExpr.dll" nodename="Expr (Value Advanced)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="6375" top="2385" width="1416" height="276">
-   </BOUNDS>
-   <PIN pinname="Term" slicecount="1" visible="1" values="|return -Math.Cos(Math.Pi*2-A)/2)*R;|">
-   </PIN>
-   <PIN pinname="A" slicecount="1" visible="1" values="0.08">
-   </PIN>
-   <PIN pinname="Variables Name" slicecount="1" values="A">
-   </PIN>
-   <PIN pinname=" R" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="6375" top="2385">
-   </BOUNDS>
-   <PIN pinname="Error" visible="1">
-   </PIN>
-   <PIN pinname="Output Code" visible="1" pintype="Output">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="11" srcpinname="Radians" dstnodeid="19" dstpinname="A" linkstyle="VHV">
-   <LINKPOINT x="710" y="2010">
-   </LINKPOINT>
-   <LINKPOINT x="6520" y="2010">
-   </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="20" systemname="IOBox (String)">
    <BOUNDS type="Box" left="6870" top="2100" width="1800" height="255">
@@ -262,20 +210,16 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="20" srcpinname="Output String" dstnodeid="19" dstpinname="Term">
-   </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="21">
    <BOUNDS type="Node" left="6105" top="2925" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="21" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Input 1" linkstyle="Bezier">
    <LINKPOINT x="2810" y="1868">
    </LINKPOINT>
@@ -310,8 +254,6 @@
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="19" srcpinname="Error" dstnodeid="23" dstpinname="Input String">
-   </LINK>
    <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="27">
    <BOUNDS type="Node" left="825" top="3285" width="100" height="100">
    </BOUNDS>
@@ -339,5 +281,201 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="29" srcpinname="Color Output" dstnodeid="17" dstpinname="Color">
+   </LINK>
+   <NODE systemname="Expr (Value Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\AdvExpr.dll" nodename="Expr (Value Advanced)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="840" top="2385" width="1416" height="276">
+   </BOUNDS>
+   <PIN pinname="Term">
+   </PIN>
+   <PIN pinname="A" visible="1">
+   </PIN>
+   <PIN pinname="Variables Name" slicecount="1" values="A">
+   </PIN>
+   <PIN pinname=" R" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="840" top="2385">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Radians" dstnodeid="7" dstpinname="A">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Output String" dstnodeid="7" dstpinname="Term">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="15" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Expr (Value Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\AdvExpr.dll" nodename="Expr (Value Advanced)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="6375" top="2385" width="1416" height="276">
+   </BOUNDS>
+   <PIN pinname="Term" visible="1">
+   </PIN>
+   <PIN pinname="A" visible="1">
+   </PIN>
+   <PIN pinname="Variables Name" slicecount="1" values="A">
+   </PIN>
+   <PIN pinname=" R" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="6375" top="2385">
+   </BOUNDS>
+   <PIN pinname="Error" visible="1">
+   </PIN>
+   <PIN pinname="Output Code" visible="1" pintype="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Radians" dstnodeid="19" dstpinname="A" linkstyle="VHV">
+   <LINKPOINT x="710" y="2010">
+   </LINKPOINT>
+   <LINKPOINT x="6520" y="2010">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Output String" dstnodeid="19" dstpinname="Term">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="21" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Error" dstnodeid="23" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="Rotate (Transform)" nodename="Rotate (Transform)" componentmode="Hidden" id="30">
+   <BOUNDS type="Node" left="1005" top="5115" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="0.25">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="30" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="17" dstpinname="DomeTransform">
+   </LINK>
+   <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="1125" top="5880" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" slicecount="1" values="0.5">
+   </PIN>
+   </NODE>
+   <NODE systemname="GeometryFile (DX11.Geometry Assimp)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.Assimp.dll" nodename="GeometryFile (DX11.Geometry Assimp)" componentmode="Hidden" id="35">
+   <BOUNDS type="Node" left="10110" top="1290" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" slicecount="1" visible="1" values="|..\..\assets\model\lp\DresdenDomeModel2_ Triangles.3ds|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Select (Node)" filename="%VVVV%\lib\nodes\modules\Node\Select (Node).v4p" nodename="Select (Node)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="10320" top="1905" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="35" srcpinname="Output" dstnodeid="34" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="33" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11385" top="1320" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11385" top="1320" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0,1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="2" values="0,0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Y Output Value" dstnodeid="34" dstpinname="Select">
+   </LINK>
+   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="32">
+   <BOUNDS type="Node" left="9525" top="2835" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="DomeMesh">
+   </PIN>
+   </NODE>
+   <NODE systemname="Sphere (DX11.Geometry)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Sphere (DX11.Geometry)" componentmode="Hidden" id="36">
+   <BOUNDS type="Node" left="9540" top="2370" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Resolution X" slicecount="1" values="32">
+   </PIN>
+   <PIN pinname="Resolution Y" slicecount="1" values="32">
+   </PIN>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="38" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="10395" top="720" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10395" top="720" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="..\..\assets\model\erich\DOME_zitrone.dae">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="|All Files (*.*)||*.*|">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Output String" dstnodeid="35" dstpinname="Filename">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="45" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1695" top="3735" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1695" top="3735" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.031">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="46" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="270" top="3750" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="270" top="3750" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.099">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="30" srcpinname="Transform Out" dstnodeid="31" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="36" srcpinname="Geometry Out" dstnodeid="32" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="3" dstpinname="Input Node">
    </LINK>
    </PATCH>
