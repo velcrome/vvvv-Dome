@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.8.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\Dome (DX11).v4p" filename="C:\Users\SATO-Z800\Desktop\velcrome\vvvvDome\DemoDome.v4p" systemname="DemoDome" locked="0" scrollx="4110" scrolly="0" bgcolor="15132390">
-   <BOUNDS height="15600" left="0" top="0" type="Window" width="14400">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\Dome (DX11).v4p" filename="C:\Users\SATO-Z800\Desktop\velcrome\vvvvDome\DemoDome.v4p" systemname="DemoDome" locked="0" scrollx="6360" scrolly="2775" bgcolor="15132390">
+   <BOUNDS height="15150" left="0" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="116">
    <BOUNDS type="Node" left="6390" top="2670" width="100" height="100">
@@ -61,7 +61,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="11454" top="13059" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -71,7 +71,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Show Scene|">
    </PIN>
@@ -99,7 +99,7 @@
    </PIN>
    <PIN pinname="Time Mode" slicecount="1" values="Raw">
    </PIN>
-   <PIN pinname="Increase Timing Precision" slicecount="1" values="1">
+   <PIN pinname="Increase Timing Precision" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="239" systemname="IOBox (Value Advanced)">
@@ -139,7 +139,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="11958" top="2910" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.47">
+   <PIN pinname="Y Input Value" slicecount="1" values="1.68">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="m">
    </PIN>
@@ -269,7 +269,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="7650" top="18165" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="14400" top="0" width="14400" height="13710">
+   <BOUNDS type="Window" left="12930" top="0" width="12270" height="13710">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
@@ -707,9 +707,9 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Immersion">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="341" srcpinname="Y Output Value" dstnodeid="340" dstpinname="Switch">
@@ -923,7 +923,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1185" top="17055" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -933,7 +933,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -942,12 +942,12 @@
    <PIN pinname="Pin Visibility" slicecount="1" values="Hidden">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="393">
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="Hidden" id="393">
    <BOUNDS type="Node" left="750" top="18165" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="750" top="18165" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="11910" top="10410" width="6240" height="5010">
+   <BOUNDS type="Window" left="28065" top="7140" width="6240" height="5010">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -999,7 +999,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2985" top="8220" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1009,7 +1009,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="396" srcpinname="Y Output Value" dstnodeid="395" dstpinname="Enabled" linkstyle="VHV" hiddenwhenlocked="1">
@@ -1211,7 +1211,7 @@
    <NODE systemname="QuickPrep (Dome DX11.Layer)" filename="content\_SANDBOXES\QuickPrep (Dome DX11.Layer).v4p" nodename="QuickPrep (Dome DX11.Layer)" componentmode="InAWindow" id="346">
    <BOUNDS type="Node" left="3615" top="5715" width="4164" height="276">
    </BOUNDS>
-   <BOUNDS type="Window" left="0" top="0" width="14400" height="15600">
+   <BOUNDS type="Window" left="0" top="0" width="12600" height="15150">
    </BOUNDS>
    <PIN pinname="ContentLayer" visible="1">
    </PIN>
@@ -1498,7 +1498,7 @@
    </NODE>
    <LINK srcnodeid="116" srcpinname="frames per second" dstnodeid="427" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="Tracker (SATMontreal)" filename="modules\Input\Tracker (SATMontreal).v4p" nodename="Tracker (SATMontreal)" componentmode="InAWindow" id="414">
+   <NODE systemname="Tracker (SATMontreal)" filename="modules\Input\Tracker (SATMontreal).v4p" nodename="Tracker (SATMontreal)" componentmode="Hidden" id="414">
    <BOUNDS type="Node" left="12615" top="6645" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Position XZY" visible="1">
@@ -1507,11 +1507,13 @@
    </BOUNDS>
    <PIN pinname="Layer Out" visible="1">
    </PIN>
-   <PIN pinname="Enable Helper" slicecount="1" values="0" visible="1">
+   <PIN pinname="Enable Helper" slicecount="1" visible="1" values="0">
    </PIN>
    <BOUNDS type="Window" left="0" top="0" width="14400" height="15600">
    </BOUNDS>
    <PIN pinname="Radius" slicecount="1" values="5.2">
+   </PIN>
+   <PIN pinname="Height" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="414" srcpinname="Position XZY" dstnodeid="418" dstpinname="Input">
@@ -1539,7 +1541,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="13470" top="6300" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1549,9 +1551,11 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="428" srcpinname="Y Output Value" dstnodeid="414" dstpinname="Enable Helper">
+   </LINK>
+   <LINK srcnodeid="252" srcpinname="Y Output Value" dstnodeid="414" dstpinname="Height">
    </LINK>
    </PATCH>

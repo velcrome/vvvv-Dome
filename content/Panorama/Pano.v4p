@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.8.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\Panorama\Pano.v4p" systemname="Pano" filename="C:\Users\SATO-Z800\Desktop\velcrome\Demo\content\Pano.v4p" scrollx="0" scrolly="1050">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\Panorama\Pano.v4p" systemname="Pano" filename="C:\Users\SATO-Z800\Desktop\velcrome\Demo\content\Pano.v4p" scrollx="3975" scrolly="1005">
    <BOUNDS type="Window" left="5700" top="3645" width="9000" height="7770">
    </BOUNDS>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="2" systemname="IOBox (Node)">
@@ -384,4 +384,60 @@
    </LINK>
    <LINK srcnodeid="37" srcpinname="Texture Out" dstnodeid="0" dstpinname="Texture">
    </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="38" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="7620" top="2520" width="4410" height="555">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7620" top="2520" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="|C:\dev\vvvv\vvvv-Dome\assets\Pano\montreal street2.jpg|">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="39" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="8160" top="3930" width="4410" height="420">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8160" top="3930" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="|C:\dev\vvvv\vvvv-Dome\assets\Pano\plymouth harbour.jpg|">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="40" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="7635" top="3240" width="4980" height="435">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7635" top="3240" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="|C:\dev\vvvv\vvvv-Dome\assets\Pano\miami south beach.jpg|">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="41" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="8595" top="4995" width="4620" height="495">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8595" top="4995" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="C:\dev\vvvv\vvvv-Dome\assets\Pano\PANO_20140920_073758.jpg">
+   </PIN>
+   </NODE>
    </PATCH>

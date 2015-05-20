@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.8.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\landscape\Desert (DX11.Layer).v4p" systemname="Desert (DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome\content\landscape\Desert (DX11.Layer).v4p" scrollx="4005" scrolly="3120">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\landscape\MockData (DX11.Layer).v4p" systemname="MockData (DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome\content\landscape\MockData (DX11.Layer).v4p" scrollx="1350" scrolly="2970">
    <BOUNDS type="Window" left="4305" top="3540" width="10905" height="9915">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.8.0">
@@ -14,7 +14,7 @@
    <PIN pinname="Input Node" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE systemname="Perlin (DX11.TextureFX)" filename="%VVVV%\packs\dx11_vvvv\nodes\texture11\Source\Perlin.tfx" nodename="Perlin (DX11.TextureFX)" componentmode="Hidden" id="14">
+   <NODE systemname="Perlin (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Perlin.tfx" nodename="Perlin (DX11.TextureFX)" componentmode="Hidden" id="14">
    <BOUNDS type="Node" left="6660" top="3540" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
@@ -106,7 +106,7 @@
    </NODE>
    <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="14" dstpinname="FrequencyBalance">
    </LINK>
-   <NODE systemname="Grid (DX11.Geometry)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Grid (DX11.Geometry)" componentmode="Hidden" id="15">
+   <NODE systemname="Grid (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Grid (DX11.Geometry)" componentmode="Hidden" id="15">
    <BOUNDS type="Node" left="4770" top="8655" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
@@ -121,7 +121,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5550" top="7980" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="256">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="128">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -174,7 +174,7 @@
    </NODE>
    <LINK srcnodeid="23" srcpinname="Output" dstnodeid="14" dstpinname="Color1">
    </LINK>
-   <NODE systemname="Rasterizer (DX11.RenderState)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Rasterizer (DX11.RenderState)" componentmode="Hidden" id="25">
+   <NODE systemname="Rasterizer (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Rasterizer (DX11.RenderState)" componentmode="Hidden" id="25">
    <BOUNDS type="Node" left="3870" top="8685" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
@@ -194,7 +194,7 @@
    </NODE>
    <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="27" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="Halo (DX11.TextureFX)" filename="%VVVV%\packs\dx11_vvvv\nodes\texture11\Source\Halo.tfx" nodename="Halo (DX11.TextureFX)" componentmode="Hidden" id="30">
+   <NODE systemname="Halo (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Halo.tfx" nodename="Halo (DX11.TextureFX)" componentmode="Hidden" id="30">
    <BOUNDS type="Node" left="10110" top="5910" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
@@ -218,7 +218,7 @@
    <PIN pinname="Transform" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE systemname="BlendBasic (DX11.TextureFX)" filename="%VVVV%\packs\dx11_vvvv\nodes\texture11\Mixer\BlendBasic.tfx" nodename="BlendBasic (DX11.TextureFX)" componentmode="Hidden" id="31">
+   <NODE systemname="BlendBasic (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\BlendBasic.tfx" nodename="BlendBasic (DX11.TextureFX)" componentmode="Hidden" id="31">
    <BOUNDS type="Node" left="9660" top="8490" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture In 2" visible="1" slicecount="1" values="||">
@@ -234,7 +234,7 @@
    <PIN pinname="Input" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE systemname="PhongPoint (DX11.Effect)" filename="%VVVV%\packs\dx11_vvvv\nodes\dx11\PhongPoint.fx" nodename="PhongPoint (DX11.Effect)" componentmode="Hidden" id="1">
+   <NODE systemname="PhongPoint (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\PhongPoint.fx" nodename="PhongPoint (DX11.Effect)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="4155" top="11505" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Geometry" visible="1">
@@ -294,14 +294,6 @@
    </LINK>
    <LINK srcnodeid="13" srcpinname="Position Out" dstnodeid="14" dstpinname="Z">
    </LINK>
-   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="34">
-   <BOUNDS type="Node" left="10965" top="2160" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="|Audio RMS|">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="HSL (Color Join)" nodename="HSL (Color Join)" componentmode="Hidden" id="26">
    <BOUNDS type="Node" left="8415" top="2475" width="100" height="100">
    </BOUNDS>
@@ -392,7 +384,7 @@
    <PIN pinname="Apply" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
-   <NODE systemname="BlendBasic (DX11.TextureFX)" filename="%VVVV%\packs\dx11_vvvv\nodes\texture11\Mixer\BlendBasic.tfx" nodename="BlendBasic (DX11.TextureFX)" componentmode="Hidden" id="49">
+   <NODE systemname="BlendBasic (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\BlendBasic.tfx" nodename="BlendBasic (DX11.TextureFX)" componentmode="Hidden" id="49">
    <BOUNDS type="Node" left="10155" top="7605" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture In 2" visible="1" slicecount="1" values="||">
@@ -607,6 +599,8 @@
    <LINK srcnodeid="71" srcpinname="Output" dstnodeid="1" dstpinname="Light PositionXYZ">
    </LINK>
    <LINK srcnodeid="14" srcpinname="Texture Out" dstnodeid="31" dstpinname="Texture In">
+   <LINKPOINT x="9675" y="5775">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="61" dstpinname="Simulate">
    </LINK>
@@ -617,15 +611,15 @@
    <LINK srcnodeid="68" srcpinname="Output" dstnodeid="69" dstpinname="Input 1">
    </LINK>
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="75">
-   <BOUNDS type="Node" left="11040" top="8610" width="100" height="100">
+   <BOUNDS type="Node" left="7125" top="4770" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filename" slicecount="1" values="..\..\assets\img\color_picker.png">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="BlendBasic (DX11.TextureFX)" filename="%VVVV%\packs\dx11_vvvv\nodes\texture11\Mixer\BlendBasic.tfx" nodename="BlendBasic (DX11.TextureFX)" componentmode="Hidden" id="76">
-   <BOUNDS type="Node" left="9465" top="9165" width="100" height="100">
+   <NODE systemname="BlendBasic (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\BlendBasic.tfx" nodename="BlendBasic (DX11.TextureFX)" componentmode="Hidden" id="76">
+   <BOUNDS type="Node" left="6645" top="5340" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture In 2" visible="1" slicecount="1" values="||">
    </PIN>

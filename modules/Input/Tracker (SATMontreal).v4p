@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.8.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\modules\Input\Tracker (SATMontreal).v4p" systemname="Tracker (SATMontreal)" filename="C:\dev\vvvv\vvvv-Domemaster_dx11\modules\Input\Tracker (SATMontreal).v4p" scrollx="1275" scrolly="2775">
-   <BOUNDS type="Window" left="2085" top="5010" width="14400" height="15600">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\modules\Input\Tracker (SATMontreal).v4p" systemname="Tracker (SATMontreal)" filename="C:\dev\vvvv\vvvv-Domemaster_dx11\modules\Input\Tracker (SATMontreal).v4p" scrollx="1050" scrolly="240">
+   <BOUNDS type="Window" left="0" top="0" width="14400" height="15600">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.8.0">
    </PACK>
@@ -1001,5 +1001,65 @@
    <LINK srcnodeid="62" srcpinname="X Output Value" dstnodeid="49" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="50" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="65">
+   <BOUNDS type="Node" left="7170" top="5325" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7170" top="5325" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" values="0.5,0.5">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="65" srcpinname="Y Output Value" dstnodeid="43" dstpinname="Default">
+   </LINK>
+   <NODE systemname="IP (Network)" nodename="IP (Network)" componentmode="Hidden" id="66">
+   <BOUNDS type="Node" left="1935" top="1605" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="IP" visible="1">
+   </PIN>
+   <PIN pinname="Update" slicecount="1" visible="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="67" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1890" top="2055" width="1695" height="1170">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1890" top="2055" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="192.168.1.1">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="IP">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="66" srcpinname="IP" dstnodeid="67" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="68" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2010" top="720" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2010" top="720" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="68" srcpinname="Y Output Value" dstnodeid="66" dstpinname="Update">
    </LINK>
    </PATCH>

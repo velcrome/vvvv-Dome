@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\Boids\Boids (DX11.Layer).v4p" filename="C:\dev\vvvv\vvvv-Dome\content\Boids\Boids (DX11.Layer).v4p" systemname="Boids (DX11.Layer)" scrollx="2220" scrolly="4155">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.8.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\Boids\Boids (DX11.Layer).v4p" filename="C:\dev\vvvv\vvvv-Dome\content\Boids\Boids (DX11.Layer).v4p" systemname="Boids (DX11.Layer)" scrollx="135" scrolly="5595">
    <BOUNDS height="12810" left="5175" top="7875" type="Window" width="17730">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.3.0">
+   <PACK Name="addonpack" Version="33.8.0">
    </PACK>
    <NODE componentmode="InABox" id="55" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="10710" top="8970" type="Node" width="0">
@@ -765,9 +765,9 @@
    </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="194" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="2010" top="11280" width="795" height="240">
+   <BOUNDS type="Box" left="2130" top="13080" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2010" top="11280" width="0" height="0">
+   <BOUNDS type="Node" left="2130" top="13080" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
@@ -833,7 +833,7 @@
    <LINK srcnodeid="200" srcpinname="Saturation" dstnodeid="199" dstpinname="Go To Position">
    </LINK>
    <NODE systemname="HSL (Color Join)" nodename="HSL (Color Join)" componentmode="Hidden" id="202">
-   <BOUNDS type="Node" left="6465" top="9435" width="100" height="100">
+   <BOUNDS type="Node" left="5025" top="11190" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Lightness" visible="1">
    </PIN>
@@ -859,7 +859,7 @@
    <LINK srcnodeid="205" srcpinname="Output" dstnodeid="202" dstpinname="Lightness">
    </LINK>
    <NODE systemname="PhongPoint (DX11.Effect)" filename="%VVVV%\packs\dx11_vvvv\nodes\dx11\PhongPoint.fx" nodename="PhongPoint (DX11.Effect)" componentmode="Hidden" id="193">
-   <BOUNDS type="Node" left="2145" top="10260" width="100" height="100">
+   <BOUNDS type="Node" left="2265" top="12060" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform In" visible="1">
    </PIN>
@@ -887,7 +887,7 @@
    <LINK srcnodeid="202" srcpinname="Output" dstnodeid="193" dstpinname="Ambient Color">
    </LINK>
    <NODE systemname="RandomSpread (Spreads)" nodename="RandomSpread (Spreads)" componentmode="Hidden" id="206">
-   <BOUNDS type="Node" left="7635" top="10545" width="100" height="100">
+   <BOUNDS type="Node" left="4425" top="10485" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Spread Count" visible="1">
    </PIN>
@@ -895,7 +895,7 @@
    </PIN>
    <PIN pinname="Width" slicecount="1" values="0.2">
    </PIN>
-   <PIN pinname="Input" slicecount="1" values="0.12">
+   <PIN pinname="Input" slicecount="1" values="0.6">
    </PIN>
    </NODE>
    <LINK srcnodeid="77" srcpinname="Y Output Value" dstnodeid="206" dstpinname="Spread Count">
@@ -923,7 +923,7 @@
    <LINK srcnodeid="207" srcpinname="Y Output Value" dstnodeid="99" dstpinname="Enemy_Scale">
    </LINK>
    <NODE systemname="Box (DX11.Geometry)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Box (DX11.Geometry)" componentmode="Hidden" id="195">
-   <BOUNDS type="Node" left="810" top="9555" width="100" height="100">
+   <BOUNDS type="Node" left="1425" top="11190" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>

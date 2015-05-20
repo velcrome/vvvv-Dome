@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.8.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\landscape\Ocean (DX11.Layer).v4p" systemname="Ocean (DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome\content\landscape\Ocean (DX11.Layer).v4p" scrollx="1395" scrolly="2070">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\landscape\Ocean (DX11.Layer).v4p" systemname="Ocean (DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome\content\landscape\Ocean (DX11.Layer).v4p" scrollx="3300" scrolly="990">
    <BOUNDS type="Window" left="10125" top="3660" width="10905" height="9915">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.8.0">
@@ -37,7 +37,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4605" top="3135" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="100">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="31">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -85,7 +85,7 @@
    <NODE systemname="HSL (Color Join)" nodename="HSL (Color Join)" componentmode="Hidden" id="23">
    <BOUNDS type="Node" left="9870" top="3660" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Lightness" slicecount="1" values="0">
+   <PIN pinname="Lightness" slicecount="1" values="0.68">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -127,7 +127,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="3.22">
+   <PIN pinname="Input 2" slicecount="1" values="3.55">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -267,7 +267,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="9165" top="7290" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="17340" top="9195" width="6240" height="5085">
+   <BOUNDS type="Window" left="15930" top="6060" width="6240" height="5085">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -297,13 +297,15 @@
    <NODE systemname="HSCB (DX11.TextureFX)" filename="%VVVV%\packs\dx11_vvvv\nodes\texture11\Filter\HSCB.tfx" nodename="HSCB (DX11.TextureFX)" componentmode="Hidden" id="41">
    <BOUNDS type="Node" left="7215" top="6405" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Brightness" slicecount="1" values="0.11">
+   <PIN pinname="Brightness" slicecount="1" values="-2.64">
    </PIN>
-   <PIN pinname="Contrast" slicecount="1" values="1.29">
+   <PIN pinname="Contrast" slicecount="1" values="-0.14">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="Saturation" slicecount="1" values="3.83">
+   <PIN pinname="Saturation" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Hue" slicecount="1" values="3.19">
    </PIN>
    </NODE>
    <LINK srcnodeid="41" srcpinname="Texture Out" dstnodeid="1" dstpinname="Texture">
@@ -313,8 +315,6 @@
    <LINK srcnodeid="40" srcpinname="Texture Out" dstnodeid="36" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="30" srcpinname="Texture Out" dstnodeid="31" dstpinname="Texture In 2">
-   </LINK>
-   <LINK srcnodeid="41" srcpinname="Texture Out" dstnodeid="39" dstpinname="Texture In">
    </LINK>
    <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="42">
    <BOUNDS type="Node" left="3615" top="4635" width="100" height="100">
@@ -327,5 +327,7 @@
    <LINK srcnodeid="42" srcpinname="Render State" dstnodeid="25" dstpinname="Render State">
    </LINK>
    <LINK srcnodeid="13" srcpinname="Position Out" dstnodeid="40" dstpinname="Time">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Texture Out" dstnodeid="39" dstpinname="Texture In">
    </LINK>
    </PATCH>

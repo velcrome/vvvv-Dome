@@ -1,11 +1,11 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta31.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\360lab\Talk - EDML und die Rolle der Kunst.v4p" systemname="Talk - EDML und die Rolle der Kunst" filename="C:\dev\vvvv\360lab\Talk - EDML und die Rolle der Kunst.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.8.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\360lab\Talk - EDML und die Rolle der Kunst.v4p" systemname="Talk - EDML und die Rolle der Kunst" filename="C:\dev\vvvv\360lab\Talk - EDML und die Rolle der Kunst.v4p" scrollx="15" scrolly="15">
    <BOUNDS type="Window" left="14400" top="0" width="14400" height="15480">
    </BOUNDS>
    <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="0">
-   <BOUNDS type="Node" left="3189" top="11853" width="100" height="100">
+   <BOUNDS type="Node" left="1989" top="12048" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3189" top="11853" width="2400" height="1800">
+   <BOUNDS type="Box" left="1989" top="12048" width="2400" height="1800">
    </BOUNDS>
    <BOUNDS type="Window" left="30150" top="1230" width="15540" height="11700">
    </BOUNDS>
@@ -72,7 +72,7 @@
    </LINK>
    <LINK srcnodeid="6" srcpinname="Projection" dstnodeid="0" dstpinname="Projection">
    </LINK>
-   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="18">
+   <NODE systemname="S (VALUE)" nodename="S (Value)" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="6294" top="11253" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
@@ -80,6 +80,8 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="CameraPosition">
    </PIN>
    <PIN pinname="Send String" slicecount="1" values="CameraPosition">
+   </PIN>
+   <PIN pinname="Display Channel" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="6" srcpinname="Position" dstnodeid="18" dstpinname="Input Value">
@@ -252,12 +254,14 @@
    </LINK>
    <LINK srcnodeid="137" srcpinname="Output" dstnodeid="48" dstpinname="Texture">
    </LINK>
-   <NODE systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
+   <NODE systemname="MAINLOOP (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
    <BOUNDS type="Node" left="2076" top="624" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Maximum background fpsS" visible="1">
    </PIN>
    <PIN pinname="Time Mode" slicecount="1" values="Filtered">
+   </PIN>
+   <PIN pinname="Increase Timing Precision" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="142" systemname="IOBox (Value Advanced)">
@@ -722,7 +726,7 @@
    <PIN pinname="Reset" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="189">
+   <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="189">
    <BOUNDS type="Node" left="408" top="672" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
@@ -858,7 +862,7 @@
    </NODE>
    <LINK srcnodeid="202" srcpinname="Layer" dstnodeid="69" dstpinname="Input 10">
    </LINK>
-   <NODE systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (System Global)" componentmode="Hidden" id="188">
+   <NODE systemname="Keyboard (System Global Legacy2)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (System Global)" componentmode="Hidden" id="188">
    <BOUNDS type="Node" left="408" top="156" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
@@ -889,7 +893,7 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="203" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Fullscreen">
-   <LINKPOINT x="228" y="9384">
+   <LINKPOINT x="0" y="9482">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="0" srcpinname="Actual Backbuffer Width" dstnodeid="1" dstpinname="Aspect Width">
@@ -964,4 +968,16 @@
    </LINK>
    <LINK srcnodeid="208" srcpinname="Output String" dstnodeid="176" dstpinname="Headline">
    </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="209" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="3405" top="8655" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3405" top="8655" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="146" srcpinname="Layer" dstnodeid="209" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="addonpack" Version="33.8.0">
+   </PACK>
    </PATCH>
