@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.8.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\Dome (DX11).v4p" filename="C:\Users\SATO-Z800\Desktop\velcrome\vvvvDome\DemoDome.v4p" systemname="DemoDome" locked="0" scrollx="6360" scrolly="2775" bgcolor="15132390">
-   <BOUNDS height="15150" left="0" top="0" type="Window" width="12600">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\Dome (DX11).v4p" filename="C:\Users\SATO-Z800\Desktop\velcrome\vvvvDome\DemoDome.v4p" systemname="DemoDome" locked="0" scrollx="2190" scrolly="5085" bgcolor="15132390">
+   <BOUNDS height="15600" left="0" top="0" type="Window" width="14400">
    </BOUNDS>
    <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="116">
    <BOUNDS type="Node" left="6390" top="2670" width="100" height="100">
@@ -269,7 +269,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="7650" top="18165" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="12930" top="0" width="12270" height="13710">
+   <BOUNDS type="Window" left="14400" top="0" width="14400" height="15600">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
@@ -337,7 +337,7 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
+   <PIN pinname="Enabled" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="DomeMaster (DX11.Layer SAT)" filename="modules\DomeMaster (DX11.Layer SAT).v4p" nodename="DomeMaster (DX11.Layer SAT)" componentmode="Hidden" id="278">
@@ -1127,7 +1127,7 @@
    <NODE nodename="IOBox (String)" componentmode="InABox" id="407" systemname="IOBox (String)">
    <BOUNDS type="Node" left="735" top="480" width="1032" height="240">
    </BOUNDS>
-   <BOUNDS type="Box" left="735" top="480" width="4290" height="1095">
+   <BOUNDS type="Box" left="735" top="480" width="4290" height="1065">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="vvvv-Dome">
    </PIN>
@@ -1208,18 +1208,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE systemname="QuickPrep (Dome DX11.Layer)" filename="content\_SANDBOXES\QuickPrep (Dome DX11.Layer).v4p" nodename="QuickPrep (Dome DX11.Layer)" componentmode="InAWindow" id="346">
-   <BOUNDS type="Node" left="3615" top="5715" width="4164" height="276">
-   </BOUNDS>
-   <BOUNDS type="Window" left="0" top="0" width="12600" height="15150">
-   </BOUNDS>
-   <PIN pinname="ContentLayer" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="3615" top="5715">
-   </BOUNDS>
-   <PIN pinname="Enabled" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="415">
    <BOUNDS type="Node" left="12195" top="7875" width="1980" height="270">
    </BOUNDS>
@@ -1239,7 +1227,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="12210" top="5940" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1251,7 +1239,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Simulate WASD|">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="416" srcpinname="Y Output Value" dstnodeid="415" dstpinname="Switch">
@@ -1522,12 +1510,6 @@
    <LINKPOINT x="12600" y="14895">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="346" srcpinname="ContentLayer" dstnodeid="394" dstpinname="Layer 1" linkstyle="VHV">
-   <LINKPOINT x="3730" y="6848">
-   </LINKPOINT>
-   <LINKPOINT x="4295" y="6848">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="340" srcpinname="Output" dstnodeid="303" dstpinname="Input Value">
    </LINK>
    <LINK srcnodeid="418" srcpinname="Output" dstnodeid="420" dstpinname="Go To Position">
@@ -1541,7 +1523,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="13470" top="6300" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1551,11 +1533,29 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="428" srcpinname="Y Output Value" dstnodeid="414" dstpinname="Enable Helper">
    </LINK>
    <LINK srcnodeid="252" srcpinname="Y Output Value" dstnodeid="414" dstpinname="Height">
+   </LINK>
+   <NODE systemname="QuickPrep (Dome DX11.Layer)" filename="content\_SANDBOXES\QuickPrep (Dome DX11.Layer).v4p" nodename="QuickPrep (Dome DX11.Layer)" componentmode="InAWindow" id="346">
+   <BOUNDS type="Node" left="3615" top="5715" width="4164" height="276">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="14400" height="15600">
+   </BOUNDS>
+   <PIN pinname="ContentLayer" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="3615" top="5715">
+   </BOUNDS>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="346" srcpinname="ContentLayer" dstnodeid="394" dstpinname="Layer 1" linkstyle="VHV">
+   <LINKPOINT x="3730" y="6848">
+   </LINKPOINT>
+   <LINKPOINT x="4295" y="6848">
+   </LINKPOINT>
    </LINK>
    </PATCH>

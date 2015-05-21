@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.8.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\Panorama\Pano.v4p" systemname="Pano" filename="C:\Users\SATO-Z800\Desktop\velcrome\Demo\content\Pano.v4p" scrollx="3975" scrolly="1005">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\Panorama\Pano.v4p" systemname="Pano" filename="C:\Users\SATO-Z800\Desktop\velcrome\Demo\content\Pano.v4p" scrollx="1080" scrolly="840">
    <BOUNDS type="Window" left="5700" top="3645" width="9000" height="7770">
    </BOUNDS>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="2" systemname="IOBox (Node)">
@@ -92,30 +92,16 @@
    </NODE>
    <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Pause">
    </LINK>
-   <NODE systemname="Dir (File)" nodename="Dir (File)" componentmode="Hidden" id="18">
-   <BOUNDS type="Node" left="4506" top="3150" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Mask" slicecount="1" values="*.*">
-   </PIN>
-   <PIN pinname="Directory" slicecount="1" values="..\..\assets\Pano">
-   </PIN>
-   <PIN pinname="Filenames" visible="1">
-   </PIN>
-   <PIN pinname="Update" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="19">
    <BOUNDS type="Node" left="4836" top="3747" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="13" values="C:\dev\vvvv\vvvv-Dome\assets\Pano\danakil.jpg,|C:\dev\vvvv\vvvv-Dome\assets\Pano\dresden meadow.jpg|,C:\dev\vvvv\vvvv-Dome\assets\Pano\image-777051-galleryV9-xlxk.jpg,|C:\dev\vvvv\vvvv-Dome\assets\Pano\miami south beach.jpg|,|C:\dev\vvvv\vvvv-Dome\assets\Pano\montreal street2.jpg|,|C:\dev\vvvv\vvvv-Dome\assets\Pano\new york city dumbo.jpg|,|C:\dev\vvvv\vvvv-Dome\assets\Pano\new york city times square.jpg|,C:\dev\vvvv\vvvv-Dome\assets\Pano\PANO_20140916_155729.jpg,C:\dev\vvvv\vvvv-Dome\assets\Pano\PANO_20140920_070944.jpg,C:\dev\vvvv\vvvv-Dome\assets\Pano\PANO_20140920_071843.jpg,C:\dev\vvvv\vvvv-Dome\assets\Pano\PANO_20140920_073758.jpg,C:\dev\vvvv\vvvv-Dome\assets\Pano\PANO_20140920_074055.jpg,|C:\dev\vvvv\vvvv-Dome\assets\Pano\plymouth harbour.jpg|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Index" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="18" srcpinname="Filenames" dstnodeid="19" dstpinname="Input">
-   </LINK>
    <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="20">
    <BOUNDS type="Node" left="5460" top="2739" width="100" height="100">
    </BOUNDS>
@@ -384,24 +370,10 @@
    </LINK>
    <LINK srcnodeid="37" srcpinname="Texture Out" dstnodeid="0" dstpinname="Texture">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="38" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="7620" top="2520" width="4410" height="555">
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="43" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6720" top="1530" width="4800" height="885">
    </BOUNDS>
-   <BOUNDS type="Node" left="7620" top="2520" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="1" values="|C:\dev\vvvv\vvvv-Dome\assets\Pano\montreal street2.jpg|">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="39" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="8160" top="3930" width="4410" height="420">
-   </BOUNDS>
-   <BOUNDS type="Node" left="8160" top="3930" width="0" height="0">
+   <BOUNDS type="Node" left="6720" top="1530" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -409,35 +381,13 @@
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="1" values="|C:\dev\vvvv\vvvv-Dome\assets\Pano\plymouth harbour.jpg|">
+   <PIN pinname="Input String" visible="1" slicecount="4" values="|C:\dev\vvvv\vvvv-Dome\assets\Pano\montreal street2.jpg|,|C:\dev\vvvv\vvvv-Dome\assets\Pano\miami south beach.jpg|,|C:\dev\vvvv\vvvv-Dome\assets\Pano\plymouth harbour.jpg|,C:\dev\vvvv\vvvv-Dome\assets\Pano\PANO_20140920_073758.jpg">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="40" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="7635" top="3240" width="4980" height="435">
-   </BOUNDS>
-   <BOUNDS type="Node" left="7635" top="3240" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="1" values="|C:\dev\vvvv\vvvv-Dome\assets\Pano\miami south beach.jpg|">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="41" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="8595" top="4995" width="4620" height="495">
-   </BOUNDS>
-   <BOUNDS type="Node" left="8595" top="4995" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="1" values="C:\dev\vvvv\vvvv-Dome\assets\Pano\PANO_20140920_073758.jpg">
-   </PIN>
-   </NODE>
+   <LINK srcnodeid="43" srcpinname="Output String" dstnodeid="19" dstpinname="Input">
+   </LINK>
    </PATCH>
