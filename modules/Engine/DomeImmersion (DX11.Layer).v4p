@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.8.dtd" >
    <PATCH nodename="C:\dev\vvvv\vvvv-Dome\modules\Engine\DomeImmersion (DX11.Layer).v4p" systemname="DomeImmersion (EX9)" filename="C:\Users\SATO-Z800\Desktop\velcrome\vvvvDome\DomeImmersion (EX9).v4p" scrollx="6180" scrolly="600">
    <BOUNDS type="Window" left="7665" top="4350" width="11355" height="9810">
    </BOUNDS>
@@ -90,7 +90,7 @@
    <PIN pinname="Pin Visibility" slicecount="1" values="Hidden">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="33.3.0">
+   <PACK Name="addonpack" Version="33.8.0">
    </PACK>
    <NODE systemname="Renderer (DX11 CubeTexture)" nodename="Renderer (DX11 CubeTexture)" componentmode="Hidden" id="0" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll">
    <BOUNDS type="Node" left="7053" top="4311" width="6672" height="276">
@@ -128,6 +128,8 @@
    <PIN pinname="Near Plane" slicecount="1" values="0.1">
    </PIN>
    <PIN pinname="Clear Depth" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Bind Whole Target" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="57" srcpinname="Color Output" dstnodeid="0" dstpinname="Background Color">

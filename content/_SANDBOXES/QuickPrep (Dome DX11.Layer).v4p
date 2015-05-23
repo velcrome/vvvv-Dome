@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.8.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\_SANDBOXES\QuickPrep (Dome DX11.Layer).v4p" systemname="QuickPrep (Dome DX11.Layer)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\content\sandboxes\QuickPrep (Dome DX11.Layer).v4p" scrollx="3075" scrolly="7830" bgcolor="15132390">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\_SANDBOXES\QuickPrep (Dome DX11.Layer).v4p" systemname="QuickPrep (Dome DX11.Layer)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\content\sandboxes\QuickPrep (Dome DX11.Layer).v4p" scrollx="1380" scrolly="4035" bgcolor="15132390">
    <BOUNDS type="Window" left="0" top="0" width="14400" height="15600">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.8.0">
@@ -69,7 +69,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Bang">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Next">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Next Pano|">
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
@@ -227,7 +227,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2775" top="9120" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="14.08">
+   <PIN pinname="Y Input Value" slicecount="1" values="4.33">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="m">
    </PIN>
@@ -498,8 +498,6 @@
    <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="32" srcpinname="Layer" dstnodeid="50" dstpinname="Layer 3">
-   </LINK>
    <NODE systemname="Validator (DX11.Layer)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Validator (DX11.Layer)" componentmode="Hidden" id="110">
    <BOUNDS type="Node" left="2790" top="11850" width="100" height="100">
    </BOUNDS>
@@ -737,7 +735,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3660" top="23310" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|Mikrofonarray (2- Kinect USB Au|">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="(nil)">
    </PIN>
    </NODE>
    <LINK srcnodeid="118" srcpinname="Output Enum" dstnodeid="31" dstpinname="Audio Input">
@@ -795,7 +793,7 @@
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0.5">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.0955414012738854">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Close">
    </PIN>
@@ -952,8 +950,6 @@
    </LINK>
    <LINK srcnodeid="135" srcpinname="Layer" dstnodeid="110" dstpinname="Layer In">
    </LINK>
-   <LINK srcnodeid="43" srcpinname="Layer" dstnodeid="50" dstpinname="Layer 1">
-   </LINK>
    <LINK srcnodeid="43" srcpinname="Layer" dstnodeid="58" dstpinname="Layer 1">
    <LINKPOINT x="3180" y="15135">
    </LINKPOINT>
@@ -1045,9 +1041,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="161" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5010" top="4245" width="480" height="480">
+   <BOUNDS type="Box" left="1365" top="4350" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="5010" top="4245" width="0" height="0">
+   <BOUNDS type="Node" left="1365" top="4350" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -1071,15 +1067,87 @@
    <LINK srcnodeid="48" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 7">
    </LINK>
    <NODE systemname="QuickCanvas" filename="..\QuickCanvas.v4p" componentmode="Hidden" id="177" nodename="..\QuickCanvas.v4p">
-   <BOUNDS type="Node" left="9930" top="16140" width="100" height="100">
+   <BOUNDS type="Node" left="12525" top="15930" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9930" top="16140" width="4800" height="3600">
+   <BOUNDS type="Box" left="12525" top="15930" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="9240" top="8325" width="9000" height="6000">
+   <BOUNDS type="Window" left="7800" top="8415" width="9000" height="6000">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
+   <PIN pinname="Overlay" visible="1">
+   </PIN>
+   <PIN pinname="Content" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Live" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="177" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 8">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="178" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="12525" top="14190" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12525" top="14190" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Overlay">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="178" srcpinname="Y Output Value" dstnodeid="177" dstpinname="Overlay">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="180" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="13635" top="15000" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13635" top="15000" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|InfoCanvas Enabled|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="180" srcpinname="Y Output Value" dstnodeid="177" dstpinname="Enabled">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="181" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="13275" top="14220" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13275" top="14220" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Content">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="181" srcpinname="Y Output Value" dstnodeid="177" dstpinname="Content">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Layer" dstnodeid="50" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="43" srcpinname="Layer" dstnodeid="50" dstpinname="Layer 1">
    </LINK>
    </PATCH>
