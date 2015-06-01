@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_dx11\content\_SANDBOXES\QuickPrep (Dome DX11.Layer).v4p" systemname="QuickPrep (Dome DX11.Layer)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\content\sandboxes\QuickPrep (Dome DX11.Layer).v4p" scrollx="0" scrolly="2715">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_dx11\content\_SANDBOXES\QuickPrep (Dome DX11.Layer).v4p" systemname="QuickPrep (Dome DX11.Layer)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\content\sandboxes\QuickPrep (Dome DX11.Layer).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="0" top="0" width="11520" height="12375">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.3.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="504" top="8088" width="3528" height="780">
@@ -52,26 +52,6 @@
    <BOUNDS type="Box" left="504" top="6768">
    </BOUNDS>
    <PIN pinname="Layer 7" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2748" top="5343" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2748" top="5343" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Bang">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Next">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="6" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node">
@@ -222,38 +202,10 @@
    <PIN pinname="Size" slicecount="1" values="30">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="23" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="1575" top="5385" width="792" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1575" top="5385" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="2.9">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="m">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <NODE systemname="SoftDome" filename="..\SoftDome.v4p" componentmode="Hidden" id="26" nodename="..\SoftDome.v4p">
-   <BOUNDS type="Node" left="3720" top="6135" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3720" top="6135" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="750" top="570" width="9765" height="14250">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="SubDivisions" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Alpha" slicecount="1" values="0.77">
-   </PIN>
-   </NODE>
    <NODE systemname="Trees (DX11)" filename="..\Trees (DX11).v4p" componentmode="Hidden" id="32" nodename="..\Trees (DX11).v4p">
-   <BOUNDS type="Node" left="5805" top="6105" width="100" height="100">
+   <BOUNDS type="Node" left="5805" top="5955" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5805" top="6105" width="4800" height="3600">
+   <BOUNDS type="Box" left="5805" top="5955" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="9060" top="5340" width="9000" height="6000">
    </BOUNDS>
@@ -285,33 +237,39 @@
    </PIN>
    </NODE>
    <NODE systemname="Matrix (DX11)" filename="..\Matrix (DX11).v4p" componentmode="Hidden" id="42" nodename="content\Matrix (DX11).v4p">
-   <BOUNDS type="Node" left="7410" top="4215" width="100" height="100">
+   <BOUNDS type="Node" left="4755" top="5205" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7410" top="4215" width="4800" height="3600">
+   <BOUNDS type="Box" left="4755" top="5205" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="0" top="0" width="11520" height="12384">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
+   <PIN pinname="Apply" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <NODE systemname="SpaceGrid (DX11)" filename="..\SpaceGrid\SpaceGrid (DX11).v4p" nodename="SpaceGrid (DX11)" componentmode="Hidden" id="43">
-   <BOUNDS type="Node" left="7410" top="4845" width="100" height="100">
+   <BOUNDS type="Node" left="6885" top="5205" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="10035" top="6645" width="9000" height="6000">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="7410" top="4845">
+   <BOUNDS type="Box" left="6885" top="5205">
    </BOUNDS>
+   <PIN pinname="Apply - Apply" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <NODE systemname="TwilightSound (DX11)" filename="..\Twilight\TwilightSound (DX11).v4p" componentmode="Hidden" id="44" nodename="TwilightSound (DX11)">
-   <BOUNDS type="Node" left="7410" top="5475" width="100" height="100">
+   <BOUNDS type="Node" left="7950" top="5955" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7410" top="5475" width="4800" height="3600">
+   <BOUNDS type="Box" left="7950" top="5955" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="-300" top="1245" width="12600" height="15150">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Apply - Apply" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="QuickSound (DShow)" filename="Sound\QuickSound (DShow).v4p" componentmode="Hidden" id="31" nodename="QuickSound (DShow)">
@@ -332,20 +290,6 @@
    </LINK>
    <LINK srcnodeid="31" srcpinname="Audio RMS" dstnodeid="35" dstpinname="Input Value">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="45" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="8655" top="4335" width="6495" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="8655" top="4335" width="2010" height="1035">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|these three patches make use of dynamicbuffers. will not work properly with dx11_beta32|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
    <NODE id="46" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
    <BOUNDS type="Node" left="5778" top="12471" width="5370" height="270">
    </BOUNDS>
@@ -362,6 +306,10 @@
    </NODE>
    <LINK srcnodeid="32" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 5">
    </LINK>
-   <LINK srcnodeid="26" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 3">
+   <LINK srcnodeid="43" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 6">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 4">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 7">
    </LINK>
    </PATCH>
