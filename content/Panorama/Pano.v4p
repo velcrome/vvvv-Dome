@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_dx11\content\Panorama\Pano.v4p" systemname="Pano" filename="C:\Users\SATO-Z800\Desktop\velcrome\Demo\content\Pano.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="5700" top="3645" width="9000" height="6000">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\Panorama\Pano.v4p" systemname="Pano" filename="C:\Users\SATO-Z800\Desktop\velcrome\Demo\content\Pano.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="5700" top="3645" width="9000" height="7770">
    </BOUNDS>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="2" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="2859" top="5598" width="795" height="240">
@@ -97,7 +97,7 @@
    </BOUNDS>
    <PIN pinname="Mask" slicecount="1" values="*.*">
    </PIN>
-   <PIN pinname="Directory" slicecount="1" values="assets">
+   <PIN pinname="Directory" slicecount="1" values="C:\dev\vvvv\vvvv-Dome\content\Panorama\C:\dev\vvvv\vvvv-Dome\content\Panorama\assets">
    </PIN>
    <PIN pinname="Filenames" visible="1">
    </PIN>
@@ -214,7 +214,7 @@
    </LINK>
    <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="24" dstpinname="Resolution X">
    </LINK>
-   <PACK Name="addonpack" Version="33.0.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="26" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="240" top="3072" width="1596" height="276">
