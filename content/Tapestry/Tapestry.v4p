@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.8.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\Tapestry\Tapestry.v4p" systemname="Tapestry" filename="C:\dev\vvvv\vvvv-Dome\content\Tapestry\Tapestry.v4p" scrollx="0" scrolly="1065">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_dx11\content\Tapestry\Tapestry.v4p" systemname="Tapestry" filename="C:\dev\vvvv\vvvv-Dome\content\Tapestry\Tapestry.v4p" scrollx="0" scrolly="1410">
    <BOUNDS type="Window" left="7125" top="2670" width="9000" height="11610">
    </BOUNDS>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
@@ -12,7 +12,7 @@
    <PIN pinname="Input Node" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="33.8.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="225" top="6915" width="100" height="100">
@@ -371,9 +371,11 @@
    <NODE systemname="GeometryFile (DX11.Geometry Assimp)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.Assimp.dll" nodename="GeometryFile (DX11.Geometry Assimp)" componentmode="Hidden" id="67">
    <BOUNDS type="Node" left="705" top="4635" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="..\..\assets\model\erich\DOME_zitrone.dae">
+   <PIN pinname="Filename" slicecount="1" values="DOME_zitrone.dae">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Reload" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="Select (Node)" filename="%VVVV%\lib\nodes\modules\Node\Select (Node).v4p" nodename="Select (Node)" componentmode="Hidden" id="69">

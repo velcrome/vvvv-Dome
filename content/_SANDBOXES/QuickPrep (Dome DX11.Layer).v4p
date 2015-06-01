@@ -203,9 +203,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Trees (DX11)" filename="..\Trees (DX11).v4p" componentmode="Hidden" id="32" nodename="..\Trees (DX11).v4p">
-   <BOUNDS type="Node" left="5805" top="5955" width="100" height="100">
+   <BOUNDS type="Node" left="5850" top="4395" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5805" top="5955" width="4800" height="3600">
+   <BOUNDS type="Box" left="5850" top="4395" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="9060" top="5340" width="9000" height="6000">
    </BOUNDS>
@@ -237,9 +237,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Matrix (DX11)" filename="..\Matrix (DX11).v4p" componentmode="Hidden" id="42" nodename="content\Matrix (DX11).v4p">
-   <BOUNDS type="Node" left="4755" top="5205" width="100" height="100">
+   <BOUNDS type="Node" left="4740" top="5430" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4755" top="5205" width="4800" height="3600">
+   <BOUNDS type="Box" left="4740" top="5430" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="0" top="0" width="11520" height="12384">
    </BOUNDS>
@@ -249,26 +249,14 @@
    </PIN>
    </NODE>
    <NODE systemname="SpaceGrid (DX11)" filename="..\SpaceGrid\SpaceGrid (DX11).v4p" nodename="SpaceGrid (DX11)" componentmode="Hidden" id="43">
-   <BOUNDS type="Node" left="6885" top="5205" width="100" height="100">
+   <BOUNDS type="Node" left="5805" top="6015" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="10035" top="6645" width="9000" height="6000">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="6885" top="5205">
+   <BOUNDS type="Box" left="5805" top="6015">
    </BOUNDS>
-   <PIN pinname="Apply - Apply" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <NODE systemname="TwilightSound (DX11)" filename="..\Twilight\TwilightSound (DX11).v4p" componentmode="Hidden" id="44" nodename="TwilightSound (DX11)">
-   <BOUNDS type="Node" left="7950" top="5955" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="7950" top="5955" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="-300" top="1245" width="12600" height="15150">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
    <PIN pinname="Apply - Apply" slicecount="1" values="0">
    </PIN>
    </NODE>
@@ -304,12 +292,98 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <LINK srcnodeid="32" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 5">
+   <NODE systemname="Gallery (DX11.Layer)" filename="..\Gallery\Gallery (DX11.Layer).v4p" nodename="Gallery (DX11.Layer)" componentmode="Hidden" id="47">
+   <BOUNDS type="Node" left="2160" top="5010" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Floor (DX11.Layer)" filename="..\landscape\Floor (DX11.Layer).v4p" nodename="Floor (DX11.Layer)" componentmode="Hidden" id="49">
+   <BOUNDS type="Node" left="2640" top="5925" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="4425" top="6930" width="9000" height="6000">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="MockData (DX11.Layer)" filename="..\landscape\MockData (DX11.Layer).v4p" nodename="MockData (DX11.Layer)" componentmode="Hidden" id="50">
+   <BOUNDS type="Node" left="7410" top="4155" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Ceiling (DX11.Layer)" filename="..\landscape\Ceiling (DX11.Layer).v4p" nodename="Ceiling (DX11.Layer)" componentmode="Hidden" id="52">
+   <BOUNDS type="Node" left="3720" top="5400" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Extrude (DX11.Layer)" filename="..\landscape\Extrude (DX11.Layer).v4p" nodename="Extrude (DX11.Layer)" componentmode="Hidden" id="53">
+   <BOUNDS type="Node" left="7950" top="6210" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Pano" filename="..\Panorama\Pano.v4p" nodename="..\Panorama\Pano.v4p" componentmode="Hidden" id="54">
+   <BOUNDS type="Node" left="1575" top="5895" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Next" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Tapestry" filename="..\Tapestry\Tapestry.v4p" nodename="..\Tapestry\Tapestry.v4p" componentmode="Hidden" id="55">
+   <BOUNDS type="Node" left="9015" top="5700" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Close" visible="1" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS type="Box" left="9015" top="5700">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="55" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 8">
    </LINK>
-   <LINK srcnodeid="43" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 6">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="56" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9015" top="4410" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9015" top="4410" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="57">
+   <BOUNDS type="Node" left="9015" top="5205" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" slicecount="1" values="5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="57" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Position Out" dstnodeid="55" dstpinname="Close">
+   </LINK>
+   <LINK srcnodeid="52" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="43" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 5">
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 7">
    </LINK>
    <LINK srcnodeid="42" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 4">
-   </LINK>
-   <LINK srcnodeid="44" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 7">
    </LINK>
    </PATCH>
