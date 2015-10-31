@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\landscape\Extrude (DX11.Layer).v4p" systemname="Extrude (DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome\content\landscape\Extrude (DX11.Layer).v4p" scrollx="1095" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_ix\content\landscape\Extrude (DX11.Layer).v4p" systemname="Extrude (DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome\content\landscape\Extrude (DX11.Layer).v4p" scrollx="2910" scrolly="0">
    <BOUNDS type="Window" left="4305" top="3540" width="10905" height="9915">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.3.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="2" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="4335" top="6900" width="795" height="240">
@@ -14,7 +14,7 @@
    <PIN pinname="Input Node" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE systemname="Perlin (DX11.TextureFX)" filename="%VVVV%\packs\dx11_vvvv\nodes\texture11\Source\Perlin.tfx" nodename="Perlin (DX11.TextureFX)" componentmode="Hidden" id="14">
+   <NODE systemname="Perlin (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Perlin.tfx" nodename="Perlin (DX11.TextureFX)" componentmode="Hidden" id="14">
    <BOUNDS type="Node" left="7845" top="4095" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
@@ -41,10 +41,10 @@
    </BOUNDS>
    <PIN pinname="Position Out" visible="1">
    </PIN>
-   <PIN pinname="Position In" slicecount="1" values="0.23" visible="1">
+   <PIN pinname="Position In" slicecount="1" visible="1" values="0.23">
    </PIN>
    </NODE>
-   <NODE systemname="DynamicTexture (DX11.Texture 2d)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DynamicTexture (DX11.Texture 2d)" componentmode="Hidden" id="12">
+   <NODE systemname="DynamicTexture (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DynamicTexture (DX11.Texture 2d)" componentmode="Hidden" id="12">
    <BOUNDS type="Node" left="7650" top="1575" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Width" visible="1">
@@ -99,7 +99,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8205" top="2385" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2.01">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2.11">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -130,8 +130,8 @@
    </NODE>
    <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="14" dstpinname="FrequencyBalance">
    </LINK>
-   <NODE systemname="Grid (DX11.Geometry)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Grid (DX11.Geometry)" componentmode="Hidden" id="15">
-   <BOUNDS type="Node" left="4515" top="3915" width="100" height="100">
+   <NODE systemname="Grid (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Grid (DX11.Geometry)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="4725" top="4080" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
@@ -161,7 +161,7 @@
    <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Resolution Y">
    </LINK>
    <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="21">
-   <BOUNDS type="Node" left="3165" top="5205" width="100" height="100">
+   <BOUNDS type="Node" left="2655" top="6045" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -171,7 +171,7 @@
    </PIN>
    </NODE>
    <NODE systemname="ExtrudeGSFX (DX11.GeomFX)" filename="dx11\ExtrudeGSFX.gsfx" nodename="ExtrudeGSFX (DX11.GeomFX)" componentmode="Hidden" id="22">
-   <BOUNDS type="Node" left="4665" top="5535" width="100" height="100">
+   <BOUNDS type="Node" left="4470" top="5430" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Extrude" slicecount="1" values="0.06">
    </PIN>
@@ -206,7 +206,7 @@
    <PIN pinname="Saturation" slicecount="1" values="0.53">
    </PIN>
    </NODE>
-   <NODE systemname="Rasterizer (DX11.RenderState)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Rasterizer (DX11.RenderState)" componentmode="Hidden" id="25">
+   <NODE systemname="Rasterizer (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Rasterizer (DX11.RenderState)" componentmode="Hidden" id="25">
    <BOUNDS type="Node" left="3630" top="4320" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
@@ -229,7 +229,7 @@
    <LINK srcnodeid="26" srcpinname="Output" dstnodeid="14" dstpinname="Color2">
    </LINK>
    <NODE systemname="Power (Value)" nodename="Power (Value)" componentmode="Hidden" id="27">
-   <BOUNDS type="Node" left="4785" top="4695" width="100" height="100">
+   <BOUNDS type="Node" left="5745" top="4020" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -247,10 +247,12 @@
    </PIN>
    <PIN pinname="X" slicecount="1" values="0.25">
    </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
    <LINK srcnodeid="28" srcpinname="Transform Out" dstnodeid="21" dstpinname="Transform In">
    </LINK>
-   <NODE systemname="Halo (DX11.TextureFX)" filename="%VVVV%\packs\dx11_vvvv\nodes\texture11\Source\Halo.tfx" nodename="Halo (DX11.TextureFX)" componentmode="Hidden" id="30">
+   <NODE systemname="Halo (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Halo.tfx" nodename="Halo (DX11.TextureFX)" componentmode="Hidden" id="30">
    <BOUNDS type="Node" left="12165" top="3300" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
@@ -266,8 +268,8 @@
    <PIN pinname="Technique" slicecount="1" values="Smooth">
    </PIN>
    </NODE>
-   <NODE systemname="BlendBasic (DX11.TextureFX)" filename="%VVVV%\packs\dx11_vvvv\nodes\texture11\Mixer\BlendBasic.tfx" nodename="BlendBasic (DX11.TextureFX)" componentmode="Hidden" id="31">
-   <BOUNDS type="Node" left="7890" top="5040" width="100" height="100">
+   <NODE systemname="BlendBasic (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\BlendBasic.tfx" nodename="BlendBasic (DX11.TextureFX)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="7845" top="4680" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture In 2" visible="1">
    </PIN>
@@ -286,7 +288,7 @@
    </LINK>
    <LINK srcnodeid="31" srcpinname="Texture Out" dstnodeid="22" dstpinname="texHEIGHT">
    </LINK>
-   <NODE systemname="PhongPoint (DX11.Effect)" filename="%VVVV%\packs\dx11_vvvv\nodes\dx11\PhongPoint.fx" nodename="PhongPoint (DX11.Effect)" componentmode="Hidden" id="1">
+   <NODE systemname="PhongPoint (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\PhongPoint.fx" nodename="PhongPoint (DX11.Effect)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="4365" top="6045" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Geometry" visible="1">
@@ -345,7 +347,7 @@
    <LINK srcnodeid="13" srcpinname="Position Out" dstnodeid="14" dstpinname="Z">
    </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="34">
-   <BOUNDS type="Node" left="9990" top="2970" width="100" height="100">
+   <BOUNDS type="Node" left="10395" top="3015" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="|Audio RMS|">
    </PIN>

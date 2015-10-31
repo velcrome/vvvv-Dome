@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\modules\Engine\Dome (Transform).v4p" systemname="Dome (Transform)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\modules\Dome (Transform).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_ix\modules\Engine\Dome (Transform).v4p" systemname="Dome (Transform)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\modules\Dome (Transform).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="3240" top="5760" width="13890" height="8880">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.3.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1839" top="3348" width="100" height="100">
@@ -19,7 +19,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2766" top="597" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="5.5">
+   <PIN pinname="Y Input Value" slicecount="1" values="8.6">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="m">
    </PIN>
@@ -51,7 +51,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="405" top="6330" width="750" height="240">
    </BOUNDS>
-   <PIN pinname="Input Node" visible="1">
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="4">
@@ -146,7 +146,7 @@
    <LINKPOINT x="450" y="3938">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="DomeHelper (DX11.Layer)" filename="modules\DomeHelper (DX11.Layer).v4p" nodename="DomeHelper (DX11.Layer)" componentmode="Hidden" id="17">
+   <NODE systemname="DomeHelper (DX11.Layer)" filename="..\Helper\DomeHelper (DX11.Layer).v4p" nodename="DomeHelper (DX11.Layer)" componentmode="Hidden" id="17">
    <BOUNDS type="Node" left="3285" top="5700" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer Out" visible="1">
@@ -336,35 +336,19 @@
    </LINK>
    <LINK srcnodeid="19" srcpinname="Error" dstnodeid="23" dstpinname="Input String">
    </LINK>
-   <NODE systemname="Rotate (Transform)" nodename="Rotate (Transform)" componentmode="Hidden" id="30">
-   <BOUNDS type="Node" left="1005" top="5115" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="X" slicecount="1" values="0.25">
-   </PIN>
-   <PIN pinname="Y" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Z" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="30" dstpinname="Transform In">
-   </LINK>
    <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="17" dstpinname="DomeTransform">
    </LINK>
    <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="31">
    <BOUNDS type="Node" left="1125" top="5880" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Transform In" visible="1">
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    <PIN pinname="XYZ" slicecount="1" values="0.5">
    </PIN>
    </NODE>
-   <NODE systemname="GeometryFile (DX11.Geometry Assimp)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.Assimp.dll" nodename="GeometryFile (DX11.Geometry Assimp)" componentmode="Hidden" id="35">
+   <NODE systemname="GeometryFile (DX11.Geometry Assimp)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.Assimp.dll" nodename="GeometryFile (DX11.Geometry Assimp)" componentmode="Hidden" id="35">
    <BOUNDS type="Node" left="10110" top="1290" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filename" slicecount="1" visible="1" values="|..\..\assets\model\lp\DresdenDomeModel2_ Triangles.3ds|">
@@ -416,7 +400,7 @@
    <PIN pinname="Send String" slicecount="1" values="DomeMesh">
    </PIN>
    </NODE>
-   <NODE systemname="Sphere (DX11.Geometry)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Sphere (DX11.Geometry)" componentmode="Hidden" id="36">
+   <NODE systemname="Sphere (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Sphere (DX11.Geometry)" componentmode="Hidden" id="36">
    <BOUNDS type="Node" left="9540" top="2370" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Resolution X" slicecount="1" values="32">
@@ -472,10 +456,18 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="30" srcpinname="Transform Out" dstnodeid="31" dstpinname="Transform In">
-   </LINK>
    <LINK srcnodeid="36" srcpinname="Geometry Out" dstnodeid="32" dstpinname="Input Value">
    </LINK>
-   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="3" dstpinname="Input Node">
+   <NODE systemname="Rotate (Transform)" nodename="Rotate (Transform)" componentmode="Hidden" id="47">
+   <BOUNDS type="Node" left="1005" top="5115" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" slicecount="1" values="-0.08">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="47" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Transform Out" dstnodeid="31" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Transform Out" dstnodeid="3" dstpinname="Input Node">
    </LINK>
    </PATCH>

@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.8.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\modules\Input\QuickSound (DShow).v4p" systemname="QuickSound (DShow)" filename="C:\dev\vvvv\vvvv-Domemaster_dx11_tracking\content\QuickSound (DShow).v4p" scrollx="15" scrolly="930">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_ix\modules\Input\QuickSound (DShow).v4p" systemname="QuickSound (DShow)" filename="C:\dev\vvvv\vvvv-Domemaster_dx11_tracking\content\QuickSound (DShow).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="1710" top="4620" width="11565" height="8400">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.8.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="FFT (DShow9)" nodename="FFT (DShow9)" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="2955" top="3885" width="100" height="100">
@@ -17,7 +17,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2835" top="1740" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -27,7 +27,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>

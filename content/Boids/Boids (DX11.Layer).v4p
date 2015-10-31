@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.8.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\Boids\Boids (DX11.Layer).v4p" filename="C:\dev\vvvv\vvvv-Dome\content\Boids\Boids (DX11.Layer).v4p" systemname="Boids (DX11.Layer)" scrollx="135" scrolly="5595">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_ix\content\Boids\Boids (DX11.Layer).v4p" filename="C:\dev\vvvv\vvvv-Dome\content\Boids\Boids (DX11.Layer).v4p" systemname="Boids (DX11.Layer)" scrollx="0" scrolly="6990">
    <BOUNDS height="12810" left="5175" top="7875" type="Window" width="17730">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.8.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE componentmode="InABox" id="55" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="10710" top="8970" type="Node" width="0">
@@ -858,7 +858,7 @@
    </LINK>
    <LINK srcnodeid="205" srcpinname="Output" dstnodeid="202" dstpinname="Lightness">
    </LINK>
-   <NODE systemname="PhongPoint (DX11.Effect)" filename="%VVVV%\packs\dx11_vvvv\nodes\dx11\PhongPoint.fx" nodename="PhongPoint (DX11.Effect)" componentmode="Hidden" id="193">
+   <NODE systemname="PhongPoint (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\PhongPoint.fx" nodename="PhongPoint (DX11.Effect)" componentmode="Hidden" id="193">
    <BOUNDS type="Node" left="2265" top="12060" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform In" visible="1">
@@ -922,14 +922,12 @@
    </NODE>
    <LINK srcnodeid="207" srcpinname="Y Output Value" dstnodeid="99" dstpinname="Enemy_Scale">
    </LINK>
-   <NODE systemname="Box (DX11.Geometry)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Box (DX11.Geometry)" componentmode="Hidden" id="195">
-   <BOUNDS type="Node" left="1425" top="11190" width="100" height="100">
+   <NODE systemname="Box (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Box (DX11.Geometry)" componentmode="Hidden" id="195">
+   <BOUNDS type="Node" left="705" top="12165" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="195" srcpinname="Geometry Out" dstnodeid="193" dstpinname="Geometry">
-   </LINK>
    <LINK srcnodeid="73" srcpinname="Y Output Value" dstnodeid="99" dstpinname="Reset">
    </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="211">
@@ -943,5 +941,45 @@
    <LINK srcnodeid="73" srcpinname="Y Output Value" dstnodeid="211" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="211" srcpinname="Output 1" dstnodeid="99" dstpinname="InitFlock">
+   </LINK>
+   <NODE systemname="Tetra (DX11.GeomFX)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\DX11.GeomFX\Tetra (DX11.GeomFX)\Tetra (DX11.GeomFX).v4p" nodename="Tetra (DX11.GeomFX)" componentmode="Hidden" id="213">
+   <BOUNDS type="Node" left="765" top="11070" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   <PIN pinname="Displace Default" slicecount="1" values="0.85" visible="1">
+   </PIN>
+   <PIN pinname="Displacment Indexing" slicecount="1" values="Primitive">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="213" srcpinname="Geometry Out" dstnodeid="193" dstpinname="Geometry">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="214" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="375" top="9585" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="375" top="9585" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.52">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Displace Default|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="214" srcpinname="Y Output Value" dstnodeid="213" dstpinname="Displace Default">
+   </LINK>
+   <NODE systemname="Box (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Box (DX11.Geometry)" componentmode="Hidden" id="212">
+   <BOUNDS type="Node" left="585" top="10485" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   <PIN pinname="SubDivisions" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="212" srcpinname="Geometry Out" dstnodeid="213" dstpinname="Geometry In">
    </LINK>
    </PATCH>

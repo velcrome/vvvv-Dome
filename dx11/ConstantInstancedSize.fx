@@ -4,6 +4,7 @@
 //@credits: 
 
 Texture2D texture2d; 
+float Alpha;
 
 SamplerState g_samLinear : IMMUTABLE
 {
@@ -66,7 +67,7 @@ vs2ps VS(VS_IN input)
 float4 PS_Tex(vs2ps In): SV_Target
 {
     float4 col = texture2d.Sample( g_samLinear, In.TexCd) * In.Color;
-    col.a *= In.Alpha;
+    col.a *= In.Alpha * Alpha;
 	return col;
 }
 
