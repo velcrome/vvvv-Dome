@@ -1,0 +1,53 @@
+//@author: idwyr	
+//@help: transition shader
+//@tags: texture
+//@credits: glsl.io
+
+Texture2D from;
+Texture2D to;
+float progress <float uimin=0.0; float uimax=1.0;>;
+float size;
+float zoom;
+float colorSeparation;
+
+SamplerState linearSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Wrap;
+    AddressV = Wrap;
+};
+
+struct psInput
+{
+	float4 p : SV_Position;
+	float2 uv : TEXCOORD0;
+};
+
+
+float4 PS(psInput input) : SV_Target
+{	
+	float2 p = input.uv;
+	float inv = 1. - progress;
+	float2 disp = size*float2(cos(zoom*p.x), sin(zoom*p.y));
+	float4 texTo = to.Sample(linearSampler, p + inv*disp);
+	float4 texFrom = float4(
+	from.Sample(linearSampler, p + progress*disp*(1.0 - colorSeparation)).r,
+	from.Sample(linearSampler, p + progress*disp).g,
+	from.Sample(linearSampler, p + progress*disp*(1.0 + colorSeparation)).b,
+    1.0);
+	float4 result = float4 (0,0,0,1);
+	result = texTo*progress + texFrom*inv;
+	return result;  
+  
+}
+
+technique10 Process
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_4_0,PS()));
+	}
+}
+
+
+

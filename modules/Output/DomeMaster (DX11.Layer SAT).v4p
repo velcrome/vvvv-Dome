@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_ix\modules\Output\DomeMaster (DX11.Layer SAT).v4p" systemname="DomeMaster (DX11.Layer SAT)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\modules\DomeMaster (DX11.Layer SAT).v4p" scrollx="195" scrolly="2475">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_ix\modules\Output\DomeMaster (DX11.Layer SAT).v4p" systemname="DomeMaster (DX11.Layer SAT)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\modules\DomeMaster (DX11.Layer SAT).v4p" scrollx="195" scrolly="3600">
    <BOUNDS type="Window" left="6900" top="585" width="10275" height="9225">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -103,7 +103,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="XYZ" slicecount="1" values="3.62" visible="1">
+   <PIN pinname="XYZ" slicecount="1" visible="1" values="3.62">
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -487,7 +487,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2970" top="3405" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.29">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -557,7 +557,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2355" top="8520" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2.84">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

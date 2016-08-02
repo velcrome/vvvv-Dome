@@ -1,0 +1,57 @@
+//@author: idwyr
+//@help: fft generated dynamic texture
+//@tags: texture
+//@credits: 
+
+Texture2D texture2d : INITIAL;
+Texture2D FFTtex;
+
+float2 R:TARGETSIZE;
+int2 newRes;
+SamplerState linearSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Wrap;
+    AddressV = Wrap;
+};
+
+struct psInput
+{
+	float4 p : SV_Position;
+	float2 uv : TEXCOORD0;
+	
+	
+};
+
+
+float4 PS(psInput input) : SV_Target
+{	
+	//float4 newcolor = FFTBuffer[input.uv.x*totalnum];
+
+	//return newcolor;
+	
+	int totalnum = newRes.x + newRes.y;
+	float2 finalUV = float2(0,input.uv.y);
+	//float times = totalnum/(trunc(totalnum/newRes.x));
+	float times = totalnum/(trunc(totalnum/newRes.x));
+	float2 offset = float2 (0,0);
+	//offset.y = trunc(newRes.y*input.uv.y);
+	offset.y = trunc(newRes.y*input.uv.y);
+	offset.x = (totalnum%newRes.x)/times;
+finalUV.x = input.uv.x*(newRes.x/R.x)+offset.x*offset.y ;
+	float4 final = FFTtex.Sample(linearSampler, finalUV);
+return final;
+}
+
+technique10 Process
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_4_0,PS()));
+	}
+	
+	
+}
+
+
+

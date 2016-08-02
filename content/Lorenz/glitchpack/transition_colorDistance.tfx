@@ -1,0 +1,44 @@
+//@author: idwyr
+//@help: transition shader
+//@tags: texture
+//@credits: glsl.io
+
+Texture2D from;
+Texture2D to;
+float progress <float uimin=0.0; float uimax=1.0;>;
+float interpolationPower;
+
+SamplerState linearSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Wrap;
+    AddressV = Wrap;
+};
+
+struct psInput
+{
+	float4 p : SV_Position;
+	float2 uv : TEXCOORD0;
+};
+
+
+float4 PS(psInput input) : SV_Target
+{	float4 ca = from.Sample(linearSampler, input.uv);
+	float4 cb = to.Sample(linearSampler, input.uv);
+	
+	float4 c = lerp(distance(ca, cb)>progress?ca:cb,
+                   		cb,
+                     pow(progress,interpolationPower));
+	return c;
+}
+
+technique10 Process
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_4_0,PS()));
+	}
+}
+
+
+

@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha32.2.dtd" >
-   <PATCH nodename="C:\Users\SATO-Z800\Desktop\VVVV MarkoRitter\vvvv-Domemaster_dx11_tracking\content\text.v4p" systemname="text" filename="C:\Users\SATO-Z800\Desktop\velcrome\text.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_ix\content\text.v4p" systemname="text" filename="C:\Users\SATO-Z800\Desktop\velcrome\text.v4p" scrollx="9780" scrolly="0">
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="8064" top="3264" width="795" height="720">
    </BOUNDS>
@@ -189,7 +189,7 @@
    </BOUNDS>
    <PIN pinname="Hue" visible="1">
    </PIN>
-   <PIN pinname="Lightness" slicecount="1" values="0.02">
+   <PIN pinname="Lightness" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -272,7 +272,7 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="32.2.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="Text (DX11.Layer Advanced)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.Text.dll" nodename="Text (DX11.Layer Advanced)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="7782" top="8157" width="5268" height="276">
@@ -462,7 +462,7 @@
    <PIN pinname="Mode" slicecount="1" values="LessRead">
    </PIN>
    </NODE>
-   <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="46">
+   <NODE systemname="Separate (String Legacy)" nodename="Separate (String)" componentmode="Hidden" id="46">
    <BOUNDS type="Node" left="564" top="4512" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">

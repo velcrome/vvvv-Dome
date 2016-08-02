@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\Player\Player (DX11.Layer).v4p" systemname="Player (DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome\content\Player (DX11.Layer).v4p" scrollx="2925" scrolly="0">
-   <BOUNDS type="Window" left="8340" top="5820" width="9000" height="6000">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_ix\content\Player\Player (DX11.Layer).v4p" systemname="Player (DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome\content\Player (DX11.Layer).v4p" scrollx="225" scrolly="0">
+   <BOUNDS type="Window" left="8340" top="5820" width="12960" height="6000">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.3.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="2535" top="3735" width="795" height="240">
@@ -14,13 +14,13 @@
    <PIN pinname="Input Node" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Grid (DX11.Geometry)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Grid (DX11.Geometry)" componentmode="Hidden" id="2">
+   <NODE systemname="Grid (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Grid (DX11.Geometry)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="2085" top="1065" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="4">
+   <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="5985" top="2610" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filename" slicecount="7" visible="1" values="..\..\assets\img\mosque\image-777039-galleryV9-kogm.jpg">
@@ -58,7 +58,7 @@
    <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="SphereToCube (DX11.Texture 2d)" filename="%VVVV%\packs\dx11_vvvv\nodes\modules\Cubemap\SphereToCube (DX11.Texture 2d).v4p" nodename="SphereToCube (DX11.Texture 2d)" componentmode="Hidden" id="10">
+   <NODE systemname="SphereToCube (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\modules\Cubemap\SphereToCube (DX11.Texture 2d).v4p" nodename="SphereToCube (DX11.Texture 2d)" componentmode="Hidden" id="10">
    <BOUNDS type="Node" left="5970" top="3375" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
@@ -70,12 +70,12 @@
    <PIN pinname="Texture Size" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="CubeMap (DX11.Effect)" filename="%VVVV%\packs\dx11_vvvv\nodes\dx11\CubeMap.fx" nodename="CubeMap (DX11.Effect)" componentmode="Hidden" id="11">
+   <NODE systemname="CubeMap (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\CubeMap.fx" nodename="CubeMap (DX11.Effect)" componentmode="Hidden" id="11">
    <BOUNDS type="Node" left="4860" top="4020" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture Cube" visible="1">
    </PIN>
-   <PIN pinname="Geometry" visible="1">
+   <PIN pinname="Geometry" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -178,8 +178,8 @@
    </NODE>
    <LINK srcnodeid="24" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Texture Size">
    </LINK>
-   <NODE systemname="Rasterizer (DX11.RenderState)" filename="%VVVV%\packs\dx11_vvvv\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Rasterizer (DX11.RenderState)" componentmode="Hidden" id="29">
-   <BOUNDS type="Node" left="3375" top="2025" width="100" height="100">
+   <NODE systemname="Rasterizer (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Rasterizer (DX11.RenderState)" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="1410" top="1875" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
@@ -276,12 +276,12 @@
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
-   <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="50">
-   <BOUNDS type="Node" left="7755" top="1035" width="100" height="100">
+   <NODE systemname="Counter (Animation Legacy)" nodename="Counter (Animation)" componentmode="Hidden" id="50">
+   <BOUNDS type="Node" left="2685" top="1965" width="100" height="100">
    </BOUNDS>
    </NODE>
-   <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="51">
-   <BOUNDS type="Node" left="7215" top="975" width="100" height="100">
+   <NODE systemname="Counter (Animation Legacy)" nodename="Counter (Animation)" componentmode="Hidden" id="51">
+   <BOUNDS type="Node" left="7275" top="720" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
    </PIN>

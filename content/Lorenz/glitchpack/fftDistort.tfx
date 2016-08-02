@@ -1,0 +1,58 @@
+//@author: idwyr
+//@help:  texture fx
+//@tags: texture
+//@credits: 
+#include "ColorSpace.fxh"
+Texture2D inputT;
+Texture2D control;
+Texture2D control2;
+float progress;
+StructuredBuffer<float2> control3;
+float hue,saturation, lightness;
+float scale;
+float thresh <float uimin=0.0; float uimax=1.0;> = 0.5 ;
+
+SamplerState linearSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Wrap;
+    AddressV = Wrap;
+};
+
+struct psInput
+{
+	float4 p : SV_Position;
+	float2 uv : TEXCOORD0;
+};
+
+
+float4 PS(psInput input) : SV_Target
+{	float4 base  = float4 (0,0,0,1);
+	base = inputT.Sample(linearSampler, input.uv);
+	float4 contr1 = control.Sample(linearSampler,input.uv);
+	float4 contr2 = control2.Sample(linearSampler,input.uv);
+	float2 distort = float2(0,0);
+	float2 newdistort = control3[0];
+	if(contr1.r>0.6){distort = scale*contr2.rg;} else {distort = float2(0,0);}
+	float4 inTex = inputT.Sample(linearSampler, input.uv+distort);
+	float4 tempHUE = float4 (RGBtoHSL(inTex.rgb),1);
+	tempHUE.x += hue;
+	tempHUE.y += saturation;
+	tempHUE.z -= 1-lightness;
+	float4 converted = float4 (HSLtoRGB(tempHUE.rgb),1);
+	float4 result = float4(0,0,0,1);
+	if(contr1.r>0.6) {result.rgb = converted.rgb; } else {result.rgb = inTex.rgb;}
+	result = lerp (base, result, progress);
+	return result;
+}
+
+technique10 Process
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_4_0,PS()));
+	}
+}
+
+
+

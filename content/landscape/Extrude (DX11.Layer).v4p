@@ -1,13 +1,13 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_ix\content\landscape\Extrude (DX11.Layer).v4p" systemname="Extrude (DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome\content\landscape\Extrude (DX11.Layer).v4p" scrollx="2910" scrolly="0">
-   <BOUNDS type="Window" left="4305" top="3540" width="10905" height="9915">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\landscape\Extrude (DX11.Layer).v4p" systemname="Extrude (DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome\content\landscape\Extrude (DX11.Layer).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="4110" top="2940" width="25440" height="15990">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="2" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="4335" top="6900" width="795" height="240">
+   <BOUNDS type="Box" left="3840" top="8055" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4335" top="6900" width="0" height="0">
+   <BOUNDS type="Node" left="3840" top="8055" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
@@ -207,7 +207,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Rasterizer (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Rasterizer (DX11.RenderState)" componentmode="Hidden" id="25">
-   <BOUNDS type="Node" left="3630" top="4320" width="100" height="100">
+   <BOUNDS type="Node" left="555" top="5955" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
@@ -289,7 +289,7 @@
    <LINK srcnodeid="31" srcpinname="Texture Out" dstnodeid="22" dstpinname="texHEIGHT">
    </LINK>
    <NODE systemname="PhongPoint (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\PhongPoint.fx" nodename="PhongPoint (DX11.Effect)" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="4365" top="6045" width="100" height="100">
+   <BOUNDS type="Node" left="3870" top="7200" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Geometry" visible="1">
    </PIN>
@@ -315,6 +315,8 @@
    </PIN>
    <PIN pinname="Light Attenuation 2" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Layer" dstnodeid="2" dstpinname="Input Node">
    </LINK>
@@ -325,11 +327,11 @@
    <LINK srcnodeid="25" srcpinname="Render State" dstnodeid="1" dstpinname="Render State">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="32" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4230" top="1935" width="795" height="720">
+   <BOUNDS type="Box" left="5235" top="1530" width="795" height="720">
    </BOUNDS>
-   <BOUNDS type="Node" left="4230" top="1935" width="0" height="0">
+   <BOUNDS type="Node" left="5235" top="1530" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,5,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,7.69,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -356,4 +358,26 @@
    </NODE>
    <LINK srcnodeid="14" srcpinname="Texture Out" dstnodeid="1" dstpinname="Texture">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="35" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="12765" top="5025" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12765" top="5025" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Enabled">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.0">
+   </PACK>
    </PATCH>
