@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\_SANDBOXES\OldPrep (Dome DX11.Layer).v4p" systemname="QuickPrep (Dome DX11.Layer)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\content\sandboxes\QuickPrep (Dome DX11.Layer).v4p" scrollx="45" scrolly="1275">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\_SANDBOXES\OldPrep (Dome DX11.Layer).v4p" systemname="QuickPrep (Dome DX11.Layer)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\content\sandboxes\QuickPrep (Dome DX11.Layer).v4p" scrollx="0" scrolly="135">
    <BOUNDS type="Window" left="-225" top="-105" width="14610" height="15705">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -123,7 +123,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1575" top="5385" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.63">
+   <PIN pinname="Y Input Value" slicecount="1" values="-10.03">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="m">
    </PIN>
@@ -172,30 +172,6 @@
    <PIN pinname="Apply" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE systemname="Pano" filename="..\Panorama\Pano.v4p" nodename="..\Panorama\Pano.v4p" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="1755" top="5730" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Window" left="14640" top="5325" width="9000" height="7755">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="StopRotation" slicecount="1" visible="1" values="0">
-   </PIN>
-   <BOUNDS type="Box" left="1755" top="5730">
-   </BOUNDS>
-   <PIN pinname="Next">
-   </PIN>
-   <PIN pinname="HorizonRaise">
-   </PIN>
-   <PIN pinname="Resize Radius" slicecount="1" values="7.97">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Next">
-   </LINK>
-   <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="2" dstpinname="HorizonRaise">
-   </LINK>
    <NODE systemname="TwilightSound (DX11)" filename="..\Twilight\TwilightSound (DX11).v4p" componentmode="Hidden" id="48" nodename="TwilightSound (DX11)">
    <BOUNDS type="Node" left="1005" top="4023" width="100" height="100">
    </BOUNDS>
@@ -219,7 +195,7 @@
    </PIN>
    <PIN pinname="Apply" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="X" slicecount="1" values="4.00661735312348E-005" visible="1">
+   <PIN pinname="X" slicecount="1" visible="1" values="4.00661735312348E-005">
    </PIN>
    </NODE>
    <NODE systemname="StraightStruts" filename="..\StraightStruts.v4p" nodename="..\StraightStruts.v4p" componentmode="Hidden" id="50">
@@ -261,15 +237,15 @@
    </BOUNDS>
    <PIN pinname="Layer Out" visible="1">
    </PIN>
-   <PIN pinname="Alpha" slicecount="1" values="0.01" visible="1">
+   <PIN pinname="Alpha" slicecount="1" visible="1" values="0.01">
    </PIN>
    <BOUNDS type="Window" left="-2730" top="1515" width="21585" height="15150">
    </BOUNDS>
-   <PIN pinname="Brightness" slicecount="1" values="0.14" visible="1">
+   <PIN pinname="Brightness" slicecount="1" visible="1" values="0.14">
    </PIN>
    <PIN pinname="Speed" slicecount="1" values="0.2">
    </PIN>
-   <PIN pinname="Next Palette" slicecount="1" values="0" visible="1">
+   <PIN pinname="Next Palette" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="RotationSpeed" slicecount="1" values="0">
    </PIN>
@@ -278,6 +254,18 @@
    <BOUNDS type="Node" left="8760" top="5565" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="-10">
+   </PIN>
+   <PIN pinname="Displace" slicecount="1" values="3.36">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Triangle Size" slicecount="1" values="1.08">
+   </PIN>
+   <PIN pinname="Spread" slicecount="1" values="0.87">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="0.06">
    </PIN>
    </NODE>
    <NODE systemname="Sphere (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Sphere (DX11.Geometry)" componentmode="Hidden" id="59">
@@ -474,8 +462,6 @@
    <PIN pinname="Behavior" slicecount="1" values="Bang">
    </PIN>
    </NODE>
-   <LINK srcnodeid="74" srcpinname="Y Output Value" dstnodeid="2" dstpinname="StopRotation">
-   </LINK>
    <LINK srcnodeid="6" srcpinname="Layer Out" dstnodeid="73" dstpinname="Layer 1">
    </LINK>
    <LINK srcnodeid="73" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node" linkstyle="VHV">
@@ -562,12 +548,34 @@
    <BOUNDS type="Node" left="10620" top="3735" width="100" height="100">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="26" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 5">
-   </LINK>
-   <LINK srcnodeid="32" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 7">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Layer Out" dstnodeid="6" dstpinname="Layer 6">
-   </LINK>
    <LINK srcnodeid="89" srcpinname="Output" dstnodeid="57" dstpinname="Brightness">
+   </LINK>
+   <NODE systemname="Pano" filename="..\Panorama\Pano.v4p" nodename="..\Panorama\Pano.v4p" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1755" top="5730" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14640" top="5325" width="9000" height="7755">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="StopRotation" slicecount="1" visible="1" values="0">
+   </PIN>
+   <BOUNDS type="Box" left="1755" top="5730">
+   </BOUNDS>
+   <PIN pinname="Next">
+   </PIN>
+   <PIN pinname="HorizonRaise">
+   </PIN>
+   <PIN pinname="Resize Radius" slicecount="1" values="7.97">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Next">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="2" dstpinname="HorizonRaise">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Y Output Value" dstnodeid="2" dstpinname="StopRotation">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 7">
    </LINK>
    </PATCH>

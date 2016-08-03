@@ -1,0 +1,87 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Rot\Audience.v4p" systemname="Audience" filename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Rot\Audience.v4p">
+   <NODE systemname="BillBoard (DX11.Layer)" filename="..\..\..\modules\Helper\BillBoard (DX11.Layer).v4p" nodename="BillBoard (DX11.Layer)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="2040" top="3705" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Element Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Tilt" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Position" slicecount="3" visible="1" values="1.19,2,0.27">
+   </PIN>
+   <PIN pinname="Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="3465" top="2775" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" slicecount="1" values="img\zuschauer.png">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="CircularSpread (Spreads)" nodename="CircularSpread (Spreads)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1500" top="2160" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output X" visible="1">
+   </PIN>
+   <PIN pinname="Output Y" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" slicecount="1" values="8">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1530" top="2835" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" values="1.86">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="3210" top="1500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" slicecount="1" values="0.65">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output X" dstnodeid="3" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output Y" dstnodeid="3" dstpinname="Z">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="XYZ" dstnodeid="0" dstpinname="Position">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Transform Out" dstnodeid="0" dstpinname="Element Transform">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Texture Out" dstnodeid="0" dstpinname="Texture">
+   </LINK>
+   <NODE id="5" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   <BOUNDS type="Box" left="2040" top="4305" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2040" top="4305" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="5" dstpinname="Input Node">
+   </LINK>
+   <BOUNDS type="Window" left="-1" top="-1" width="5065" height="5305">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   </PATCH>

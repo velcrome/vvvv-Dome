@@ -1,0 +1,181 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Sturm\BlackNWhite.v4p" systemname="BlackNWhite" filename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Sturm\BlackNWhite.v4p">
+   <NODE systemname="Constant (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\Constant.fx" nodename="Constant (DX11.Effect)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="3030" top="4965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Sampler State" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Sphere (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Sphere (DX11.Geometry)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="2535" top="4065" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   <PIN pinname="Resolution X" visible="1">
+   </PIN>
+   <PIN pinname="Resolution Y" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="DynamicTexture (DX11.Texture 2d Color)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DynamicTexture (DX11.Texture 2d Color)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="4965" top="4050" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Width" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Data" visible="1" slicecount="2" values="|0.00000,0.00000,0.00000,1.00000|,|1.00000,0.99813,0.99978,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Rasterizer (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Rasterizer (DX11.RenderState)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1500" top="4050" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="NoCullSimple">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="3405" top="4035" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="DomeTransform">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="5" systemname="IOBox (Color)">
+   <BOUNDS type="Box" left="5760" top="1500" width="2265" height="1110">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5760" top="1500" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="6" visible="1" values="|0.00000,0.00000,0.00000,1.00000|,|1.00000,0.99813,0.99978,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|0.99781,1.00000,0.99914,1.00000|,|0.00185,0.00185,0.00185,1.00000|,|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Sampler (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Sampler (DX11)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="6375" top="4065" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mode" slicecount="1" values="PointClamp">
+   </PIN>
+   <PIN pinname="Sampler" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (Color)" nodename="GetSlice (Color)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="5745" top="3090" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bin Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Render State" dstnodeid="0" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Geometry Out" dstnodeid="0" dstpinname="Geometry">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Texture Out" dstnodeid="0" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Sampler" dstnodeid="0" dstpinname="Sampler State">
+   </LINK>
+   <NODE id="8" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   <BOUNDS type="Box" left="3030" top="5565" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3030" top="5565" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="8" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="2" dstpinname="Data">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Color Output" dstnodeid="7" dstpinname="Input">
+   </LINK>
+   <NODE id="9" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Index">
+   </PIN>
+   <BOUNDS type="Box" left="5745" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5745" top="500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Index">
+   </LINK>
+   <BOUNDS type="Window" left="-1" top="-1" width="7975" height="6565">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3180" top="3030" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3180" top="3030" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="64">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Resolution X">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Resolution Y">
+   </LINK>
+   <NODE systemname="Rotate (Transform)" nodename="Rotate (Transform)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="3555" top="4410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" visible="1" values="0.18">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Input Value" dstnodeid="11" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Transform Out" dstnodeid="0" dstpinname="Transform In" linkstyle="PolyLine">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4275" top="3405" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4275" top="3405" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.011">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Y">
+   </LINK>
+   </PATCH>
