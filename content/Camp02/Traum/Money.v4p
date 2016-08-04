@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Traum\Money.v4p" filename="C:\dev\vvvv\vvvv-Dome\content\Boids\Boids (DX11.Layer).v4p" systemname="Boids (DX11.Layer)" scrollx="90" scrolly="7035">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Traum\Money.v4p" filename="C:\dev\vvvv\vvvv-Dome\content\Boids\Boids (DX11.Layer).v4p" systemname="Boids (DX11.Layer)" scrollx="0" scrolly="6810">
    <BOUNDS height="12810" left="5175" top="7875" type="Window" width="17730">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -137,7 +137,7 @@
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="0" visible="1">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Reset">
    </PIN>
@@ -724,28 +724,14 @@
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE systemname="Decay (Animation)" nodename="Decay (Animation)" componentmode="Hidden" id="216">
-   <BOUNDS type="Node" left="16305" top="10290" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Decay" slicecount="1" values="20">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="215" srcpinname="Y Output Value" dstnodeid="216" dstpinname="Input">
-   </LINK>
    <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="217">
-   <BOUNDS type="Node" left="15855" top="10755" width="100" height="100">
+   <BOUNDS type="Node" left="15660" top="10530" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Inverse Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="216" srcpinname="Output" dstnodeid="217" dstpinname="Input 1">
-   </LINK>
    <NODE componentmode="Hidden" debug="0" filename="_FlockingBehaviour(3D)\SubPatches\FlockingBehavior_subPatch.v4p" hiddenwhenlocked="0" id="99" nodename="_FlockingBehaviour(3D)\SubPatches\FlockingBehavior_subPatch.v4p" systemname="FlockingBehavior_subPatch">
    <BOUNDS height="270" left="1515" top="7905" type="Node" width="12960">
    </BOUNDS>
@@ -925,7 +911,9 @@
    </PIN>
    <PIN pinname="Element Transform" visible="1">
    </PIN>
-   <PIN pinname="Enabled" visible="1">
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="99" srcpinname="PositionXYZ" dstnodeid="219" dstpinname="Position">
@@ -957,7 +945,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="XYZ" slicecount="1" values="0.89">
+   <PIN pinname="XYZ" slicecount="1" values="0.89" visible="1">
    </PIN>
    <PIN pinname="Transform In" visible="1">
    </PIN>
@@ -992,6 +980,70 @@
    </LINK>
    <LINK srcnodeid="223" srcpinname="Transform Out" dstnodeid="222" dstpinname="Transform In">
    </LINK>
-   <LINK srcnodeid="215" srcpinname="Y Output Value" dstnodeid="219" dstpinname="Enabled">
+   <NODE systemname="SetAlpha (Color)" nodename="SetAlpha (Color)" componentmode="Hidden" id="225">
+   <BOUNDS type="Node" left="13515" top="10725" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="225" srcpinname="Output" dstnodeid="219" dstpinname="Color">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="226" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="17565" top="8070" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="17565" top="8070" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Alpha">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="226" srcpinname="Y Output Value" dstnodeid="225" dstpinname="Alpha">
+   </LINK>
+   <LINK srcnodeid="226" srcpinname="Y Output Value" dstnodeid="217" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="217" srcpinname="Inverse Output" dstnodeid="219" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="227">
+   <BOUNDS type="Node" left="18435" top="10005" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="228">
+   <BOUNDS type="Node" left="16920" top="10530" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="217" srcpinname="Inverse Output" dstnodeid="228" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="228" srcpinname="Up Edge" dstnodeid="73" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="229" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="465" top="10470" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="465" top="10470" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.89">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Size">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="229" srcpinname="Y Output Value" dstnodeid="222" dstpinname="XYZ">
    </LINK>
    </PATCH>

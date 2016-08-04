@@ -15,6 +15,10 @@
    </PIN>
    <BOUNDS type="Window" left="5580" top="2730" width="15300" height="8970">
    </BOUNDS>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="1710" top="1830" width="100" height="100">
@@ -132,4 +136,46 @@
    </LINK>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
+   <NODE systemname="SetAlpha (Color)" nodename="SetAlpha (Color)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="5805" top="3225" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" slicecount="1" values="|0.99646,0.99629,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6525" top="2235" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6525" top="2235" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Alpha">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Alpha">
+   </LINK>
+   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="6855" top="3075" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Inverse Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="9" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="0" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Inverse Output" dstnodeid="0" dstpinname="Enabled">
+   </LINK>
    </PATCH>

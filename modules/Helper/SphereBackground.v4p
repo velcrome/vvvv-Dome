@@ -66,7 +66,7 @@
    </NODE>
    <LINK srcnodeid="1" srcpinname="Layer" dstnodeid="5" dstpinname="Input Node">
    </LINK>
-   <BOUNDS type="Window" left="-1" top="-1" width="4840" height="4690">
+   <BOUNDS type="Window" left="13740" top="7515" width="9405" height="4680">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -91,5 +91,29 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="7" srcpinname="Output Node" dstnodeid="1" dstpinname="Texture">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="8" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="945" top="405" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="945" top="405" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Render State|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output Node" dstnodeid="6" dstpinname="Render State">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="9" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="3825" top="870" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3825" top="870" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform In|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output Node" dstnodeid="2" dstpinname="Transform In">
    </LINK>
    </PATCH>

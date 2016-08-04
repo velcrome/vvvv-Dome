@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Sturm\BlackNWhite.v4p" systemname="BlackNWhite" filename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Sturm\BlackNWhite.v4p">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Sturm\BlackNWhite.v4p" systemname="BlackNWhite" filename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Sturm\BlackNWhite.v4p" scrollx="2925" scrolly="240">
    <NODE systemname="Constant (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\Constant.fx" nodename="Constant (DX11.Effect)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="3030" top="4965" width="100" height="100">
    </BOUNDS>
@@ -35,7 +35,7 @@
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="Data" visible="1" slicecount="2" values="|0.00000,0.00000,0.00000,1.00000|,|1.00000,0.99813,0.99978,1.00000|">
+   <PIN pinname="Data" visible="1" slicecount="2" values="|0.00185,0.00185,0.00185,1.00000|,|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
    </NODE>
    <NODE systemname="Rasterizer (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Rasterizer (DX11.RenderState)" componentmode="Hidden" id="3">
@@ -55,9 +55,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="5" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="5760" top="1500" width="2265" height="1110">
+   <BOUNDS type="Box" left="4785" top="1155" width="2265" height="1110">
    </BOUNDS>
-   <BOUNDS type="Node" left="5760" top="1500" width="0" height="0">
+   <BOUNDS type="Node" left="4785" top="1155" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Color Input" slicecount="6" visible="1" values="|0.00000,0.00000,0.00000,1.00000|,|1.00000,0.99813,0.99978,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|0.99781,1.00000,0.99914,1.00000|,|0.00185,0.00185,0.00185,1.00000|,|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
@@ -89,7 +89,7 @@
    </PIN>
    <PIN pinname="Index" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="6" values="|0.00000,0.00000,0.00000,1.00000|,|1.00000,0.99813,0.99978,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|0.99781,1.00000,0.99914,1.00000|,|0.00185,0.00185,0.00185,1.00000|,|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -112,10 +112,6 @@
    </NODE>
    <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="8" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="2" dstpinname="Data">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="Color Output" dstnodeid="7" dstpinname="Input">
-   </LINK>
    <NODE id="9" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Index">
    </PIN>
@@ -126,7 +122,7 @@
    </NODE>
    <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Index">
    </LINK>
-   <BOUNDS type="Window" left="-1" top="-1" width="7975" height="6565">
+   <BOUNDS type="Window" left="5580" top="6750" width="7965" height="8295">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -177,5 +173,61 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Y">
+   </LINK>
+   <NODE systemname="RGB (Color Split Vector)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.RGBVector.dll" nodename="RGB (Color Split Vector)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="6915" top="3030" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname=" RGBA" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="RGB (Color Join Vector)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.RGBVector.dll" nodename="RGB (Color Join Vector)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="7305" top="3585" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname=" RGBA" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="13" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="2" dstpinname="Data">
+   </LINK>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="7200" top="3285" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname=" RGBA" dstnodeid="15" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Position Out" dstnodeid="14" dstpinname=" RGBA">
+   </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="16" systemname="IOBox (Color)">
+   <BOUNDS type="Box" left="7785" top="1035" width="2265" height="1110">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7785" top="1035" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="14" visible="1" values="|0.00000,0.00000,0.00000,1.00000|,|1.00000,0.99813,0.99978,1.00000|,|0.00000,0.44446,0.96475,1.00000|,|0.00000,0.32429,0.93333,1.00000|,|0.27620,0.27620,0.27620,1.00000|,|0.24287,0.24287,0.24287,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,0.99813,0.99978,1.00000|,|0.00000,0.00000,0.00000,1.00000|,|0.01482,0.01482,0.01482,1.00000|,|1.00000,0.00000,0.05009,1.00000|,|1.00000,0.02200,0.00000,1.00000|,|0.94625,0.63228,0.73543,1.00000|,|1.00000,0.65618,0.76222,1.00000|">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="7">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Color Output" dstnodeid="7" dstpinname="Input">
    </LINK>
    </PATCH>

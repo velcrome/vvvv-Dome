@@ -1,0 +1,133 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Traum\Auge.v4p" systemname="Auge" filename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Traum\Auge.v4p">
+   <NODE systemname="BillBoard (DX11.Layer)" filename="..\..\..\modules\Helper\BillBoard (DX11.Layer).v4p" nodename="BillBoard (DX11.Layer)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1500" top="3615" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Position" slicecount="3" visible="1" values="0,0,0">
+   </PIN>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Element Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Tilt" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="2895" top="1920" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" slicecount="1" values="img\auge.png">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="SizeXY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="2" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1590" top="1500" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1590" top="1500" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,3.5,3.17">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <NODE systemname="AspectRatio (Transform)" filename="" nodename="AspectRatio (Transform)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="3210" top="2970" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Uniform Scale" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="3480" top="2280" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="5" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4200" top="2385" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4200" top="2385" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="4.3">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <NODE systemname="SetAlpha (Color)" nodename="SetAlpha (Color)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="2025" top="2640" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Position">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="0" dstpinname="Element Transform">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="0" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Texture Out" dstnodeid="0" dstpinname="Texture">
+   </LINK>
+   <NODE id="7" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="4215" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="4215" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="7" dstpinname="Input Node">
+   </LINK>
+   <NODE id="8" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Alpha">
+   </PIN>
+   <BOUNDS type="Box" left="2025" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2025" top="500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Alpha">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="X" dstnodeid="3" dstpinname="Aspect Width">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Y" dstnodeid="3" dstpinname="Aspect Height">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Uniform Scale">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="SizeXY" dstnodeid="4" dstpinname="XY">
+   </LINK>
+   <BOUNDS type="Window" left="-1" top="-1" width="5700" height="5215">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   </PATCH>
