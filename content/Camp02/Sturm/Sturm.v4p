@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Sturm\Sturm.v4p" systemname="Destiny" filename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Destiny\Destiny.v4p" scrollx="840" scrolly="5355">
-   <BOUNDS type="Window" left="1365" top="690" width="11340" height="13170">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Sturm\Sturm.v4p" systemname="Destiny" filename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Destiny\Destiny.v4p" scrollx="2685" scrolly="1500">
+   <BOUNDS type="Window" left="11835" top="2580" width="15345" height="13170">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -23,9 +23,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="2" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="4410" top="17850" width="795" height="240">
+   <BOUNDS type="Box" left="585" top="19755" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4410" top="17850" width="0" height="0">
+   <BOUNDS type="Node" left="585" top="19755" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
@@ -69,7 +69,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="4410" top="16695" width="100" height="100">
+   <BOUNDS type="Node" left="690" top="18795" width="15300" height="270">
    </BOUNDS>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
@@ -82,6 +82,8 @@
    <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="7" srcpinname="Layer Out" dstnodeid="2" dstpinname="Input Node">
@@ -561,6 +563,8 @@
    </PIN>
    <PIN pinname="Output 8" visible="1">
    </PIN>
+   <PIN pinname="Output 6" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="64" srcpinname="Output" dstnodeid="60" dstpinname="Input">
    </LINK>
@@ -589,7 +593,7 @@
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Destination Maximum" slicecount="1" values="2" visible="1">
+   <PIN pinname="Destination Maximum" slicecount="1" visible="1" values="2">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -696,6 +700,8 @@
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
    <LINK srcnodeid="74" srcpinname="Y Output Value" dstnodeid="66" dstpinname="Destination Maximum">
@@ -805,5 +811,197 @@
    <LINK srcnodeid="6" srcpinname="Transform Out" dstnodeid="80" dstpinname="Transform In">
    </LINK>
    <LINK srcnodeid="80" srcpinname="Transform Out" dstnodeid="1" dstpinname="Element Transform">
+   </LINK>
+   <NODE systemname="SphereBackground" filename="..\..\..\modules\Helper\SphereBackground.v4p" nodename="..\..\..\modules\Helper\SphereBackground.v4p" componentmode="Hidden" id="84">
+   <BOUNDS type="Node" left="13440" top="14835" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" visible="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Window" left="17970" top="8040" width="4830" height="4680">
+   </BOUNDS>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="SetAlpha (Color)" nodename="SetAlpha (Color)" componentmode="Hidden" id="83">
+   <BOUNDS type="Node" left="13500" top="14085" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="84" dstpinname="Color">
+   </LINK>
+   <NODE systemname="DepthStencil (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DepthStencil (DX11.RenderState)" componentmode="Hidden" id="82">
+   <BOUNDS type="Node" left="13320" top="13425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="NoDepth">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="82" srcpinname="Render State" dstnodeid="84" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="60" srcpinname="Output 6" dstnodeid="83" dstpinname="Alpha">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 4">
+   </LINK>
+   <NODE systemname="SphereBackground" filename="..\..\..\modules\Helper\SphereBackground.v4p" nodename="..\..\..\modules\Helper\SphereBackground.v4p" componentmode="Hidden" id="98">
+   <BOUNDS type="Node" left="10980" top="17325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="97">
+   <BOUNDS type="Node" left="9975" top="14655" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Activity">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="95">
+   <BOUNDS type="Node" left="11055" top="14730" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Reset" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Pause" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Phase" slicecount="1" values="0.5">
+   </PIN>
+   </NODE>
+   <NODE systemname="WaveShaper (Value)" nodename="WaveShaper (Value)" componentmode="Hidden" id="94">
+   <BOUNDS type="Node" left="11055" top="15090" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Shape" slicecount="1" values="Sine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="95" srcpinname="Output" dstnodeid="94" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Lava (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Lava.tfx" nodename="Lava (DX11.TextureFX)" componentmode="Hidden" id="92">
+   <BOUNDS type="Node" left="12315" top="16785" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Time" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Integrate (Differential)" nodename="Integrate (Differential)" componentmode="Hidden" id="91">
+   <BOUNDS type="Node" left="12480" top="16350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="Position In" slicecount="1" visible="1" values="0.13">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="91" srcpinname="Position Out" dstnodeid="92" dstpinname="Time">
+   </LINK>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="90">
+   <BOUNDS type="Node" left="11070" top="13905" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0.02">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="88">
+   <BOUNDS type="Node" left="12105" top="14205" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Epsilon" slicecount="1" values="0.04">
+   </PIN>
+   <PIN pinname="Inverse Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="90" srcpinname="Output" dstnodeid="95" dstpinname="Period">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="87">
+   <BOUNDS type="Node" left="11070" top="13440" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="11070" top="13440" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="87" srcpinname="Y Output Value" dstnodeid="90" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="87" srcpinname="Y Output Value" dstnodeid="88" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="88" srcpinname="Inverse Output" dstnodeid="95" dstpinname="Pause">
+   </LINK>
+   <LINK srcnodeid="88" srcpinname="Inverse Output" dstnodeid="95" dstpinname="Reset">
+   </LINK>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="86">
+   <BOUNDS type="Node" left="10035" top="15135" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Destination Maximum" slicecount="1" values="0.5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="98" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 3">
+   </LINK>
+   <NODE systemname="DepthStencil (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DepthStencil (DX11.RenderState)" componentmode="Hidden" id="99">
+   <BOUNDS type="Node" left="10065" top="16485" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="NoDepth">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="99" srcpinname="Render State" dstnodeid="98" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="92" srcpinname="Texture Out" dstnodeid="98" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="HSL (Color Join)" nodename="HSL (Color Join)" componentmode="Hidden" id="100">
+   <BOUNDS type="Node" left="11460" top="16725" width="600" height="270">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Lightness" slicecount="1" values="1.11">
+   </PIN>
+   <PIN pinname="Hue" slicecount="1" values="0.12">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="100" srcpinname="Output" dstnodeid="98" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="91" dstpinname="Position In">
+   </LINK>
+   <LINK srcnodeid="97" srcpinname="Input Value" dstnodeid="86" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="60" srcpinname="Output 4" dstnodeid="100" dstpinname="Alpha">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\modules\Helper\BillBoard (DX11.Layer).v4p" systemname="BillBoard (DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome_lab\modules\Helper\BillBoard (DX11.Layer).v4p" scrollx="3705" scrolly="2730">
+   <PATCH nodename="" systemname="BillBoard (DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome_lab\modules\Helper\BillBoard (DX11.Layer).v4p" scrollx="3705" scrolly="2730">
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="8064" top="3264" width="795" height="720">
    </BOUNDS>
@@ -253,7 +253,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Grid (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Grid (DX11.Geometry)" componentmode="Hidden" id="54">
-   <BOUNDS type="Node" left="9270" top="8880" width="100" height="100">
+   <BOUNDS type="Node" left="7995" top="8805" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
@@ -363,7 +363,7 @@
    <LINK srcnodeid="63" srcpinname="Output Node" dstnodeid="53" dstpinname="Sampler State">
    </LINK>
    <NODE systemname="Multiply (Transform)" nodename="Multiply (Transform)" componentmode="Hidden" id="64">
-   <BOUNDS type="Node" left="10170" top="8790" width="100" height="100">
+   <BOUNDS type="Node" left="9900" top="8805" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform In 1" visible="1" slicecount="1" values="||">
    </PIN>
