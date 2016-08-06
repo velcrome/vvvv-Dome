@@ -172,7 +172,7 @@
    <PIN pinname="Alpha" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Sealife" filename="Sealife.v4p" nodename="Sealife.v4p" componentmode="Hidden" id="97">
+   <NODE systemname="Sealife" filename="Sealife.v4p" nodename="Sealife.v4p" componentmode="InAWindow" id="97">
    <BOUNDS type="Node" left="9569" top="10858" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="4674" top="7141" width="9790" height="7435">
@@ -361,7 +361,7 @@
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="Filename" slicecount="1" values="img\box\underwater.jpg" visible="1">
+   <PIN pinname="Filename" slicecount="1" visible="1" values="img\box\underwater.jpg">
    </PIN>
    </NODE>
    <LINK srcnodeid="110" srcpinname="Texture Out" dstnodeid="108" dstpinname="Texture">

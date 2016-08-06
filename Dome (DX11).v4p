@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\Dome (DX11).v4p" filename="C:\Users\SATO-Z800\Desktop\velcrome\vvvvDome\DemoDome.v4p" systemname="DemoDome" locked="0" scrollx="0" scrolly="795" bgcolor="15132390">
-   <BOUNDS height="15855" left="-105" top="0" type="Window" width="14610">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\Dome (DX11).v4p" filename="C:\Users\SATO-Z800\Desktop\velcrome\vvvvDome\DemoDome.v4p" systemname="DemoDome" locked="0" scrollx="30" scrolly="0" bgcolor="15132390">
+   <BOUNDS height="15855" left="0" top="-105" type="Window" width="14610">
    </BOUNDS>
    <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="116">
    <BOUNDS type="Node" left="6390" top="2670" width="100" height="100">
@@ -949,6 +949,10 @@
    </PIN>
    <BOUNDS type="Box" left="3450" top="9690">
    </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="394" srcpinname="Layer Out" dstnodeid="245" dstpinname="Input Node">
    </LINK>
@@ -1605,6 +1609,8 @@
    </PIN>
    <PIN pinname="Background Color" slicecount="1" visible="1" values="|0.25394,0.19230,0.17439,1.00000|">
    </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="448" srcpinname="Layer Out" dstnodeid="457" dstpinname="Layers">
    </LINK>
@@ -1733,7 +1739,7 @@
    </BOUNDS>
    <PIN pinname="ContentLayer" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="-105" top="0" width="14610" height="15855">
+   <BOUNDS type="Window" left="0" top="-105" width="14610" height="15855">
    </BOUNDS>
    <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
    </PIN>
@@ -1765,9 +1771,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Traum" filename="content\Camp02\Traum\Traum.v4p" componentmode="Hidden" id="499" nodename="content\Camp02\Traum\Traum.v4p">
-   <BOUNDS type="Node" left="5280" top="7020" width="100" height="100">
+   <BOUNDS type="Node" left="5025" top="6975" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5280" top="7020" width="4800" height="3600">
+   <BOUNDS type="Box" left="5025" top="6975" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="4245" top="5955" width="24270" height="8280">
    </BOUNDS>
@@ -1789,13 +1795,13 @@
    </PIN>
    </NODE>
    <NODE systemname="Sturm" filename="content\Camp02\Sturm\Sturm.v4p" nodename="content\Camp02\Sturm\Sturm.v4p" componentmode="Hidden" id="502" stayontop="1">
-   <BOUNDS type="Node" left="7260" top="7020" width="100" height="100">
+   <BOUNDS type="Node" left="7200" top="7020" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
    <BOUNDS type="Window" left="11835" top="2580" width="15345" height="13170">
    </BOUNDS>
-   <BOUNDS type="Box" left="7260" top="7020">
+   <BOUNDS type="Box" left="7200" top="7020">
    </BOUNDS>
    <PIN pinname="Control" visible="1">
    </PIN>
@@ -1835,15 +1841,15 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="493" srcpinname="Values" dstnodeid="499" dstpinname="Control" linkstyle="VHV">
-   <LINKPOINT x="1545" y="6645">
+   <LINKPOINT x="1460" y="6630">
    </LINKPOINT>
-   <LINKPOINT x="5280" y="6645">
+   <LINKPOINT x="5110" y="6615">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="493" srcpinname="Values" dstnodeid="502" dstpinname="Control" linkstyle="VHV">
-   <LINKPOINT x="1545" y="6645">
+   <LINKPOINT x="1525" y="6645">
    </LINKPOINT>
-   <LINKPOINT x="7260" y="6645">
+   <LINKPOINT x="7220" y="6645">
    </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="505" systemname="IOBox (Color)">
@@ -1851,7 +1857,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6075" top="11175" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00927,0.00927,0.00927,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.02224,0.02224,0.02224,1.00000|">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
@@ -1888,6 +1894,88 @@
    </NODE>
    <LINK srcnodeid="507" srcpinname="Y Output Value" dstnodeid="502" dstpinname="Enable">
    </LINK>
-   <LINK srcnodeid="502" srcpinname="Layer" dstnodeid="484" dstpinname="Input Node">
+   <NODE systemname="Tapestry" filename="content\Tapestry\Tapestry.v4p" nodename="content\Tapestry\Tapestry.v4p" componentmode="Hidden" id="509">
+   <BOUNDS type="Node" left="5430" top="8955" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Close" slicecount="1" values="1" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="5865" top="6375" width="9000" height="11610">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InAWindow" id="511" stayontop="1">
+   <BOUNDS type="Node" left="10140" top="720" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10140" top="720" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="22905" top="915" width="6240" height="5085">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Toggle (Animation)" nodename="Toggle (Animation)" componentmode="Hidden" id="512">
+   <BOUNDS type="Node" left="5430" top="8220" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (Keyboard)" componentmode="Hidden" id="515">
+   <BOUNDS type="Node" left="5445" top="7800" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Key Match" slicecount="1" values="Space">
+   </PIN>
+   <PIN pinname="Space" visible="1">
+   </PIN>
+   <PIN pinname="Reset Toggle" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Key Mode" slicecount="1" values="DownOnly">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="515" srcpinname="Space" dstnodeid="512" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="516" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6270" top="8235" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6270" top="8235" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="515" srcpinname="Space" dstnodeid="516" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Desktop)" componentmode="Hidden" id="514">
+   <BOUNDS type="Node" left="5445" top="7440" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="514" srcpinname="Device" dstnodeid="515" dstpinname="Keyboard">
+   </LINK>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="517">
+   <BOUNDS type="Node" left="5430" top="8625" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" slicecount="1" values="5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="512" srcpinname="Output" dstnodeid="517" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="517" srcpinname="Position Out" dstnodeid="509" dstpinname="Close">
+   </LINK>
+   <LINK srcnodeid="509" srcpinname="Layer" dstnodeid="394" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="498" srcpinname="Layer" dstnodeid="484" dstpinname="Input Node">
    </LINK>
    </PATCH>

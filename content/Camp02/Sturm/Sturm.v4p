@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Sturm\Sturm.v4p" systemname="Destiny" filename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Destiny\Destiny.v4p" scrollx="2685" scrolly="1500">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Sturm\Sturm.v4p" systemname="Destiny" filename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Destiny\Destiny.v4p" scrollx="1965" scrolly="9105">
    <BOUNDS type="Window" left="11835" top="2580" width="15345" height="13170">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -1003,5 +1003,19 @@
    <LINK srcnodeid="97" srcpinname="Input Value" dstnodeid="86" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="60" srcpinname="Output 4" dstnodeid="100" dstpinname="Alpha">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="101" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9795" top="15675" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9795" top="15675" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="101" dstpinname="Y Input Value">
+   <LINKPOINT x="9780" y="15630">
+   </LINKPOINT>
    </LINK>
    </PATCH>

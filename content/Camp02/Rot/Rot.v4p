@@ -642,4 +642,24 @@
    </LINK>
    <LINK srcnodeid="75" srcpinname="Output 4" dstnodeid="84" dstpinname="Input">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="91" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="240" top="5790" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="240" top="5790" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Input Value" dstnodeid="91" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="92" systemname="IOBox (Color)">
+   <BOUNDS type="Box" left="765" top="7245" width="900" height="300">
+   </BOUNDS>
+   <BOUNDS type="Node" left="765" top="7245" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Output" dstnodeid="92" dstpinname="Color Input">
+   </LINK>
    </PATCH>

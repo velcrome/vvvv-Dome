@@ -1,0 +1,119 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Traum\Title.v4p" systemname="Title" filename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Traum\Title.v4p">
+   <NODE systemname="BillBoard (DX11.Layer)" filename="..\..\..\modules\Helper\BillBoard (DX11.Layer).v4p" nodename="BillBoard (DX11.Layer)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="2085" top="3870" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Position" visible="1" slicecount="99" values="1.22155420428766,0,4.84848484848485,-1.53593122677207,1.40703882030065,4.54545454545455,0.231337067067875,-2.6359665606171,4.24242424242424,1.87347557275604,2.44361712806093,3.93939393939394,-3.3792835365045,-0.59774767589834,3.63636363636364,3.14449032595983,-2.00026735183924,3.33333333333334,-1.0324702945321,3.84073803265011,3.03030303030303,-1.93152400228341,-3.71903193044607,2.72727272727273,4.10764340120532,1.50010478201944,2.42424242424243,-4.18519937277353,1.72758946134746,2.12121212121212,1.97414956527503,-4.21864295359983,1.81818181818182,1.426059063625,4.54650100991818,1.51515151515152,-4.197011263386,-2.43225381531963,1.21212121212121,4.8019835199816,-1.05570260624541,0.909090909090911,-2.85444392818619,4.06015275606996,0.606060606060608,-0.641372283567926,-4.94942564640749,0.303030303030305,3.82324497728022,3.22223491441912,1.94289029309402E-015,-4.98654693456912,0.206209371233808,-0.303030303030301,3.51801475505192,-3.50089456068281,-0.606060606060604,-0.227107672944311,4.91141281342732,-0.909090909090907,-3.10798504186505,-3.72440480435048,-1.21212121212121,4.72235120771083,0.635385675921445,-1.51515151515151,-3.82331589305318,2.66016361488538,-1.81818181818182,0.993755292926997,-4.41734191053878,-2.12121212121212,2.1741673996412,3.79421201131943,-2.42424242424242,-3.99245155159394,-1.27370093791657,-2.72727272727273,3.61036917096261,-1.66808213044174,-3.03030303030303,-1.43876470546053,3.43785471060224,-3.33333333333333,-1.16148121557936,-3.22921366434439,-3.63636363636363,2.7256325895564,1.43251610008907,-3.93939393939394,-2.55869774798219,0.674464514827872,-4.24242424242424,1.12655903396107,-1.75205813779319,-4.54545454545454,0.206902175628224,1.20390454926177,-4.84848484848484">
+   </PIN>
+   <PIN pinname="Element Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="SphericalSpread (Spreads)" filename="%VVVV%\addonpack\lib\nodes\plugins\SphericalSpread.dll" nodename="SphericalSpread (Spreads)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="2145" top="2025" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="OutputXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" slicecount="1" values="17">
+   </PIN>
+   <PIN pinname="Radius" slicecount="1" values="5">
+   </PIN>
+   </NODE>
+   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="2955" top="3270" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Uniform Scale" slicecount="1" values="1.6">
+   </PIN>
+   </NODE>
+   <NODE systemname="Rotate (Transform)" nodename="Rotate (Transform)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1500" top="2730" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" visible="1" values="1.34">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (3d Vector)" nodename="Multiply (3d Vector)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="2100" top="3300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ UnTransformed" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="XYZ Transformed" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="SetAlpha (Color)" nodename="SetAlpha (Color)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="2550" top="2655" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="1635" top="1500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="60">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="3" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="XYZ Transformed" dstnodeid="0" dstpinname="Position">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="0" dstpinname="Element Transform">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="0" dstpinname="Color">
+   </LINK>
+   <NODE id="7" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   <BOUNDS type="Box" left="2085" top="4470" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2085" top="4470" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="7" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="4" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="OutputXYZ" dstnodeid="4" dstpinname="XYZ UnTransformed">
+   </LINK>
+   <NODE id="8" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Alpha">
+   </PIN>
+   <BOUNDS type="Box" left="2550" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2550" top="500" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Alpha">
+   </LINK>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="4740" top="2805" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Inverse Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="9" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Inverse Output" dstnodeid="0" dstpinname="Enabled">
+   </LINK>
+   </PATCH>
