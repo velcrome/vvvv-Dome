@@ -13,6 +13,8 @@
    </PIN>
    <PIN pinname="Enabled" visible="1">
    </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="SphericalSpread (Spreads)" filename="%VVVV%\addonpack\lib\nodes\plugins\SphericalSpread.dll" nodename="SphericalSpread (Spreads)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2145" top="2025" width="100" height="100">
@@ -22,14 +24,6 @@
    <PIN pinname="Spread Count" slicecount="1" values="17">
    </PIN>
    <PIN pinname="Radius" slicecount="1" values="5">
-   </PIN>
-   </NODE>
-   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="2955" top="3270" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Uniform Scale" slicecount="1" values="1.6">
    </PIN>
    </NODE>
    <NODE systemname="Rotate (Transform)" nodename="Rotate (Transform)" componentmode="Hidden" id="3">
@@ -72,8 +66,6 @@
    </LINK>
    <LINK srcnodeid="4" srcpinname="XYZ Transformed" dstnodeid="0" dstpinname="Position">
    </LINK>
-   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="0" dstpinname="Element Transform">
-   </LINK>
    <LINK srcnodeid="5" srcpinname="Output" dstnodeid="0" dstpinname="Color">
    </LINK>
    <NODE id="7" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
@@ -115,5 +107,71 @@
    <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="9" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="9" srcpinname="Inverse Output" dstnodeid="0" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="Dir (File)" filename="" nodename="Dir (File)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="6735" top="1410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Directory" slicecount="1" values="img\title">
+   </PIN>
+   <PIN pinname="Filenames" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="6435" top="1920" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="SizeXY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Filenames" dstnodeid="11" dstpinname="Filename">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Texture Out" dstnodeid="0" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="6360" top="2805" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Uniform Scale" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="6615" top="2235" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="SizeXY" dstnodeid="13" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="X" dstnodeid="12" dstpinname="Aspect Width">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Y" dstnodeid="12" dstpinname="Aspect Height">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Transform Out" dstnodeid="0" dstpinname="Element Transform">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7485" top="2280" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7485" top="2280" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2.7">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Uniform Scale">
    </LINK>
    </PATCH>

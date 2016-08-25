@@ -662,4 +662,16 @@
    </NODE>
    <LINK srcnodeid="12" srcpinname="Output" dstnodeid="92" dstpinname="Color Input">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="93" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1245" top="6030" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1245" top="6030" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="93" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>
