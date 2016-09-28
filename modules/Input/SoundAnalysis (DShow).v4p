@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\modules\Input\SoundAnalysis (DShow).v4p" systemname="SoundAnalysis (DShow)" filename="C:\dev\vvvv\vvvv-Dome_ix\modules\Input\SoundAnalysis (DShow).v4p">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab2\modules\Input\SoundAnalysis (DShow).v4p" systemname="SoundAnalysis (DShow)" filename="C:\dev\vvvv\vvvv-Dome_ix\modules\Input\SoundAnalysis (DShow).v4p">
    <BOUNDS type="Window" left="7395" top="5055" width="11310" height="7560">
    </BOUNDS>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="13">
@@ -135,7 +135,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3300" top="1479" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="15735" top="5790" width="11565" height="8400">
+   <BOUNDS type="Window" left="12900" top="2595" width="11565" height="8400">
    </BOUNDS>
    <PIN pinname="Combi Audio" visible="1">
    </PIN>
@@ -163,5 +163,7 @@
    </PIN>
    </NODE>
    <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.0">
    </PACK>
    </PATCH>
