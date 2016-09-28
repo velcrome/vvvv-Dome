@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Domemaster_dx11_tracking\modules\Output\DomeMapping (DX11).v4p" systemname="DomeMapping (DX11)" filename="C:\dev\vvvv\vvvv-Domemaster_dx11_tracking\modules\Output\DomeMapping (DX11).v4p" scrollx="0" scrolly="10200">
-   <BOUNDS type="Window" left="585" top="5370" width="15330" height="6000">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_dx11\modules\Output\DomeMapping (DX11).v4p" systemname="DomeMapping (DX11)" filename="C:\dev\vvvv\vvvv-Domemaster_dx11_tracking\modules\Output\DomeMapping (DX11).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="2610" top="195" width="15330" height="6000">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.0.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="960" top="3825" width="795" height="240">

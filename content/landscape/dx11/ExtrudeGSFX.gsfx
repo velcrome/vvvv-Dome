@@ -1,0 +1,91 @@
+float4x4 tV : VIEW;
+float Extrude = 0.1f;
+struct VS_IN
+{
+    float3 pos  : POSITION; 
+	float3 norm  : NORMAL; 
+	float2 uv : TEXCOORD0;
+};
+
+VS_IN VS(VS_IN In)
+{
+	VS_IN Out=In;
+    return Out;
+}
+
+Texture2D texHEIGHT;
+SamplerState samp_lin <bool visible=false;string uiname="Sampler";> {Filter=MIN_MAG_MIP_LINEAR;AddressU=CLAMP;AddressV=CLAMP;};
+
+
+[maxvertexcount(32)]
+void GS(triangle VS_IN InN[3], inout TriangleStream<VS_IN> gsout)
+{ 
+	VS_IN Out = (VS_IN)0;
+	/*
+	sort vertices
+	
+	*1------*2
+	|
+	|
+	|
+	*0
+	
+	*/
+	float dl1 = length(InN[0].pos.xyz-InN[1].pos.xyz);
+	float dl2 = length(InN[1].pos.xyz-InN[2].pos.xyz);
+	float dl3 = length(InN[2].pos.xyz-InN[0].pos.xyz);
+	VS_IN In[3]=InN;
+	float maxlength = max(max(dl1,dl2),dl3);
+	if(dl1==maxlength){
+		In[0]=InN[1];In[1]=InN[2];In[2]=InN[0];
+	}
+	if(dl2==maxlength){
+		In[0]=InN[2];In[1]=InN[0];In[2]=InN[1];
+	}
+	
+	float3 n=normalize(normalize(In[0].norm)+normalize(In[2].norm));
+	float2 uv_t=(In[0].uv+In[2].uv)/2;
+	float ext=Extrude*texHEIGHT.SampleLevel(samp_lin,uv_t,0).x;
+	
+	Out=In[0];
+	gsout.Append(Out);
+	
+	Out=In[1];
+	gsout.Append(Out);
+
+	Out=In[0];
+	Out.pos = In[0].pos+ext*n;
+	Out.norm=cross(In[0].pos-In[1].pos,n);
+	gsout.Append(Out);
+	
+	Out=In[1];
+	Out.pos = In[1].pos+ext*n;
+	Out.norm=cross(In[1].pos-In[2].pos,n);
+	gsout.Append(Out);
+	
+	Out=In[2];
+	Out.pos = In[2].pos+ext*n;
+	Out.norm=cross(In[0].pos-In[1].pos,n);
+	gsout.Append(Out);
+	
+	Out=In[1];
+	gsout.Append(Out);
+
+	Out=In[2];
+	gsout.Append(Out);
+	
+	gsout.RestartStrip();
+	
+}
+
+
+GeometryShader gsStreamOut = ConstructGSWithSO( CompileShader( gs_4_0, GS() ), "POSITION.xyz;NORMAL.xyz;TEXCOORD0.xy" );
+
+technique10 PassMesh
+{
+    pass PP2
+    {
+        SetVertexShader( CompileShader( vs_4_0, VS() ) );
+        SetGeometryShader( gsStreamOut );
+    }  
+}
