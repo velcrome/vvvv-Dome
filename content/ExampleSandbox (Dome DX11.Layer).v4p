@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\ExampleSandbox (Dome DX11.Layer).v4p" systemname="ExampleSandbox (Dome DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome_lab2\content\_SANDBOXES\ExampleSandbox (Dome DX11.Layer).v4p" scrollx="0" scrolly="2640">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\ExampleSandbox (Dome DX11.Layer).v4p" systemname="ExampleSandbox (Dome DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome_lab2\content\_SANDBOXES\ExampleSandbox (Dome DX11.Layer).v4p" scrollx="0" scrolly="4965">
    <BOUNDS type="Window" left="0" top="0" width="12165" height="15300">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -298,32 +298,6 @@
    <LINKPOINT x="9000" y="4695">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="Ico (DX11.Layer)" filename="Examples\Ico (DX11.Layer).v4p" nodename="Ico (DX11.Layer)" componentmode="Hidden" id="58">
-   <BOUNDS type="Node" left="8085" top="6915" width="1500" height="270">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="X" slicecount="1" values="-2">
-   </PIN>
-   <PIN pinname="Displace" slicecount="1" values="1.32">
-   </PIN>
-   <PIN pinname="Y" slicecount="1" values="10">
-   </PIN>
-   <PIN pinname="Triangle Size" slicecount="1" values="1.83">
-   </PIN>
-   <PIN pinname="Spread" slicecount="1" values="0.92">
-   </PIN>
-   <PIN pinname="Width" slicecount="1" values="0.001">
-   </PIN>
-   <PIN pinname="Brightness" slicecount="1" values="0.5">
-   </PIN>
-   <BOUNDS type="Box" left="8085" top="6915">
-   </BOUNDS>
-   <BOUNDS type="Window" left="9210" top="0" width="14400" height="15600">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="58" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 2">
-   </LINK>
    <NODE systemname="Desert (DX11.Layer)" filename="Examples\Landscape\Desert (DX11.Layer).v4p" nodename="Desert (DX11.Layer)" componentmode="Hidden" id="54">
    <BOUNDS type="Node" left="6495" top="7275" width="100" height="100">
    </BOUNDS>
@@ -403,6 +377,8 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
+   <BOUNDS type="Window" left="7740" top="3285" width="24270" height="8280">
+   </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="99" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="6495" top="6705" width="480" height="480">
@@ -433,10 +409,12 @@
    </PIN>
    <BOUNDS type="Window" left="1125" top="1875" width="14340" height="15705">
    </BOUNDS>
-   <PIN pinname="Reset" slicecount="1" values="0" visible="1">
+   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
    </PIN>
    <BOUNDS type="Box" left="9465" top="9795">
    </BOUNDS>
+   <PIN pinname="Rotation" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="House (DX11.Layer)" filename="House\House (DX11.Layer).v4p" nodename="House (DX11.Layer)" componentmode="Hidden" id="101">
    <BOUNDS type="Node" left="7980" top="9795" width="765" height="270">
@@ -445,6 +423,8 @@
    </PIN>
    <BOUNDS type="Box" left="7980" top="9795">
    </BOUNDS>
+   <PIN pinname="Rotation" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="102">
    <BOUNDS type="Node" left="6495" top="10425" width="3030" height="270">
@@ -468,10 +448,6 @@
    <BOUNDS type="Box" left="6495" top="10425">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="101" srcpinname="Layer Out" dstnodeid="102" dstpinname="Layer 2">
-   </LINK>
-   <LINK srcnodeid="100" srcpinname="Layer" dstnodeid="102" dstpinname="Layer 3">
-   </LINK>
    <NODE systemname="LatticeFloor (DX11)" filename="Examples\LatticeFloor (DX11).v4p" componentmode="Hidden" id="104" nodename="LatticeFloor (DX11)">
    <BOUNDS type="Node" left="6495" top="9795" width="100" height="100">
    </BOUNDS>
@@ -521,6 +497,26 @@
    </LINKPOINT>
    <LINKPOINT x="9765" y="9600">
    </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Rotation" dstnodeid="100" dstpinname="Rotation">
+   <LINKPOINT x="8790" y="10275">
+   </LINKPOINT>
+   <LINKPOINT x="9960" y="9270">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Ico (DX11.Layer)" filename="Examples\Ico (DX11.Layer).v4p" nodename="Ico (DX11.Layer)" componentmode="Hidden" id="106">
+   <BOUNDS type="Node" left="8085" top="6915" width="1500" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8085" top="6915">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9210" top="0" width="14400" height="15600">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="106" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Layer Out" dstnodeid="102" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="100" srcpinname="Layer" dstnodeid="102" dstpinname="Layer 3">
    </LINK>
    <LINK srcnodeid="102" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node">
    </LINK>

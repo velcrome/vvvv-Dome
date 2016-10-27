@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab2\content\Camp02\Traum\Traum.v4p" systemname="Traum" filename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Traum\Traum.v4p" scrollx="0" scrolly="4365">
-   <BOUNDS type="Window" left="4245" top="5955" width="24270" height="8280">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\Camp02\Traum\Traum.v4p" systemname="Traum" filename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Traum\Traum.v4p" scrollx="0" scrolly="4995">
+   <BOUNDS type="Window" left="7740" top="3285" width="24270" height="8280">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -55,7 +55,7 @@
    </PIN>
    <PIN pinname="Pause" slicecount="1" visible="1" values="0">
    </PIN>
-   <PIN pinname="Apply" slicecount="1" values="0">
+   <PIN pinname="Apply" slicecount="1" values="0" visible="1">
    </PIN>
    <PIN pinname="Alpha" visible="1" slicecount="1" values="1">
    </PIN>
@@ -95,7 +95,7 @@
    </PIN>
    <PIN pinname="Enable" visible="1">
    </PIN>
-   <PIN pinname="Alpha" visible="1" slicecount="1" values="1">
+   <PIN pinname="Alpha" visible="1" slicecount="1" values="0.02">
    </PIN>
    </NODE>
    <NODE systemname="Sweets" filename="Sweets.v4p" nodename="Sweets.v4p" componentmode="Hidden" id="51">
@@ -109,7 +109,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Alpha" visible="1" slicecount="1" values="1">
+   <PIN pinname="Alpha" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="floeckchen" filename="floeckchen.v4p" nodename="floeckchen.v4p" componentmode="Hidden" id="57">
@@ -191,7 +191,7 @@
    <NODE systemname="Title" filename="Title.v4p" nodename="Title.v4p" componentmode="Hidden" id="132">
    <BOUNDS type="Node" left="7283" top="8674" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Alpha" visible="1" slicecount="1" values="0">
+   <PIN pinname="Alpha" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -215,6 +215,8 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="138" srcpinname="Y Output Value" dstnodeid="116" dstpinname="Alpha">
    </LINK>
@@ -233,6 +235,8 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="139" srcpinname="Y Output Value" dstnodeid="117" dstpinname="Alpha">
    </LINK>
@@ -241,7 +245,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="18330" top="6285" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -251,9 +255,19 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="140" srcpinname="Y Output Value" dstnodeid="118" dstpinname="Alpha">
    </LINK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.0">
    </PACK>
+   <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="141">
+   <BOUNDS type="Node" left="4815" top="6465" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="141" srcpinname="Bang" dstnodeid="14" dstpinname="Apply">
+   </LINK>
    </PATCH>

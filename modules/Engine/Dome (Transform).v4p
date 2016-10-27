@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_ix\modules\Engine\Dome (Transform).v4p" systemname="Dome (Transform)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\modules\Dome (Transform).v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\modules\Engine\Dome (Transform).v4p" systemname="Dome (Transform)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\modules\Dome (Transform).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="3240" top="5760" width="13890" height="8880">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -19,7 +19,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2766" top="597" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="5">
+   <PIN pinname="Y Input Value" slicecount="1" values="5.24">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="m">
    </PIN>
@@ -338,50 +338,6 @@
    </LINK>
    <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="17" dstpinname="DomeTransform">
    </LINK>
-   <NODE systemname="GeometryFile (DX11.Geometry Assimp)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.Assimp.dll" nodename="GeometryFile (DX11.Geometry Assimp)" componentmode="Hidden" id="35">
-   <BOUNDS type="Node" left="10110" top="1290" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" visible="1" values="|..\..\assets\model\lp\DresdenDomeModel2_ Triangles.3ds|">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Select (Node)" filename="%VVVV%\lib\nodes\modules\Node\Select (Node).v4p" nodename="Select (Node)" componentmode="Hidden" id="34">
-   <BOUNDS type="Node" left="10320" top="1905" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Select" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="35" srcpinname="Output" dstnodeid="34" dstpinname="Input">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="33" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="11385" top="1320" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="11385" top="1320" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0,1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
-   </PIN>
-   <PIN pinname="Columns" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="2" values="0,0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="33" srcpinname="Y Output Value" dstnodeid="34" dstpinname="Select">
-   </LINK>
    <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="32">
    <BOUNDS type="Node" left="9525" top="2835" width="100" height="100">
    </BOUNDS>
@@ -400,24 +356,6 @@
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="38" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="10395" top="720" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="10395" top="720" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="..\..\assets\model\erich\DOME_zitrone.dae">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="|All Files (*.*)||*.*|">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="Filename">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="38" srcpinname="Output String" dstnodeid="35" dstpinname="Filename">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="45" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="1695" top="3735" width="795" height="240">
    </BOUNDS>
