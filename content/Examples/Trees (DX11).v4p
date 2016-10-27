@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab2\content\Examples\Trees (DX11).v4p" systemname="Trees (DX11)" filename="C:\Users\SATO-Z800\Desktop\VVVV MarkoRitter\vvvv-Domemaster_dx11_tracking\content\Trees (DX11).v4p" scrollx="2385" scrolly="1380">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\Examples\Trees (DX11).v4p" systemname="Trees (DX11)" filename="C:\Users\SATO-Z800\Desktop\VVVV MarkoRitter\vvvv-Domemaster_dx11_tracking\content\Trees (DX11).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="9060" top="5340" width="9000" height="6000">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -249,7 +249,7 @@
    <LINK srcnodeid="23" srcpinname="Transform Out" dstnodeid="5" dstpinname="Transform In">
    </LINK>
    <NODE systemname="Select (Transform Bin)" filename="%VVVV%\addonpack\lib\nodes\plugins\Select.dll" nodename="Select (Transform Bin)" componentmode="Hidden" id="24">
-   <BOUNDS type="Node" left="3045" top="4215" width="100" height="100">
+   <BOUNDS type="Node" left="3045" top="4350" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -296,8 +296,6 @@
    </NODE>
    <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Y">
    </LINK>
-   <LINK srcnodeid="25" srcpinname="Transform Out" dstnodeid="0" dstpinname="Transform In">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="29" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="5175" top="3075" width="795" height="720">
    </BOUNDS>
@@ -333,6 +331,8 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Enabled">
    </LINK>
@@ -356,28 +356,6 @@
    <PIN pinname="FrequencyBalance" slicecount="1" values="-0.39">
    </PIN>
    </NODE>
-   <NODE systemname="Cylinder (DX11 Geometry)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\DX11.Geometry\Cylinder (DX11 Geometry).v4p" nodename="Cylinder (DX11 Geometry)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="1005" top="4050" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Geometry Out" visible="1">
-   </PIN>
-   <PIN pinname="Caps" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Radius 2" slicecount="1" values="0.25">
-   </PIN>
-   <PIN pinname="Radius 1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Apply" visible="1">
-   </PIN>
-   <PIN pinname="Resolution Y" slicecount="1" values="39">
-   </PIN>
-   <PIN pinname="Resolution X" slicecount="1" values="15">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="2" srcpinname="Geometry Out" dstnodeid="0" dstpinname="Geometry">
-   </LINK>
-   <LINK srcnodeid="31" srcpinname="Texture Out" dstnodeid="0" dstpinname="Texture">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="32" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="1875" top="3015" width="480" height="480">
    </BOUNDS>
@@ -398,8 +376,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Apply">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="33" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="8685" top="960" width="795" height="240">
    </BOUNDS>
@@ -487,7 +463,7 @@
    <LINK srcnodeid="39" srcpinname="Render State" dstnodeid="17" dstpinname="Render State">
    </LINK>
    <NODE systemname="DepthStencil (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DepthStencil (DX11.RenderState)" componentmode="Hidden" id="40">
-   <BOUNDS type="Node" left="720" top="2190" width="100" height="100">
+   <BOUNDS type="Node" left="285" top="2865" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
@@ -505,5 +481,29 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="42" srcpinname="Output" dstnodeid="38" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Transform Out" dstnodeid="0" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Texture Out" dstnodeid="0" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="Cylinder (DX11 Geometry)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\DX11.Geometry\Cylinder (DX11 Geometry).v4p" nodename="Cylinder (DX11 Geometry)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1005" top="4050" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   <PIN pinname="Caps" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Radius 2" slicecount="1" values="0.25">
+   </PIN>
+   <PIN pinname="Radius 1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Apply" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Resolution Y" slicecount="1" values="39">
+   </PIN>
+   <PIN pinname="Resolution X" slicecount="1" values="15">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Geometry Out" dstnodeid="0" dstpinname="Geometry">
    </LINK>
    </PATCH>

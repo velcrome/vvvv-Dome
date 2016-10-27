@@ -1,13 +1,13 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab2\content\ExampleSandbox (Dome DX11.Layer).v4p" systemname="ExampleSandbox (Dome DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome_lab2\content\_SANDBOXES\ExampleSandbox (Dome DX11.Layer).v4p" scrollx="0" scrolly="195">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\ExampleSandbox (Dome DX11.Layer).v4p" systemname="ExampleSandbox (Dome DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome_lab2\content\_SANDBOXES\ExampleSandbox (Dome DX11.Layer).v4p" scrollx="0" scrolly="2640">
    <BOUNDS type="Window" left="0" top="0" width="12165" height="15300">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="3270" top="11400" width="3528" height="780">
+   <BOUNDS type="Box" left="810" top="13755" width="3528" height="780">
    </BOUNDS>
-   <BOUNDS type="Node" left="3270" top="11400" width="0" height="0">
+   <BOUNDS type="Node" left="810" top="13755" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="ContentLayer">
    </PIN>
@@ -17,7 +17,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Group (DX11.Layer)" nodename="Group (DX11.Layer)" componentmode="Hidden" id="6" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll">
-   <BOUNDS type="Node" left="6525" top="8190" width="3180" height="270">
+   <BOUNDS type="Node" left="6495" top="8190" width="3180" height="270">
    </BOUNDS>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
@@ -49,7 +49,7 @@
    </PIN>
    <PIN pinname="Layer 8" visible="1" slicecount="1" values="||">
    </PIN>
-   <BOUNDS type="Box" left="6525" top="8190">
+   <BOUNDS type="Box" left="6495" top="8190">
    </BOUNDS>
    <PIN pinname="Layer 7" visible="1" slicecount="1" values="||">
    </PIN>
@@ -165,11 +165,11 @@
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="74" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="1200" top="5175" width="480" height="480">
+   <BOUNDS type="Box" left="1080" top="4905" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="1200" top="5175" width="0" height="0">
+   <BOUNDS type="Node" left="1080" top="4905" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -178,6 +178,8 @@
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.0">
@@ -224,7 +226,7 @@
    <LINKPOINT x="9300" y="4695">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="Matrix (DX11)" filename="Examples\Matrix (DX11).v4p" componentmode="InAWindow" id="42" nodename="Matrix (DX11)">
+   <NODE systemname="Matrix (DX11)" filename="Examples\Matrix (DX11).v4p" componentmode="Hidden" id="42" nodename="Matrix (DX11)">
    <BOUNDS type="Node" left="11145" top="4875" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="11145" top="4875" width="4800" height="3600">
@@ -264,7 +266,11 @@
    </NODE>
    <LINK srcnodeid="48" srcpinname="Layer" dstnodeid="73" dstpinname="Layer 1">
    </LINK>
-   <LINK srcnodeid="88" srcpinname="Y Output Value" dstnodeid="48" dstpinname="Apply">
+   <LINK srcnodeid="88" srcpinname="Y Output Value" dstnodeid="48" dstpinname="Apply" linkstyle="VHV">
+   <LINKPOINT x="6555" y="4695">
+   </LINKPOINT>
+   <LINKPOINT x="7545" y="4695">
+   </LINKPOINT>
    </LINK>
    <NODE systemname="SpaceGrid (DX11)" filename="Examples\SpaceGrid (DX11).v4p" nodename="SpaceGrid (DX11)" componentmode="Hidden" id="49">
    <BOUNDS type="Node" left="8070" top="4875" width="100" height="100">
@@ -293,7 +299,7 @@
    </LINKPOINT>
    </LINK>
    <NODE systemname="Ico (DX11.Layer)" filename="Examples\Ico (DX11.Layer).v4p" nodename="Ico (DX11.Layer)" componentmode="Hidden" id="58">
-   <BOUNDS type="Node" left="8100" top="7275" width="100" height="100">
+   <BOUNDS type="Node" left="8085" top="6915" width="1500" height="270">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -307,33 +313,35 @@
    </PIN>
    <PIN pinname="Spread" slicecount="1" values="0.92">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="0.02">
+   <PIN pinname="Width" slicecount="1" values="0.001">
    </PIN>
    <PIN pinname="Brightness" slicecount="1" values="0.5">
    </PIN>
-   <BOUNDS type="Box" left="8100" top="7275">
+   <BOUNDS type="Box" left="8085" top="6915">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9210" top="0" width="14400" height="15600">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="58" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 2">
    </LINK>
    <NODE systemname="Desert (DX11.Layer)" filename="Examples\Landscape\Desert (DX11.Layer).v4p" nodename="Desert (DX11.Layer)" componentmode="Hidden" id="54">
-   <BOUNDS type="Node" left="6525" top="7275" width="100" height="100">
+   <BOUNDS type="Node" left="6495" top="7275" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Apply" slicecount="1" values="0" visible="1">
+   <PIN pinname="Apply" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Alpha" slicecount="1" values="0.94">
    </PIN>
    <BOUNDS type="Window" left="4305" top="3540" width="10905" height="9915">
    </BOUNDS>
-   <BOUNDS type="Box" left="6525" top="7275">
+   <BOUNDS type="Box" left="6495" top="7275">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="54" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 1">
    </LINK>
    <NODE systemname="Gallery (DX11.Layer)" filename="Examples\Gallery\Gallery (DX11.Layer).v4p" nodename="Gallery (DX11.Layer)" componentmode="Hidden" id="89">
-   <BOUNDS type="Node" left="2805" top="5805" width="2220" height="270">
+   <BOUNDS type="Node" left="1170" top="6555" width="2220" height="270">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -376,8 +384,8 @@
    </NODE>
    <LINK srcnodeid="90" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 3">
    </LINK>
-   <NODE systemname="Destiny" filename="Camp02\Destiny\Destiny.v4p" nodename="Camp02\Destiny\Destiny.v4p" componentmode="InAWindow" id="95">
-   <BOUNDS type="Node" left="510" top="6750" width="100" height="100">
+   <NODE systemname="Destiny" filename="Camp02\Destiny\Destiny.v4p" nodename="Camp02\Destiny\Destiny.v4p" componentmode="Hidden" id="95">
+   <BOUNDS type="Node" left="1695" top="7320" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="2820" top="1875" width="10260" height="6390">
    </BOUNDS>
@@ -385,21 +393,21 @@
    </PIN>
    </NODE>
    <NODE systemname="Rot" filename="Camp02\Rot\Rot.v4p" nodename="Camp02\Rot\Rot.v4p" componentmode="Hidden" id="96">
-   <BOUNDS type="Node" left="585" top="7545" width="100" height="100">
+   <BOUNDS type="Node" left="1935" top="8130" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Traum" filename="Camp02\Traum\Traum.v4p" nodename="Camp02\Traum\Traum.v4p" componentmode="Hidden" id="98">
-   <BOUNDS type="Node" left="660" top="8310" width="100" height="100">
+   <BOUNDS type="Node" left="2370" top="8790" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="99" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6510" top="6705" width="480" height="480">
+   <BOUNDS type="Box" left="6495" top="6705" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="6510" top="6705" width="0" height="0">
+   <BOUNDS type="Node" left="6495" top="6705" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -418,8 +426,102 @@
    </NODE>
    <LINK srcnodeid="99" srcpinname="Y Output Value" dstnodeid="54" dstpinname="Apply">
    </LINK>
-   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="1" dstpinname="Input Node">
-   <LINKPOINT x="2970" y="6990">
+   <NODE systemname="LorenzParticle" filename="Lorenz\LorenzParticle.v4p" nodename="Lorenz\LorenzParticle.v4p" componentmode="Hidden" id="100">
+   <BOUNDS type="Node" left="9465" top="9795" width="1245" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="1125" top="1875" width="14340" height="15705">
+   </BOUNDS>
+   <PIN pinname="Reset" slicecount="1" values="0" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="9465" top="9795">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="House (DX11.Layer)" filename="House\House (DX11.Layer).v4p" nodename="House (DX11.Layer)" componentmode="Hidden" id="101">
+   <BOUNDS type="Node" left="7980" top="9795" width="765" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="7980" top="9795">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="102">
+   <BOUNDS type="Node" left="6495" top="10425" width="3030" height="270">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Render State" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" visible="-1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="6495" top="10425">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="101" srcpinname="Layer Out" dstnodeid="102" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="100" srcpinname="Layer" dstnodeid="102" dstpinname="Layer 3">
+   </LINK>
+   <NODE systemname="LatticeFloor (DX11)" filename="Examples\LatticeFloor (DX11).v4p" componentmode="Hidden" id="104" nodename="LatticeFloor (DX11)">
+   <BOUNDS type="Node" left="6495" top="9795" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6495" top="9795" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="6588" top="2256" width="12600" height="13224">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Apply" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Lightness" slicecount="1" values="0.21">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="104" srcpinname="Layer" dstnodeid="102" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="105" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6495" top="8955" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6495" top="8955" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Apply">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="105" srcpinname="Y Output Value" dstnodeid="104" dstpinname="Apply" linkstyle="VHV">
+   <LINKPOINT x="6555" y="9600">
    </LINKPOINT>
+   <LINKPOINT x="7545" y="9600">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="105" srcpinname="Y Output Value" dstnodeid="100" dstpinname="Reset" linkstyle="VHV">
+   <LINKPOINT x="6555" y="9600">
+   </LINKPOINT>
+   <LINKPOINT x="9765" y="9600">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node">
    </LINK>
    </PATCH>

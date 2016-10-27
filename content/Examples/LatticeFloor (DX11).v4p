@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab2\content\LatticeFloor\LatticeFloor (DX11).v4p" systemname="LatticeFloor (DX11)" filename="C:\dev\vvvv\vvvv-Dome_lab2\content\LatticeFloor\LatticeFloor (DX11).v4p" scrollx="0" scrolly="4695">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\Examples\LatticeFloor (DX11).v4p" systemname="LatticeFloor (DX11)" filename="C:\dev\vvvv\vvvv-Dome_lab2\content\LatticeFloor\LatticeFloor (DX11).v4p" scrollx="0" scrolly="4695">
    <BOUNDS type="Window" left="6588" top="2256" width="12600" height="13224">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -594,6 +594,8 @@
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Lightness">
    </PIN>
    </NODE>
    <LINK srcnodeid="91" srcpinname="Y Output Value" dstnodeid="34" dstpinname="Lightness">
