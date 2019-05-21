@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\ExampleSandbox (Dome DX11.Layer).v4p" systemname="ExampleSandbox (Dome DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome_lab2\content\_SANDBOXES\ExampleSandbox (Dome DX11.Layer).v4p" scrollx="0" scrolly="2415">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\ExampleSandbox (Dome DX11.Layer).v4p" systemname="ExampleSandbox (Dome DX11.Layer)" filename="C:\dev\vvvv\vvvv-Dome_lab2\content\_SANDBOXES\ExampleSandbox (Dome DX11.Layer).v4p" scrollx="0" scrolly="2910">
    <BOUNDS type="Window" left="0" top="0" width="20985" height="15300">
    </BOUNDS>
    <PACK Name="addonpack" Version="38.1.0">
@@ -206,7 +206,7 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE systemname="Trees (DX11)" filename="Examples\Trees (DX11).v4p" componentmode="Hidden" id="32" nodename="Trees (DX11)">
+   <NODE systemname="Trees (DX11)" filename="Examples\Trees (DX11).v4p" componentmode="InAWindow" id="32" nodename="Trees (DX11)">
    <BOUNDS type="Node" left="9600" top="4875" width="705" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="9600" top="4875" width="4800" height="3600">
@@ -296,16 +296,16 @@
    <LINKPOINT x="9000" y="4695">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="Ico (DX11.Layer)" filename="Examples\Ico (DX11.Layer).v4p" nodename="Ico (DX11.Layer)" componentmode="Hidden" id="58">
-   <BOUNDS type="Node" left="8085" top="6915" width="1500" height="270">
+   <NODE systemname="Ico (DX11.Layer)" filename="Examples\Ico (DX11.Layer).v4p" nodename="Ico (DX11.Layer)" componentmode="InAWindow" id="58">
+   <BOUNDS type="Node" left="8100" top="6945" width="1500" height="270">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
    <PIN pinname="X" slicecount="1" values="-2">
    </PIN>
-   <PIN pinname="Displace" slicecount="1" values="1.32">
+   <PIN pinname="Displace" slicecount="1" values="0.55">
    </PIN>
-   <PIN pinname="Y" slicecount="1" values="10">
+   <PIN pinname="Y" slicecount="1" values="12">
    </PIN>
    <PIN pinname="Triangle Size" slicecount="1" values="1.83">
    </PIN>
@@ -315,10 +315,12 @@
    </PIN>
    <PIN pinname="Brightness" slicecount="1" values="0.5">
    </PIN>
-   <BOUNDS type="Box" left="8085" top="6915">
+   <BOUNDS type="Box" left="8100" top="6945">
    </BOUNDS>
    <BOUNDS type="Window" left="9210" top="0" width="14400" height="15600">
    </BOUNDS>
+   <PIN pinname="Saturation" slicecount="1" values="0.4">
+   </PIN>
    </NODE>
    <LINK srcnodeid="58" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 2">
    </LINK>
@@ -371,17 +373,15 @@
    <LINK srcnodeid="74" srcpinname="Y Output Value" dstnodeid="2" dstpinname="StopRotation">
    </LINK>
    <NODE systemname="Symbols (DX11)" filename="Examples\Symbols (DX11).v4p" nodename="Symbols (DX11)" componentmode="Hidden" id="90">
-   <BOUNDS type="Node" left="9630" top="7275" width="100" height="100">
+   <BOUNDS type="Node" left="10275" top="7020" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
    <BOUNDS type="Window" left="5850" top="4740" width="17895" height="8310">
    </BOUNDS>
-   <BOUNDS type="Box" left="9630" top="7275">
+   <BOUNDS type="Box" left="10275" top="7020">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="90" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 3">
-   </LINK>
    <NODE systemname="Destiny" filename="Camp02\Destiny\Destiny.v4p" nodename="Camp02\Destiny\Destiny.v4p" componentmode="Hidden" id="95">
    <BOUNDS type="Node" left="1695" top="7320" width="100" height="100">
    </BOUNDS>
@@ -504,12 +504,14 @@
    </LINK>
    <LINK srcnodeid="32" srcpinname="Layer" dstnodeid="73" dstpinname="Layer 3">
    </LINK>
-   <LINK srcnodeid="102" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node">
-   </LINK>
    <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="dx11.particles" Version="1.0.5">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.10">
    </PACK>
+   <LINK srcnodeid="6" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node">
+   <LINKPOINT x="825" y="13695">
+   </LINKPOINT>
+   </LINK>
    </PATCH>

@@ -2,7 +2,7 @@
 [Bb]in/
 [Oo]bj/
 [Bb]uild/
-
+[Cc]ontent_old/
 # mstest test results
 TestResults
 
@@ -111,3 +111,5 @@ Particle Demo
 VVVV Particle Library Proof
 
 /tmp
+/assets/Panoramas
+/assets/lecture

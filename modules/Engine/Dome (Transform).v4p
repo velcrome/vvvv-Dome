@@ -146,7 +146,7 @@
    <LINKPOINT x="1995" y="3938">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="DomeHelper (DX11.Layer)" filename="..\Helper\DomeHelper (DX11.Layer).v4p" nodename="DomeHelper (DX11.Layer)" componentmode="InAWindow" id="17">
+   <NODE systemname="DomeHelper (DX11.Layer)" filename="..\Helper\DomeHelper (DX11.Layer).v4p" nodename="DomeHelper (DX11.Layer)" componentmode="Hidden" id="17">
    <BOUNDS type="Node" left="4830" top="5700" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer Out" visible="1">

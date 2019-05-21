@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\Dome (DX11).v4p" filename="C:\Users\SATO-Z800\Desktop\velcrome\vvvvDome\DemoDome.v4p" systemname="DemoDome" locked="0" scrollx="0" scrolly="7020" bgcolor="15132390">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\Dome (DX11).v4p" filename="C:\Users\SATO-Z800\Desktop\velcrome\vvvvDome\DemoDome.v4p" systemname="DemoDome" locked="0" scrollx="0" scrolly="10650" bgcolor="15132390">
    <BOUNDS height="15300" left="0" top="0" type="Window" width="20985">
    </BOUNDS>
    <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="116">
@@ -278,7 +278,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Simulation Utility|">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (DX11)" nodename="Renderer (DX11)" componentmode="Hidden" id="215" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll">
+   <NODE systemname="Renderer (DX11)" nodename="Renderer (DX11)" componentmode="InAWindow" id="215" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll">
    <BOUNDS type="Node" left="10065" top="20055" width="7872" height="276">
    </BOUNDS>
    <BOUNDS type="Box" left="10065" top="20055" width="2400" height="1800">
