@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Traum\Raum.v4p" systemname="Raum" filename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Traum\Raum.v4p">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\content\Camp02\Traum\Raum.v4p" systemname="Raum" filename="C:\dev\vvvv\vvvv-Dome_lab\content\Camp02\Traum\Raum.v4p" scrollx="645" scrolly="345">
    <NODE systemname="BillBoard (DX11.Layer)" filename="..\..\..\modules\Helper\BillBoard (DX11.Layer).v4p" nodename="BillBoard (DX11.Layer)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1500" top="4005" width="100" height="100">
    </BOUNDS>
@@ -105,11 +105,11 @@
    </PIN>
    </NODE>
    <NODE systemname="DepthStencil (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DepthStencil (DX11.RenderState)" componentmode="Hidden" id="8">
-   <BOUNDS type="Node" left="1500" top="1995" width="100" height="100">
+   <BOUNDS type="Node" left="1080" top="1905" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Mode" slicecount="1" values="LessEqualReadWrite">
+   <PIN pinname="Mode" slicecount="1" values="NoDepth">
    </PIN>
    </NODE>
    <NODE systemname="SetAlpha (Color)" nodename="SetAlpha (Color)" componentmode="Hidden" id="9">
@@ -168,4 +168,14 @@
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
+   <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="1170" top="1155" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mode" slicecount="1" values="Add">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Render State" dstnodeid="8" dstpinname="Render State">
+   </LINK>
    </PATCH>

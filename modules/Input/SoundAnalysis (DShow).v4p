@@ -1,73 +1,13 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome_lab2\modules\Input\SoundAnalysis (DShow).v4p" systemname="SoundAnalysis (DShow)" filename="C:\dev\vvvv\vvvv-Dome_ix\modules\Input\SoundAnalysis (DShow).v4p">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\modules\Input\SoundAnalysis (DShow).v4p" systemname="SoundAnalysis (DShow)" filename="C:\dev\vvvv\vvvv-Dome_ix\modules\Input\SoundAnalysis (DShow).v4p" scrollx="1395" scrolly="120">
    <BOUNDS type="Window" left="7395" top="5055" width="11310" height="7560">
    </BOUNDS>
-   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="3390" top="3423" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="PointOfImmersion">
-   </PIN>
-   </NODE>
-   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="12">
-   <BOUNDS type="Node" left="5982" top="3423" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="CameraPosition">
-   </PIN>
-   </NODE>
-   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="11">
-   <BOUNDS type="Node" left="8490" top="3423" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="DomeTransform">
-   </PIN>
-   </NODE>
    <NODE id="10" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
    <BOUNDS type="Node" left="945" top="1614" width="5370" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="945" top="1614" width="2070" height="3825">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|There is a minimal API provided by the framework you are free to use in your immersive patches.&cr;&lf;&cr;&lf;Consider this an alpha|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
-   <NODE id="9" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="3840" top="3849" width="5370" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3840" top="3849" width="1635" height="1590">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|aka sweet spot,&cr;&lf;from this point all immersive content will be seen correctly.|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
-   <NODE id="8" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="6375" top="3849" width="5370" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="6375" top="3849" width="1620" height="1590">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|the position of the interactive camera. cool for debug helpers|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
-   <NODE id="7" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="8865" top="3849" width="5370" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="8865" top="3849" width="1605" height="1590">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|if you want to use the dome as a conventional canvas use this.It gives you dimensions of the Fulldome around you|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -166,4 +106,62 @@
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.0">
    </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3315" top="2940" width="3975" height="1455">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3315" top="2940" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="256">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Slider">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Connections" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Combi Audio" dstnodeid="14" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7590" top="2910" width="765" height="1530">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7590" top="2910" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Slider">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Connections" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Audio RMS" dstnodeid="15" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>
