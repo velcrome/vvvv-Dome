@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\modules\Output\DomeMaster (DX11 CubeMap).v4p" systemname="DomeMaster (DX11.Layer)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\modules\DomeMaster (DX11.Layer).v4p" scrollx="0" scrolly="300">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\modules\Output\DomeMaster (DX11 CubeMap).v4p" systemname="DomeMaster (DX11.Layer)" filename="C:\dev\vvvv\SAT\vvvv-Domemaster_dx11\modules\DomeMaster (DX11.Layer).v4p" scrollx="0" scrolly="150">
    <BOUNDS type="Window" left="720" top="2145" width="10275" height="9225">
    </BOUNDS>
    <PACK Name="addonpack" Version="38.1.0">
@@ -39,7 +39,7 @@
    </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,0.00000|">
    </PIN>
-   <PIN pinname="PositionXYZ" slicecount="3" values="0,0,0">
+   <PIN pinname="PositionXYZ" slicecount="3" values="0,1.7,0" visible="1">
    </PIN>
    <PIN pinname="Enable Depth Buffer" slicecount="1" values="0">
    </PIN>
@@ -169,7 +169,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="X" slicecount="1" values="0.18">
+   <PIN pinname="X" slicecount="1" values="0.25">
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -179,7 +179,7 @@
    </PIN>
    </NODE>
    <NODE id="7" systemname="CubeToSphere (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\modules\Cubemap\CubeToSphere (DX11.Texture 2d).v4p" nodename="CubeToSphere (DX11.Texture 2d)" componentmode="Hidden">
-   <PIN pinname="Texture Transform" visible="1">
+   <PIN pinname="Texture Transform" visible="1" slicecount="1" values="||">
    </PIN>
    <BOUNDS type="Node" left="3048" top="9156" width="100" height="100">
    </BOUNDS>
@@ -198,8 +198,6 @@
    <PIN pinname="Texture SizeXY" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="38" srcpinname="Transform Out" dstnodeid="7" dstpinname="Texture Transform">
-   </LINK>
    <LINK srcnodeid="19" srcpinname="Texture Out" dstnodeid="7" dstpinname="Texture In" linkstyle="Bezier">
    <LINKPOINT x="6204" y="7824">
    </LINKPOINT>
@@ -257,7 +255,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
@@ -420,4 +418,6 @@
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.7">
    </PACK>
+   <LINK srcnodeid="38" srcpinname="Transform Out" dstnodeid="7" dstpinname="Texture Transform">
+   </LINK>
    </PATCH>

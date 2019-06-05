@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\Dome (DX11).v4p" filename="C:\Users\SATO-Z800\Desktop\velcrome\vvvvDome\DemoDome.v4p" systemname="DemoDome" locked="0" scrollx="0" scrolly="10650" bgcolor="15132390">
-   <BOUNDS height="15300" left="0" top="0" type="Window" width="20985">
+   <PATCH nodename="C:\dev\vvvv\vvvv-Dome\Dome (DX11).v4p" filename="C:\Users\SATO-Z800\Desktop\velcrome\vvvvDome\DemoDome.v4p" systemname="DemoDome" locked="0" scrollx="0" scrolly="9855" bgcolor="15132390">
+   <BOUNDS height="15300" left="0" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="116">
    <BOUNDS type="Node" left="8805" top="2325" width="100" height="100">
@@ -283,7 +283,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="10065" top="20055" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="28170" top="1170" width="13035" height="12615">
+   <BOUNDS type="Window" left="10365" top="1050" width="13035" height="12615">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
@@ -386,7 +386,7 @@
    <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Dome (Transform)" filename="modules\Engine\Dome (Transform).v4p" nodename="modules\Dome (Transform).v4p" componentmode="Hidden" id="287">
+   <NODE systemname="Dome (Transform)" filename="modules\Engine\Dome (Transform).v4p" nodename="modules\Dome (Transform).v4p" componentmode="InAWindow" id="287">
    <BOUNDS type="Node" left="3603" top="11409" width="1692" height="276">
    </BOUNDS>
    <BOUNDS type="Box" left="3603" top="11409" width="3996" height="4276">
@@ -1242,12 +1242,12 @@
    </NODE>
    <LINK srcnodeid="456" srcpinname="Y Output Value" dstnodeid="444" dstpinname="Enabled">
    </LINK>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="Hidden" id="457">
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="457">
    <BOUNDS type="Node" left="4500" top="23130" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="4500" top="23130" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="16170" top="1230" width="7980" height="8325">
+   <BOUNDS type="Window" left="38175" top="1440" width="7980" height="6180">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1350,20 +1350,6 @@
    </LINK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.7">
    </PACK>
-   <NODE systemname="ExampleSandbox (Dome DX11.Layer)" filename="content\ExampleSandbox (Dome DX11.Layer).v4p" nodename="ExampleSandbox (Dome DX11.Layer)" componentmode="InAWindow" id="488" stayontop="0">
-   <BOUNDS type="Node" left="6165" top="7350" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="ContentLayer" visible="1" slicecount="1" values="||">
-   </PIN>
-   <BOUNDS type="Window" left="0" top="0" width="20985" height="15300">
-   </BOUNDS>
-   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
-   </PIN>
-   <BOUNDS type="Box" left="6165" top="7350">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="494" srcpinname="Y Output Value" dstnodeid="488" dstpinname="Evaluate">
-   </LINK>
    <LINK srcnodeid="448" srcpinname="Layer Out" dstnodeid="281" dstpinname="Layer In">
    </LINK>
    <LINK srcnodeid="281" srcpinname="Layer Out" dstnodeid="457" dstpinname="Layers">
@@ -1452,8 +1438,6 @@
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.10">
    </PACK>
-   <LINK srcnodeid="488" srcpinname="ContentLayer" dstnodeid="484" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="217" srcpinname="Position" dstnodeid="340" dstpinname="Input 2" linkstyle="Bezier">
    <LINKPOINT x="18675" y="10230">
    </LINKPOINT>
@@ -1719,7 +1703,7 @@
    </PIN>
    <BOUNDS type="Box" left="5325" top="19515">
    </BOUNDS>
-   <PIN pinname="Truncated" slicecount="1" values="0">
+   <PIN pinname="Truncated" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Cubemap Resolution" visible="1">
    </PIN>
@@ -1904,4 +1888,20 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE systemname="ExampleSandbox (Dome DX11.Layer)" filename="content\ExampleSandbox (Dome DX11.Layer).v4p" nodename="ExampleSandbox (Dome DX11.Layer)" componentmode="InAWindow" id="488" stayontop="0">
+   <BOUNDS type="Node" left="6165" top="7350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="ContentLayer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Window" left="0" top="0" width="12600" height="15300">
+   </BOUNDS>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Box" left="6165" top="7350">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="494" srcpinname="Y Output Value" dstnodeid="488" dstpinname="Evaluate">
+   </LINK>
+   <LINK srcnodeid="488" srcpinname="ContentLayer" dstnodeid="484" dstpinname="Input Node">
+   </LINK>
    </PATCH>
