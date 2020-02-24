@@ -1,7 +1,12 @@
 TextureCube tex0 <string uiname="Texture Cube";>;
 
-SamplerState s0:IMMUTABLE
-{Filter=MIN_MAG_MIP_LINEAR;AddressU=CLAMP;AddressV=CLAMP;};
+
+SamplerState s0 <string uiname="Sampler State";>
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Clamp;
+    AddressV = Clamp;
+};
 
 cbuffer cbControls:register(b0){
 	float4x4 tW:WORLD;
@@ -22,6 +27,7 @@ struct VS_IN{
 	float3 Norm:NORMAL0;
 };
 
+
 struct VS_OUT{
 	float4 PosWVP:SV_POSITION;
 	float4 PosW:TEXCOORD1;
@@ -39,7 +45,6 @@ VS_OUT VS(VS_IN In){
 }
 
 
-
 float4 psNORMAL(VS_OUT In):SV_Target{
 	float3 uvw=In.Norm;
 	uvw=mul(float4(uvw,1),tTex).xyz;
@@ -48,15 +53,26 @@ float4 psNORMAL(VS_OUT In):SV_Target{
 	return c;
 }
 
+float4 psPOSITION(VS_OUT In):SV_Target{
+	float3 uvw=In.PosW.xyz;
+	uvw=mul(float4(uvw,1),tTex).xyz;
+	float4 c=tex0.Sample(s0,uvw);
+	c=mul(c*Color,tColor);
+	return c;
+}
 
-
-technique10 _Normal{
+technique10 Normal{
 	pass P0{
 		SetVertexShader(CompileShader(vs_5_0,VS()));
-		SetPixelShader(CompileShader(ps_5_0,psNORMAL()));
+		SetPixelShader(CompileShader(ps_5_0,psPOSITION()));
 	}
+}
 
-
+technique10 Position{
+	pass P0{
+		SetVertexShader(CompileShader(vs_5_0,VS()));
+		SetPixelShader(CompileShader(ps_5_0,psPOSITION()));
+	}
 }
 
 
